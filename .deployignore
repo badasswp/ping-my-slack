@@ -1,0 +1,10 @@
+.editorconfig
+.gitignore
+.github
+CHANGELOG.md
+phpcs.xml
+phpstan.neon
+phpunit.xml
+README.md
+assets
+tests
