@@ -2,7 +2,7 @@
 
 namespace badasswp\PingMySlack;
 
-define ( 'PINGMYSLACK', __DIR__ . '/vendor/autoload.php' );
+define( 'PINGMYSLACK', __DIR__ . '/vendor/autoload.php' );
 
 /**
  * Fire Notice, if Composer is not installed.
