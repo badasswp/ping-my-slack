@@ -8,7 +8,9 @@
  * @package PingMySlack
  */
 
-class Post extends Service {
+namespace PingMySlack;
+
+class Post {
 	/**
 	 * Bind to WP.
 	 *
