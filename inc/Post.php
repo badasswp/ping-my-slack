@@ -45,7 +45,7 @@ class Post extends Service {
 			return;
 		}
 
-		switch( $new_status ) {
+		switch ( $new_status ) {
 			case 'draft':
 				$message = $this->get_message( 'A Post draft was just created!' );
 				break;
