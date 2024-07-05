@@ -28,7 +28,8 @@ class Post extends Service {
 	 * Send notification to Slack channel when a
 	 * Post is created.
 	 *
-	 * @param int      $post_id Post ID.
+	 * @param string $new_status New Status.
+	 * @param string $old_status Old Status.
 	 * @param \WP_Post $post    WP Post.
 	 *
 	 * @return void
