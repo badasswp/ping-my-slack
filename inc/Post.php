@@ -34,28 +34,28 @@ class Post extends Service {
 	 *
 	 * @return void
 	 */
-	public function ping_on_post_creation( $post_id, $post, $is_update ): void {
-		if ( wp_is_post_revision( $post_id ) || 'post' !== $post->post_type || $is_update ) {
+	public function ping_on_post_creation( $new_status, $old_status, $post ): void {
+		// Get post.
+		$this->post = $post;
+
+		// Bail out, if not changed.
+		if ( $old_status === $new_status || 'auto-draft' === $new_status ) {
 			return;
 		}
 
-		$message = sprintf(
-			'A Post was just created! ID: %s, Post Title: %s',
-			esc_html( $post_id ),
-			esc_html( get_post_field( 'post_title', $post_id ) )
-		);
+		switch( $new_status ) {
+			case 'draft':
+				$message = $this->get_message( 'A Post draft was just created!' );
+				break;
 
-		/**
-		 * Filter Ping Message.
-		 *
-		 * Set custom Slack message to be sent when the
-		 * user hits the publish button.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @return string
-		 */
-		$message = apply_filters( 'ping_my_slack_message', $message );
+			case 'publish':
+				$message = $this->get_message( 'A Post was just published!' );
+				break;
+
+			case 'trash':
+				$message = $this->get_message( 'A Post was just trashed!' );
+				break;
+		}
 
 		$this->client->ping( $message );
 	}
