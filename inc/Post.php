@@ -19,7 +19,7 @@ class Post extends Service {
 	 * @return void
 	 */
 	public function register(): void {
-		add_action( 'publish_post', [ $this, 'ping_on_post_creation' ], 10, 2 );
+		add_action( 'wp_insert_post', [ $this, 'ping_on_post_creation' ], 10, 3 );
 	}
 
 	/**
@@ -34,6 +34,10 @@ class Post extends Service {
 	 * @return void
 	 */
 	public function ping_on_post_creation( $post_id, $post ): void {
+		if ( wp_is_post_revision( $post_id ) || 'post' !== $post->post_type || $update ) {
+			return;
+		}
+
 		$message = sprintf(
 			'A Post was just created! ID: %s, Post Title: %s',
 			esc_html( $post_id ),
