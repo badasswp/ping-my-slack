@@ -44,6 +44,18 @@ class Post extends Service {
 			esc_html( get_post_field( 'post_title', $post_id ) )
 		);
 
+		/**
+		 * Filter Ping Message.
+		 *
+		 * Set custom Slack message to be sent when the
+		 * user hits the publish button.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @return string
+		 */
+		$message = applyFilters( 'ping_my_slack_message', $message );
+
 		$this->client->ping( $message );
 	}
 }
