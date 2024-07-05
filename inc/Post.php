@@ -30,9 +30,9 @@ class Post extends Service {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $new_status New Status.
-	 * @param string $old_status Old Status.
-	 * @param \WP_Post $post    WP Post.
+	 * @param string   $new_status New Status.
+	 * @param string   $old_status Old Status.
+	 * @param \WP_Post $post       WP Post.
 	 *
 	 * @return void
 	 */
