@@ -54,7 +54,7 @@ class Post extends Service {
 		 *
 		 * @return string
 		 */
-		$message = applyFilters( 'ping_my_slack_message', $message );
+		$message = apply_filters( 'ping_my_slack_message', $message );
 
 		$this->client->ping( $message );
 	}
