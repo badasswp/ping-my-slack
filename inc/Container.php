@@ -18,7 +18,7 @@ class Container {
 	 *
 	 * @var mixed[]
 	 */
-	public static $services;
+	public static array $services;
 
 	/**
 	 * Constructor.
@@ -26,7 +26,7 @@ class Container {
 	 * @since 1.0.0
 	 */
 	public function __construct() {
-		static::services = [
+		static::$services = [
 			Post::class,
 		];
 	}
@@ -42,7 +42,7 @@ class Container {
 	 * @return void
 	 */
 	public function register(): void {
-		foreach ( static::services as $service ) {
+		foreach ( static::$services as $service ) {
 			( $service::get_instance() )->register();
 		}
 	}
