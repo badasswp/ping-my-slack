@@ -28,6 +28,8 @@ class Post extends Service {
 	 * Send notification to Slack channel when a
 	 * Post is created.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @param string $new_status New Status.
 	 * @param string $old_status Old Status.
 	 * @param \WP_Post $post    WP Post.
@@ -65,6 +67,8 @@ class Post extends Service {
 	 *
 	 * This method returns the translated version
 	 * of the Slack message.
+	 *
+	 * @since 1.0.0
 	 *
 	 * @param string $message Slack Message.
 	 * @return string
