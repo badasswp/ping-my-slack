@@ -5,16 +5,14 @@ namespace badasswp\PingMySlack;
 define( 'PINGMYSLACK', __DIR__ . '/vendor/autoload.php' );
 
 /**
- * Fire Notice, if Composer is not installed.
+ * Run Notice, if Composer is not installed.
  *
  * @since 1.0.0
  *
  * @return void
  */
 function ping_my_slack_notice(): void {
-	printf(
-		esc_html__( 'Error: Composer is not installed!', 'ping-my-slack' )
-	);
+	echo esc_html__( 'Error: Composer is not installed!', 'ping-my-slack' );
 }
 
 /**
