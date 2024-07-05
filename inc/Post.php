@@ -19,7 +19,7 @@ class Post extends Service {
 	 * @return void
 	 */
 	public function register(): void {
-		add_action( 'wp_insert_post', [ $this, 'ping_on_post_creation' ], 10, 3 );
+		add_action( 'transition_post_status', [ $this, 'ping_on_post_creation' ], 10, 3 );
 	}
 
 	/**
