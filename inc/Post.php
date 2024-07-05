@@ -59,4 +59,36 @@ class Post extends Service {
 
 		$this->client->ping( $message );
 	}
+
+	/**
+	 * Get Message.
+	 *
+	 * This method returns the translated version
+	 * of the Slack message.
+	 *
+	 * @param string $message Slack Message.
+	 * @return string
+	 */
+	public function get_message( $message ): string {
+		$message = sprintf(
+			'%s %s: %s, %s: %s',
+			esc_html__( $message, 'ping-my-slack' ),
+			esc_html__( 'Post ID', 'ping-my-slack' ),
+			esc_html( $this->post->ID ),
+			esc_html__( 'Post Title', 'ping-my-slack' ),
+			esc_html( $this->post->post_title )
+		);
+
+		/**
+		 * Filter Ping Message.
+		 *
+		 * Set custom Slack message to be sent when the
+		 * user hits the publish button.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @return string
+		 */
+		return apply_filters( "ping_my_slack_${$this->post->post_type}_message", $message, $this->post );
+	}
 }
