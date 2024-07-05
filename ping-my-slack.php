@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	wp_die();
 }
 
-require_once __DIR__ . './init.php';
+require_once __DIR__ . '/init.php';
 
 // Bail out, if Composer is NOT installed.
 if ( ! file_exists( PINGMYSLACK ) ) {
