@@ -10,7 +10,7 @@
 
 namespace PingMySlack;
 
-class Post {
+class Post extends Service {
 	/**
 	 * Bind to WP.
 	 *

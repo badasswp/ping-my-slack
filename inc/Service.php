@@ -36,9 +36,7 @@ abstract class Service {
 	 * @since 1.0.0
 	 */
 	public function __construct() {
-		if ( ! $this->client ) {
-			$this->client = new Client();
-		}
+		$this->client = new Client();
 	}
 
 	/**
