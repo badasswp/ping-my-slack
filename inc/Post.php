@@ -33,8 +33,8 @@ class Post extends Service {
 	 *
 	 * @return void
 	 */
-	public function ping_on_post_creation( $post_id, $post ): void {
-		if ( wp_is_post_revision( $post_id ) || 'post' !== $post->post_type || $update ) {
+	public function ping_on_post_creation( $post_id, $post, $is_update ): void {
+		if ( wp_is_post_revision( $post_id ) || 'post' !== $post->post_type || $is_update ) {
 			return;
 		}
 
