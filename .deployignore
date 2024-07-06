@@ -1,10 +1,10 @@
 *.editorconfig
 *.gitignore
-*.github/
 *.md
 *.xml
 *.neon
 *.xml
+*.yml
 *.scss
 *.babelrc.js
 *.postcssrc.js
@@ -16,5 +16,5 @@
 *.nvmrc
 *.lock
 *.md
-package.json
-vendor/htmlburger/carbon-fields/webpack.config.js
+*package.json
+*webpack.config.js
