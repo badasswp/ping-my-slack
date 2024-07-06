@@ -58,7 +58,7 @@ class Client {
 	public function ping( $message ): void {
 		try {
 			$this->client->send( $message );
-		} catch( \RuntimeException $e ) {
+		} catch ( \RuntimeException $e ) {
 			error_log(
 				sprintf(
 					'Fatal Error: Something went wrong... %s',
