@@ -28,6 +28,7 @@ class Container {
 	public function __construct() {
 		static::$services = [
 			Post::class,
+			Admin::class,
 		];
 	}
 
