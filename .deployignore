@@ -1,6 +1,6 @@
 *.editorconfig
 *.gitignore
-*.github
+*.github/
 *.md
 *.xml
 *.neon
