@@ -21,3 +21,4 @@ vendor/htmlburger/carbon-fields/README.md
 vendor/htmlburger/carbon-fields/package.json
 vendor/htmlburger/carbon-fields/webpack.config.js
 vendor/htmlburger/carbon-fields/yarn.lock
+*.md
