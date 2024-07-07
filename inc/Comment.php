@@ -79,7 +79,7 @@ class Comment extends Service {
 			esc_html__( $message, 'ping-my-slack' ),
 			esc_html__( 'Comment', 'ping-my-slack' ),
 			esc_html( $this->comment->comment_content ),
-			esc_html__( 'Commenter', 'ping-my-slack' ),
+			esc_html__( 'User', 'ping-my-slack' ),
 			esc_html( $this->comment->comment_author_email ),
 			esc_html__( 'Post', 'ping-my-slack' ),
 			esc_html( get_the_title( $this->comment->comment_post_ID ) ),
