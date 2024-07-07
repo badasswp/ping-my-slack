@@ -75,11 +75,11 @@ class Post extends Service {
 	 */
 	public function get_message( $message ): string {
 		$message = sprintf(
-			'%s %s: %s, %s: %s',
+			"Ping: %s \n%s: %s, \n%s: %s",
 			esc_html__( $message, 'ping-my-slack' ),
-			esc_html__( 'Post ID', 'ping-my-slack' ),
+			esc_html__( 'ID', 'ping-my-slack' ),
 			esc_html( $this->post->ID ),
-			esc_html__( 'Post Title', 'ping-my-slack' ),
+			esc_html__( 'Title', 'ping-my-slack' ),
 			esc_html( $this->post->post_title )
 		);
 
