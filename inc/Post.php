@@ -89,6 +89,9 @@ class Post extends Service {
 		 * Set custom Slack message to be sent when the
 		 * user hits the publish button.
 		 *
+		 * @param string   $message Slack Message.
+		 * @param \WP_Post $post    WP Post.
+		 *
 		 * @since 1.0.0
 		 *
 		 * @return string
