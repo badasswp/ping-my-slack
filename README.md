@@ -12,3 +12,31 @@ Ever needed to keep track of what's happening on your website? No need to look f
 * Get notified when a user installs or activates, a Theme or Plugin.
 * Get notified when a user creates, modifies or deletes a User.
 * Get notified when a user logs in & out.
+
+### Hooks
+
+#### `ping_my_slack_${$post_type}_message`
+
+This custom hook (filter) provides the ability to add a custom message to be sent to your Slack Workspace. For e.g. To send a custom message when a Post draft is created by a user, you could do:
+
+```php
+add_filter( 'ping_my_slack_post_message', [ $this, 'custom_message' ] );
+
+public function custom_message( $message, $post ): array {
+    if ( 'draft' === $post->post_status ) {
+        $message = sprintf(
+            'Attention: A Post draft with ID: %d was just created, by %s!',
+            $post->ID,
+            get_user_by( 'id', $post->post_author )->display_name
+        );
+    }
+
+    return (string) $message;
+}
+```
+
+**Parameters**
+
+- message _`{string}`_ By default this will be the passed message.
+- post _`{WP_Post}`_ By default this will be the WP Post object.
+<br/>
