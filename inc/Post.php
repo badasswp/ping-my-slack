@@ -75,12 +75,16 @@ class Post extends Service {
 	 */
 	public function get_message( $message ): string {
 		$message = sprintf(
-			"Ping: %s \n%s: %s, \n%s: %s",
+			"Ping: %s \n%s: %s, \n%s: %s, \n%s: %s, \n%s: %s",
 			esc_html__( $message, 'ping-my-slack' ),
 			esc_html__( 'ID', 'ping-my-slack' ),
 			esc_html( $this->post->ID ),
 			esc_html__( 'Title', 'ping-my-slack' ),
-			esc_html( $this->post->post_title )
+			esc_html( $this->post->post_title ),
+			esc_html__( 'User', 'ping-my-slack' ),
+			esc_html( get_user_by( 'id', $this->post->post_author )->user_login ),
+			esc_html__( 'Date', 'ping-my-slack' ),
+			esc_html( date( 'H:i:s, d-m-Y' ) )
 		);
 
 		/**
