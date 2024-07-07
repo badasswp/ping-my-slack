@@ -83,7 +83,7 @@ class User extends Service {
 			"Ping: %s \n%s: %s, \n%s: %s, \n%s: %s",
 			esc_html__( 'A User just logged out!', 'ping-my-slack' ),
 			esc_html__( 'ID', 'ping-my-slack' ),
-			esc_html( $user->ID ),
+			esc_html( $user_id ),
 			esc_html__( 'User', 'ping-my-slack' ),
 			esc_html( get_user_by( 'id', $user_id )->user_login ),
 			esc_html__( 'Date', 'ping-my-slack' ),
