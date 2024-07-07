@@ -29,10 +29,10 @@ class User extends Service {
 	 * This method sends event logging to the Slack Workspace
 	 * on user login.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @param string   $user_login User Login.
 	 * @param \WP_User $user       WP User.
-	 *
-	 * @since 1.0.0
 	 *
 	 * @return void
 	 */
@@ -54,10 +54,10 @@ class User extends Service {
 		 * Set custom Slack message to be sent when the
 		 * user logs in.
 		 *
+		 * @since 1.0.0
+		 *
 		 * @param string   $message Slack Message.
 		 * @param \WP_User $user    WP User.
-		 *
-		 * @since 1.0.0
 		 *
 		 * @return string
 		 */
