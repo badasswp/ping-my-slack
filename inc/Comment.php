@@ -46,11 +46,11 @@ class Comment extends Service {
 		}
 
 		switch ( $new_status ) {
-			case 'unapproved':
+			case 'hold':
 				$message = $this->get_message( 'A Comment draft was just created!' );
 				break;
 
-			case 'approved':
+			case 'approve':
 				$message = $this->get_message( 'A Comment was just published!' );
 				break;
 
