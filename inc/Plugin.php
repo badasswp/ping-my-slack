@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin class.
+ * Plugin Class.
  *
  * Set up the singleton instance, initialise
  * and run the plugin logic.

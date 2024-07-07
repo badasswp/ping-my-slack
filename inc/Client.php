@@ -1,6 +1,6 @@
 <?php
 /**
- * Client class.
+ * Client Class.
  *
  * This class handles sending Slack notifications
  * via API calls.
