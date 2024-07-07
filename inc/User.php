@@ -45,7 +45,7 @@ class User extends Service {
 			esc_html__( 'User', 'ping-my-slack' ),
 			esc_html( $user_login ),
 			esc_html__( 'Date', 'ping-my-slack' ),
-			esc_html( date( 'H:i:s, d-m-Y' ) )
+			esc_html( gmdate( 'H:i:s, d-m-Y' ) )
 		);
 
 		/**
@@ -87,7 +87,7 @@ class User extends Service {
 			esc_html__( 'User', 'ping-my-slack' ),
 			esc_html( get_user_by( 'id', $user_id )->user_login ),
 			esc_html__( 'Date', 'ping-my-slack' ),
-			esc_html( date( 'H:i:s, d-m-Y' ) )
+			esc_html( gmdate( 'H:i:s, d-m-Y' ) )
 		);
 
 		/**
