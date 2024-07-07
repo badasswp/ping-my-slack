@@ -29,6 +29,7 @@ class Container {
 		static::$services = [
 			Post::class,
 			Admin::class,
+			User::class,
 		];
 	}
 
