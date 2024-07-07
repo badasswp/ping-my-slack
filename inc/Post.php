@@ -19,14 +19,14 @@ class Post extends Service {
 	 * @return void
 	 */
 	public function register(): void {
-		add_action( 'transition_post_status', [ $this, 'ping_on_post_creation' ], 10, 3 );
+		add_action( 'transition_post_status', [ $this, 'ping_on_post_status_change' ], 10, 3 );
 	}
 
 	/**
-	 * Ping on Post Creation.
+	 * Ping on Post Status change.
 	 *
 	 * Send notification to Slack channel when a
-	 * Post is created.
+	 * Post status changes.
 	 *
 	 * @since 1.0.0
 	 *
@@ -36,7 +36,7 @@ class Post extends Service {
 	 *
 	 * @return void
 	 */
-	public function ping_on_post_creation( $new_status, $old_status, $post ): void {
+	public function ping_on_post_status_change( $new_status, $old_status, $post ): void {
 		// Get post.
 		$this->post = $post;
 
