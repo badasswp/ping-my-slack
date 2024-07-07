@@ -66,7 +66,45 @@ class User extends Service {
 		$this->client->ping( $message );
 	}
 
-	public function ping_on_user_logout(): void {
+	/**
+	 * Ping on User logout.
+	 *
+	 * This method sends event logging to the Slack Workspace
+	 * on user logout.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param int $user_id User ID.
+	 *
+	 * @return void
+	 */
+	public function ping_on_user_logout( $user_id ): void {
+		$message = sprintf(
+			"Ping: %s \n%s: %s, \n%s: %s, \n%s: %s",
+			esc_html__( 'A User just logged out!', 'ping-my-slack' ),
+			esc_html__( 'ID', 'ping-my-slack' ),
+			esc_html( $user->ID ),
+			esc_html__( 'User', 'ping-my-slack' ),
+			esc_html( get_user_by( 'id', $user_id )->user_login ),
+			esc_html__( 'Date', 'ping-my-slack' ),
+			esc_html( date( 'H:i:s, d-m-Y' ) )
+		);
 
+		/**
+		 * Filter Ping Message.
+		 *
+		 * Set custom Slack message to be sent when the
+		 * user logs out.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param string   $message Slack Message.
+		 * @param \WP_User $user    WP User.
+		 *
+		 * @return string
+		 */
+		$message = apply_filters( "ping_my_slack_logout_message", $message, $user );
+
+		$this->client->ping( $message );
 	}
 }
