@@ -100,6 +100,6 @@ class Comment extends Service {
 		 *
 		 * @return string
 		 */
-		return apply_filters( "ping_my_slack_comment_message", $message, $this->comment );
+		return apply_filters( 'ping_my_slack_comment_message', $message, $this->comment );
 	}
 }
