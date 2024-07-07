@@ -61,7 +61,7 @@ class User extends Service {
 		 *
 		 * @return string
 		 */
-		$message = apply_filters( "ping_my_slack_login_message", $message, $user );
+		$message = apply_filters( 'ping_my_slack_login_message', $message, $user );
 
 		$this->client->ping( $message );
 	}
@@ -103,7 +103,7 @@ class User extends Service {
 		 *
 		 * @return string
 		 */
-		$message = apply_filters( "ping_my_slack_logout_message", $message, $user );
+		$message = apply_filters( 'ping_my_slack_logout_message', $message, $user );
 
 		$this->client->ping( $message );
 	}
