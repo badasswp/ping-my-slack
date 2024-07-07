@@ -8,6 +8,8 @@
  * @package PingMySlack;
  */
 
+namespace PingMySlack;
+
 class User extends Service {
 	/**
 	 * Bind to WP.
