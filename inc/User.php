@@ -38,7 +38,7 @@ class User extends Service {
 	 */
 	public function ping_on_user_login( $user_login, $user ): void {
 		$message = sprintf(
-			"Ping: %s \n%s: %s, \n%s: %s, \n%s: %s",
+			"Ping: %s \n%s: %s \n%s: %s \n%s: %s",
 			esc_html__( 'A User just logged in!', 'ping-my-slack' ),
 			esc_html__( 'ID', 'ping-my-slack' ),
 			esc_html( $user->ID ),
@@ -80,7 +80,7 @@ class User extends Service {
 	 */
 	public function ping_on_user_logout( $user_id ): void {
 		$message = sprintf(
-			"Ping: %s \n%s: %s, \n%s: %s, \n%s: %s",
+			"Ping: %s \n%s: %s \n%s: %s \n%s: %s",
 			esc_html__( 'A User just logged out!', 'ping-my-slack' ),
 			esc_html__( 'ID', 'ping-my-slack' ),
 			esc_html( $user_id ),
