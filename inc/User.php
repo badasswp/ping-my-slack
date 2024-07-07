@@ -19,7 +19,7 @@ class User extends Service {
 	 * @return void
 	 */
 	public function register(): void {
-		add_action( 'wp_login', [ $this, 'ping_on_user_login' ] );
+		add_action( 'wp_login', [ $this, 'ping_on_user_login' ], 10, 2 );
 		add_action( 'wp_logout', [ $this, 'ping_on_user_logout' ] );
 	}
 
