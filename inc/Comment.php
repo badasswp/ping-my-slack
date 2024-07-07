@@ -50,7 +50,7 @@ class Comment extends Service {
 				$message = $this->get_message( 'A Comment draft was just created!' );
 				break;
 
-			case 'approve':
+			case 'approved':
 				$message = $this->get_message( 'A Comment was just published!' );
 				break;
 
