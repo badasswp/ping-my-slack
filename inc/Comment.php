@@ -46,7 +46,7 @@ class Comment extends Service {
 		}
 
 		switch ( $new_status ) {
-			case 'hold':
+			case 'pending':
 				$message = $this->get_message( 'A Comment draft was just created!' );
 				break;
 
