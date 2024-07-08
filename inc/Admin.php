@@ -104,6 +104,19 @@ class Admin extends Service {
 			],
 		];
 
+		/**
+		 * Filter the Admin Fields.
+		 *
+		 * This provides a way to admit in new Admin fields
+		 * that extend the plugin's features.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param mixed[] $fields Admin Fields.
+		 * @return mixed[]
+		 */
+		$fields = (array) apply_filters( 'ping_my_slack_admin_fields', $fields );
+
 		return array_map(
 			function ( $field ) {
 				$field_type = $field['type'] ?? '';
