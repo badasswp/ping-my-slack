@@ -63,6 +63,16 @@ class Admin extends Service {
 				'channel'  => carbon_get_theme_option( 'ping_my_slack_channel' ),
 			]
 		);
+
+		/**
+		 * Fire after saving default options.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param mixed[] $options Plugin options.
+		 * @return void
+		 */
+		do_action( 'ping_my_slack_admin_page', get_option( 'ping_my_slack', [] ) );
 	}
 
 	/**
