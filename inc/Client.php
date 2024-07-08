@@ -65,6 +65,19 @@ class Client {
 					$e->getMessage()
 				)
 			);
+
+			/**
+			 * Fire after Exception is caught.
+			 *
+			 * This action provides a way to use the caught
+			 * exception for logging purposes.
+			 *
+			 * @since 1.0.0
+			 *
+			 * @param \RuntimeException $e Exception object.
+			 * @return void
+			 */
+			do_action( 'ping_my_slack_on_ping_error', $e );
 		}
 	}
 }
