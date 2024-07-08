@@ -67,6 +67,9 @@ class Admin extends Service {
 		/**
 		 * Fire after saving default options.
 		 *
+		 * This action provides a way to save additional field
+		 * options that extend's the plugin features.
+		 *
 		 * @since 1.0.0
 		 *
 		 * @param mixed[] $options Plugin options.
@@ -117,7 +120,7 @@ class Admin extends Service {
 		/**
 		 * Filter the Admin Fields.
 		 *
-		 * This provides a way to admit in new Admin fields
+		 * This filter provides a way to admit in new Admin fields
 		 * that extend the plugin's features.
 		 *
 		 * @since 1.0.0
