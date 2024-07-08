@@ -75,7 +75,6 @@ class User extends Service {
 	 * @since 1.0.0
 	 *
 	 * @param int $user_id User ID.
-	 *
 	 * @return void
 	 */
 	public function ping_on_user_logout( $user_id ): void {
