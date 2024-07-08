@@ -42,3 +42,30 @@ public function custom_message( $message, $post ): array {
 - message _`{string}`_ By default this will be the passed message.
 - post _`{WP_Post}`_ By default this will be the WP Post object.
 <br/>
+
+#### `ping_my_slack_admin_fields`
+
+This custom hook (filter) provides a way to implement new Admin fields in the plugin's admin page. For e.g. To add a new text field, you could do:
+
+```php
+add_filter( 'ping_my_slack_admin_fields', [ $this, 'custom_field' ] );
+
+public function custom_field( $fields ): array {
+    return wp_parse_args(
+        [
+            'telephone' => [
+                'type'  => 'text',
+                'name'  => 'ping_my_slack_telephone',
+                'html'  => esc_html__( 'My Telephone', 'ping-my-slack' ),
+                'label' => esc_html__( '(555) 555-1234', 'ping-my-slack' ),
+            ]
+        ],
+        $fields
+    );
+}
+```
+
+**Parameters**
+
+- fields _`{mixed[]}`_ By default this will be an associative array, containing fields options.
+<br/>
