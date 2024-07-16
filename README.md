@@ -69,3 +69,30 @@ public function custom_field( $fields ): array {
 
 - fields _`{mixed[]}`_ By default this will be an associative array, containing fields options.
 <br/>
+
+#### `ping_my_slack_on_ping_error`
+
+This custom hook (action) fires immediately after the Ping call is made and an exception is thrown. For e.g. you can capture errors here like so:
+
+```php
+add_action( 'ping_my_slack_on_ping_error', [ $this, 'log_ping_errors' ], 10, 1 );
+
+public function log_ping_errors( $e ): void {
+    if ( $e instanceOf \Exception ) {
+        wp_insert_post(
+            [
+                'post_type'   => 'ping_my_slack_logs',
+                'post_title'  => sprintf(
+                  'Fatal Error: %s'
+                  (string) $e->getMessage()
+                ),
+            ]
+        )
+    }
+}
+```
+
+**Parameters**
+
+- e _`{Exception}`_ By default this will be an Exception.
+<br/>
