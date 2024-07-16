@@ -96,3 +96,29 @@ public function log_ping_errors( $e ): void {
 
 - e _`{Exception}`_ By default this will be an Exception.
 <br/>
+
+#### `ping_my_slack_comment_message`
+
+This custom hook (filter) provides the ability to add a custom `Comment` message to be sent to your Slack Workspace. For e.g. :
+
+```php
+add_filter( 'ping_my_slack_comment_message', [ $this, 'comment_message' ], 10, 2 );
+
+public function comment_message( $message, $comment ): array {
+    if ( 'trash' === $comment->comment_approved ) {
+        $message = sprintf(
+            'Attention: A Comment with ID: %d was just trashed, by %s!',
+            $comment->ID,
+            wp_get_current_user()->display_name
+        );
+    }
+
+    return (string) $message;
+}
+```
+
+**Parameters**
+
+- message _`{string}`_ By default this will be the passed message.
+- comment _`{WP_Comment}`_ By default this will be the WP Comment object.
+<br/>
