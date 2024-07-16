@@ -71,33 +71,6 @@ public function custom_field( $fields ): array {
 - fields _`{mixed[]}`_ By default this will be an associative array, containing fields options.
 <br/>
 
-#### `ping_my_slack_on_ping_error`
-
-This custom hook (action) fires immediately after the Ping call is made and an exception is thrown. For e.g. you can capture errors here like so:
-
-```php
-add_action( 'ping_my_slack_on_ping_error', [ $this, 'log_ping_errors' ], 10, 1 );
-
-public function log_ping_errors( $e ): void {
-    if ( $e instanceOf \Exception ) {
-        wp_insert_post(
-            [
-                'post_type'   => 'ping_my_slack_logs',
-                'post_title'  => sprintf(
-                  'Fatal Error: %s'
-                  (string) $e->getMessage()
-                ),
-            ]
-        )
-    }
-}
-```
-
-**Parameters**
-
-- e _`{Exception}`_ By default this will be an Exception.
-<br/>
-
 #### `ping_my_slack_comment_message`
 
 This custom hook (filter) provides the ability to add a custom `Comment` message to be sent to your Slack Workspace. For e.g. To send a custom message when a Comment is trashed by a user, you could do:
@@ -123,4 +96,31 @@ public function comment_message( $message, $comment, $event ): string {
 - message _`{string}`_ By default this will be the passed message.
 - comment _`{WP_Comment}`_ By default this will be the WP Comment object.
 - event _`{string}`_ By default this will be the event that just happened.
+<br/>
+
+#### `ping_my_slack_on_ping_error`
+
+This custom hook (action) fires immediately after the Ping call is made and an exception is thrown. For e.g. you can capture errors here like so:
+
+```php
+add_action( 'ping_my_slack_on_ping_error', [ $this, 'log_ping_errors' ], 10, 1 );
+
+public function log_ping_errors( $e ): void {
+    if ( $e instanceOf \Exception ) {
+        wp_insert_post(
+            [
+                'post_type'   => 'ping_my_slack_logs',
+                'post_title'  => sprintf(
+                  'Fatal Error: %s'
+                  (string) $e->getMessage()
+                ),
+            ]
+        )
+    }
+}
+```
+
+**Parameters**
+
+- e _`{Exception}`_ By default this will be an Exception.
 <br/>
