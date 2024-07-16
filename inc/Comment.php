@@ -37,13 +37,16 @@ class Comment extends Service {
 	 * @return void
 	 */
 	public function ping_on_comment_status_change( $new_status, $old_status, $comment ): void {
-		// Get comment.
+		// Get Comment.
 		$this->comment = $comment;
 
 		// Bail out, if not changed.
 		if ( $old_status === $new_status ) {
 			return;
 		}
+
+		// Get Event Type.
+		$this->event = $new_status;
 
 		switch ( $new_status ) {
 			case 'approved':
@@ -93,9 +96,10 @@ class Comment extends Service {
 		 *
 		 * @param string      $message Slack Message.
 		 * @param \WP_Comment $comment WP Comment.
+		 * @param string      $event   Event Type.
 		 *
 		 * @return string
 		 */
-		return apply_filters( 'ping_my_slack_comment_message', $message, $this->comment );
+		return apply_filters( 'ping_my_slack_comment_message', $message, $this->comment, $this->event );
 	}
 }
