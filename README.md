@@ -22,10 +22,10 @@ Ever needed to keep track of what's happening on your website? No need to look f
 This custom hook (filter) provides the ability to add a custom `Post` message to be sent to your Slack Workspace. For e.g. To send a custom message when a Post draft is created by a user, you could do:
 
 ```php
-add_filter( 'ping_my_slack_post_message', [ $this, 'post_message' ] );
+add_filter( 'ping_my_slack_post_message', [ $this, 'post_message' ], 10, 3 );
 
-public function post_message( $message, $post ): array {
-    if ( 'draft' === $post->post_status ) {
+public function post_message( $message, $post, $event ): string {
+    if ( 'draft' === $event ) {
         $message = sprintf(
             'Attention: A Post draft with ID: %d was just created, by %s!',
             $post->ID,
@@ -41,6 +41,7 @@ public function post_message( $message, $post ): array {
 
 - message _`{string}`_ By default this will be the passed message.
 - post _`{WP_Post}`_ By default this will be the WP Post object.
+- event _`{string}`_ By default this will be the event that just happened.
 <br/>
 
 #### `ping_my_slack_admin_fields`

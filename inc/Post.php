@@ -37,13 +37,16 @@ class Post extends Service {
 	 * @return void
 	 */
 	public function ping_on_post_status_change( $new_status, $old_status, $post ): void {
-		// Get post.
+		// Get Post.
 		$this->post = $post;
 
 		// Bail out, if not changed.
 		if ( $old_status === $new_status || 'auto-draft' === $new_status ) {
 			return;
 		}
+
+		// Get Event Type.
+		$this->event = $new_status;
 
 		switch ( $new_status ) {
 			case 'draft':
@@ -97,9 +100,10 @@ class Post extends Service {
 		 *
 		 * @param string   $message Slack Message.
 		 * @param \WP_Post $post    WP Post.
+		 * @param string   $event   Event Type.
 		 *
 		 * @return string
 		 */
-		return apply_filters( "ping_my_slack_${$this->post->post_type}_message", $message, $this->post );
+		return apply_filters( "ping_my_slack_${$this->post->post_type}_message", $message, $this->post, $this->event );
 	}
 }
