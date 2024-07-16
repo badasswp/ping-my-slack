@@ -99,7 +99,7 @@ public function log_ping_errors( $e ): void {
 
 #### `ping_my_slack_comment_message`
 
-This custom hook (filter) provides the ability to add a custom `Comment` message to be sent to your Slack Workspace. For e.g. :
+This custom hook (filter) provides the ability to add a custom `Comment` message to be sent to your Slack Workspace. For e.g. You can customise the trash message like so:
 
 ```php
 add_filter( 'ping_my_slack_comment_message', [ $this, 'comment_message' ], 10, 2 );
