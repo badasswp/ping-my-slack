@@ -124,3 +124,28 @@ public function log_ping_errors( $e ): void {
 
 - e _`{Exception}`_ By default this will be an Exception.
 <br/>
+
+#### `ping_my_slack_login_message`
+
+This custom hook (filter) provides the ability to add a custom `Login` message to be sent to your Slack Workspace. For e.g. To send a custom message when an Administrator logs in, you could do:
+
+```php
+add_filter( 'ping_my_slack_login_message', [ $this, 'login_message' ], 10, 2 );
+
+public function login_message( $message, $user ): string {
+    if ( in_array( 'administrator', $user->roles, true ) ) {
+        $message = sprintf(
+            'Attention: An Administrator with ID: %d just logged in!',
+            $user->ID
+        );
+    }
+
+    return (string) $message;
+}
+```
+
+**Parameters**
+
+- message _`{string}`_ By default this will be the passed message.
+- user _`{WP_User}`_ By default this will be the WP User object.
+<br/>
