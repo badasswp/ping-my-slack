@@ -8,7 +8,7 @@
  * @package PingMySlack
  */
 
-namespace PingMySlack;
+namespace PingMySlack\Abstracts;
 
 use PingMySlack\Core\Client;
 use PingMySlack\Interfaces\Kernel;
