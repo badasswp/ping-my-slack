@@ -10,6 +10,8 @@
 
 namespace PingMySlack;
 
+use PingMySlack\Core\Container;
+
 class Plugin {
 	/**
 	 * Plugin instance.

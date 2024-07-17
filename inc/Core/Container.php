@@ -8,7 +8,7 @@
  * @package PingMySlack
  */
 
-namespace PingMySlack;
+namespace PingMySlack\Core;
 
 class Container {
 	/**
