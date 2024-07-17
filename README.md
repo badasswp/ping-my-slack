@@ -149,3 +149,28 @@ public function login_message( $message, $user ): string {
 - message _`{string}`_ By default this will be the passed message.
 - user _`{WP_User}`_ By default this will be the WP User object.
 <br/>
+
+#### `ping_my_slack_logout_message`
+
+This custom hook (filter) provides the ability to add a custom `Logout` message to be sent to your Slack Workspace. For e.g. To send a custom message when an Administrator logs out, you could do:
+
+```php
+add_filter( 'ping_my_slack_logout_message', [ $this, 'logout_message' ], 10, 2 );
+
+public function logout_message( $message, $user ): string {
+    if ( in_array( 'administrator', $user->roles, true ) ) {
+        $message = sprintf(
+            'Attention: An Administrator with ID: %d just logged out!',
+            $user->ID
+        );
+    }
+
+    return (string) $message;
+}
+```
+
+**Parameters**
+
+- message _`{string}`_ By default this will be the passed message.
+- user _`{WP_User}`_ By default this will be the WP User object.
+<br/>
