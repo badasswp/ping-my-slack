@@ -10,6 +10,7 @@
 
 namespace PingMySlack;
 
+use PingMySlack\Core\Client;
 use PingMySlack\Interfaces\Kernel;
 
 abstract class Service implements Kernel {
