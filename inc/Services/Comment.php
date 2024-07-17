@@ -8,9 +8,11 @@
  * @package PingMySlack
  */
 
-namespace PingMySlack;
+namespace PingMySlack\Services;
 
-class Comment extends Service {
+use PingMySlack\Interfaces\Kernel;
+
+class Comment extends Service implements Kernel {
 	/**
 	 * Bind to WP.
 	 *
