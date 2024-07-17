@@ -13,6 +13,8 @@ namespace PingMySlack\Services;
 use Carbon_Fields\Field;
 use Carbon_Fields\Container;
 use Carbon_Fields\Carbon_Fields;
+
+use PingMySlack\Abstracts\Service;
 use PingMySlack\Interfaces\Kernel;
 
 class Admin extends Service implements Kernel {
