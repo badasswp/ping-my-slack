@@ -8,13 +8,14 @@
  * @package PingMySlack
  */
 
-namespace PingMySlack;
+namespace PingMySlack\Services;
 
-use Carbon_Fields\Carbon_Fields;
-use Carbon_Fields\Container;
 use Carbon_Fields\Field;
+use Carbon_Fields\Container;
+use Carbon_Fields\Carbon_Fields;
+use PingMySlack\Interfaces\Kernel;
 
-class Admin extends Service {
+class Admin extends Service implements Kernel {
 	/**
 	 * Bind to WP.
 	 *
