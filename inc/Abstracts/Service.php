@@ -10,7 +10,9 @@
 
 namespace PingMySlack;
 
-abstract class Service {
+use PingMySlack\Interfaces\Kernel;
+
+abstract class Service implements Kernel {
 	/**
 	 * Plugin Services.
 	 *

@@ -8,6 +8,8 @@
  * @package PingMySlack
  */
 
+namespace PingMySlack\Interfaces;
+
 interface Kernel {
 	/**
 	 * Register call.
