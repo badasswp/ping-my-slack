@@ -10,6 +10,7 @@
 
 namespace PingMySlack\Services;
 
+use PingMySlack\Service;
 use PingMySlack\Interfaces\Kernel;
 
 class Comment extends Service implements Kernel {
