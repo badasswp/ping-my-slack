@@ -10,7 +10,7 @@
 
 namespace PingMySlack\Services;
 
-use PingMySlack\Service;
+use PingMySlack\Abstracts\Service;
 use PingMySlack\Interfaces\Kernel;
 
 class Post extends Service implements Kernel {
