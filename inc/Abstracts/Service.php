@@ -48,6 +48,8 @@ abstract class Service implements Kernel {
 	 * This method gets a single Instance for each
 	 * Plugin service.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @return static
 	 */
 	public static function get_instance() {
