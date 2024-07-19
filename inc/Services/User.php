@@ -23,6 +23,7 @@ class User extends Service implements Kernel {
 	 */
 	public function register(): void {
 		add_action( 'user_register', [ $this, 'ping_on_user_creation' ], 10, 2 );
+		add_action( 'deleted_user', [ $this, 'ping_on_user_deletion' ], 10, 3 );
 	}
 
 	/**
@@ -64,6 +65,47 @@ class User extends Service implements Kernel {
 		 * @return string
 		 */
 		$message = apply_filters( 'ping_my_slack_user_creation_message', $message, $user_id );
+
+		$this->client->ping( $message );
+	}
+
+	/*
+	 * Ping on User Deletion.
+	 *
+	 * This method sends event logging to the Slack Workspace
+	 * on user deletion.
+	 *
+	 * @param int      $user_id  ID of the deleted user.
+	 * @param int|null $reassign ID of the user to reassign posts and links to.
+	 *                           Default null, for no reassignment.
+	 * @param WP_User  $user     WP_User object of the deleted user.
+	 */
+	public function ping_on_user_deletion( $user_id, $reassign, $user ) {
+		$message = sprintf(
+			"Ping: %s \n%s: %s \n%s: %s \n%s: %s",
+			esc_html__( 'A User was just deleted!', 'ping-my-slack' ),
+			esc_html__( 'ID', 'ping-my-slack' ),
+			esc_html( $user_id ),
+			esc_html__( 'User', 'ping-my-slack' ),
+			esc_html( $user->user_login ),
+			esc_html__( 'Date', 'ping-my-slack' ),
+			esc_html( gmdate( 'H:i:s, d-m-Y' ) )
+		);
+
+		/**
+		 * Filter Ping Message.
+		 *
+		 * Set custom Slack message to be sent when a previous
+		 * user is deleted.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param string   $message Slack Message.
+		 * @param int      $user_id User ID.
+		 *
+		 * @return string
+		 */
+		$message = apply_filters( 'ping_my_slack_user_deletion_message', $message, $user_id );
 
 		$this->client->ping( $message );
 	}
