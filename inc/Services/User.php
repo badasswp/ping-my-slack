@@ -41,7 +41,7 @@ class User extends Service implements Kernel {
 	public function ping_on_user_creation( $user_id, $user_data ): void {
 		$message = sprintf(
 			"Ping: %s \n%s: %s \n%s: %s \n%s: %s",
-			esc_html__( 'A User just created now!', 'ping-my-slack' ),
+			esc_html__( 'A new User was just created now!', 'ping-my-slack' ),
 			esc_html__( 'ID', 'ping-my-slack' ),
 			esc_html( $user_id ),
 			esc_html__( 'User', 'ping-my-slack' ),
