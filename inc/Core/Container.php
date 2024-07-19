@@ -11,6 +11,7 @@
 namespace PingMySlack\Core;
 
 use PingMySlack\Services\Post;
+use PingMySlack\Services\User;
 use PingMySlack\Services\Access;
 use PingMySlack\Services\Admin;
 use PingMySlack\Services\Comment;
@@ -36,6 +37,7 @@ class Container {
 			Admin::class,
 			Comment::class,
 			Post::class,
+			User::class
 		];
 	}
 

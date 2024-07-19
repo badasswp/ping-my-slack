@@ -1,0 +1,70 @@
+<?php
+/**
+ * User Class.
+ *
+ * This class handles the pinging of user account creation,
+ * modification & deletion.
+ *
+ * @package PingMySlack;
+ */
+
+namespace PingMySlack\Services;
+
+use PingMySlack\Abstracts\Service;
+use PingMySlack\Interfaces\Kernel;
+
+class User extends Service implements Kernel {
+	/**
+	 * Bind to WP.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
+	 */
+	public function register(): void {
+		add_action( 'user_register', [ $this, 'ping_on_user_creation' ], 10, 2 );
+	}
+
+	/**
+	 * Ping on User Creation.
+	 *
+	 * This method sends event logging to the Slack Workspace
+	 * on user creation.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param int     $user_id   User ID.
+	 * @param mixed[] $user_data User Data.
+	 *
+	 * @return void
+	 */
+	public function ping_on_user_creation( $user_id, $user_data ): void {
+		$message = sprintf(
+			"Ping: %s \n%s: %s \n%s: %s \n%s: %s",
+			esc_html__( 'A User just created now!', 'ping-my-slack' ),
+			esc_html__( 'ID', 'ping-my-slack' ),
+			esc_html( $user_id ),
+			esc_html__( 'User', 'ping-my-slack' ),
+			esc_html( get_user_by( 'id', $user_id )->user_login ),
+			esc_html__( 'Date', 'ping-my-slack' ),
+			esc_html( gmdate( 'H:i:s, d-m-Y' ) )
+		);
+
+		/**
+		 * Filter Ping Message.
+		 *
+		 * Set custom Slack message to be sent when a new
+		 * user is created.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param string   $message Slack Message.
+		 * @param int      $user_id User ID.
+		 *
+		 * @return string
+		 */
+		$message = apply_filters( 'ping_my_slack_user_creation_message', $message, $user_id );
+
+		$this->client->ping( $message );
+	}
+}
