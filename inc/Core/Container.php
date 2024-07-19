@@ -37,7 +37,7 @@ class Container {
 			Admin::class,
 			Comment::class,
 			Post::class,
-			User::class
+			User::class,
 		];
 	}
 
