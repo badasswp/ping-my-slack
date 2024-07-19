@@ -32,10 +32,10 @@ class Container {
 	 */
 	public function __construct() {
 		static::$services = [
-			Post::class,
+			Access::class,
 			Admin::class,
-			User::class,
 			Comment::class,
+			Post::class,
 		];
 	}
 

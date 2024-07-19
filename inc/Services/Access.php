@@ -1,9 +1,9 @@
 <?php
 /**
- * User Class.
+ * Access Class.
  *
- * This class handles the pinging of user events
- * to the Slack workspace.
+ * This class handles the pinging of user login/logout
+ * events to the Slack workspace.
  *
  * @package PingMySlack;
  */
@@ -13,7 +13,7 @@ namespace PingMySlack\Services;
 use PingMySlack\Abstracts\Service;
 use PingMySlack\Interfaces\Kernel;
 
-class User extends Service implements Kernel {
+class Access extends Service implements Kernel {
 	/**
 	 * Bind to WP.
 	 *
