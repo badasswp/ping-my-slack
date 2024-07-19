@@ -76,6 +76,8 @@ class User extends Service implements Kernel {
 	 * This method sends event logging to the Slack Workspace
 	 * on user modification/update.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @param int   $user_id      The ID of the user that was just updated.
 	 * @param array $userdata     The array of user data that was updated.
 	 * @param array $userdata_raw The unedited array of user data that was updated.
@@ -115,6 +117,8 @@ class User extends Service implements Kernel {
 	 *
 	 * This method sends event logging to the Slack Workspace
 	 * on user deletion.
+	 *
+	 * @since 1.0.0
 	 *
 	 * @param int      $user_id  ID of the deleted user.
 	 * @param int|null $reassign ID of the user to reassign posts and links to.
