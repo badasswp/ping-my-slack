@@ -103,6 +103,6 @@ class Comment extends Service implements Kernel {
 		 *
 		 * @return string
 		 */
-		return apply_filters( 'ping_my_slack_comment_message', $message, $this->comment, $this->event );
+		return (string) apply_filters( 'ping_my_slack_comment_message', $message, $this->comment, $this->event );
 	}
 }
