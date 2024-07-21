@@ -44,4 +44,22 @@ class CommentTest extends TestCase {
 
 		$this->assertConditionsMet();
 	}
+
+	public function test_ping_on_comment_status_change_passes() {
+		$comment = Mockery::mock( \WP_Comment::class )->makePartial();
+		$comment->shouldAllowMockingProtectedMethods();
+
+		$this->comment->shouldReceive( 'get_message' )
+			->once()
+			->with( 'A Comment was just trashed!' )
+			->andReturn( 'A Comment was just trashed!' );
+
+		$this->client->shouldReceive( 'ping' )
+			->once()
+			->with( 'A Comment was just trashed!' );
+
+		$this->comment->ping_on_comment_status_change( 'trash', 'approved', $comment );
+
+		$this->assertConditionsMet();
+	}
 }
