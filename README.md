@@ -17,7 +17,7 @@ Ever needed to keep track of what's happening on your website? No need to look f
 
 ### Hooks
 
-#### `ping_my_slack_${$post_type}_message`
+#### `ping_my_slack_{$post_type}_message`
 
 This custom hook (filter) provides the ability to add a custom `Post` message to be sent to your Slack Workspace. For e.g. To send a custom message when a Post draft is created by a user, you could do:
 
