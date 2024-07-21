@@ -23,7 +23,7 @@ class Client {
 	 *
 	 * @var SlackClient
 	 */
-	private SlackClient $client;
+	private SlackClient $slack;
 
 	/**
 	 * Set up.
@@ -35,7 +35,7 @@ class Client {
 	public function __construct() {
 		$settings = get_option( 'ping_my_slack', [] );
 
-		$this->client = new SlackClient(
+		$this->slack = new SlackClient(
 			$settings['webhook'] ?? '',
 			[
 				'channel'  => $settings['channel'] ?? '',
@@ -57,7 +57,7 @@ class Client {
 	 */
 	public function ping( $message ): void {
 		try {
-			$this->client->send( $message );
+			$this->slack->send( $message );
 		} catch ( \RuntimeException $e ) {
 			error_log(
 				sprintf(
