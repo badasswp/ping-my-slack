@@ -14,6 +14,13 @@ use PingMySlack\Services\Comment;
 class CommentTest extends TestCase {
 	public function setUp(): void {
 		\WP_Mock::setUp();
+
+		$this->client = Mockery::mock( Client::class )->makePartial();
+		$this->client->shouldAllowMockingProtectedMethods();
+
+		$this->comment = Mockery::mock( Comment::class )->makePartial();
+		$this->comment->shouldAllowMockingProtectedMethods();
+		$this->comment->client = $this->client;
 	}
 
 	public function tearDown(): void {
@@ -21,16 +28,9 @@ class CommentTest extends TestCase {
 	}
 
 	public function test_register() {
-		$client = Mockery::mock( Client::class )->makePartial();
-		$client->shouldAllowMockingProtectedMethods();
+		\WP_Mock::expectActionAdded( 'transition_comment_status', [ $this->comment, 'ping_on_comment_status_change' ], 10, 3 );
 
-		$comment = Mockery::mock( Comment::class )->makePartial();
-		$comment->shouldAllowMockingProtectedMethods();
-		$comment->client = $client;
-
-		\WP_Mock::expectActionAdded( 'transition_comment_status', [ $comment, 'ping_on_comment_status_change' ], 10, 3 );
-
-		$comment->register();
+		$this->comment->register();
 
 		$this->assertConditionsMet();
 	}
