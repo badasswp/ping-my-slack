@@ -24,7 +24,11 @@ jobs:
 
     - name: Run Linting
       run: |
-        composer run-script lint
+        composer run lint
+
+    - name: Run Testing
+      run: |
+        composer run test
 
   build:
     name: Build
