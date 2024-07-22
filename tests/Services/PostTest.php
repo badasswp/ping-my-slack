@@ -38,4 +38,13 @@ class PostTest extends TestCase {
 
 		$this->assertConditionsMet();
 	}
+
+	public function test_ping_on_post_status_change_bails_if_new_status_is_auto_draft() {
+		$post = Mockery::mock( \WP_Post::class )->makePartial();
+		$post->shouldAllowMockingProtectedMethods();
+
+		$this->post->ping_on_post_status_change( 'auto-draft', 'draft', $post );
+
+		$this->assertConditionsMet();
+	}
 }
