@@ -63,6 +63,11 @@ class Client {
 	 * @return void
 	 */
 	public function ping( $message ): void {
+		$this->slack = new SlackClient(
+			$settings['webhook'] ?? '',
+			$this->args
+		);
+
 		try {
 			$this->slack->send( $message );
 		} catch ( \RuntimeException $e ) {
