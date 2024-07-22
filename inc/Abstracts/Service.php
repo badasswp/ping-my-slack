@@ -63,6 +63,20 @@ abstract class Service implements Kernel {
 	}
 
 	/**
+	 * Get Date.
+	 *
+	 * Utility function to obtain the current
+	 * date to be logged.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return string
+	 */
+	public function get_date(): string {
+		return gmdate( 'H:i:s, d-m-Y' );
+	}
+
+	/**
 	 * Register Service.
 	 *
 	 * This method registers the Services' logic
