@@ -74,7 +74,7 @@ class Client {
 			error_log(
 				sprintf(
 					'Fatal Error: Something went wrong... %s',
-					$e->getMessage()
+					wp_json_encode( $this->args ) . ' ' . $e->getMessage()
 				)
 			);
 
