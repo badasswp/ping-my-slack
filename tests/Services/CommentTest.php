@@ -11,6 +11,7 @@ use PingMySlack\Services\Comment;
  * @covers \PingMySlack\Services\Comment::__construct
  * @covers \PingMySlack\Services\Comment::register
  * @covers \PingMySlack\Services\Comment::ping_on_comment_status_change
+ * @covers \PingMySlack\Services\Comment::get_message
  */
 class CommentTest extends TestCase {
 	public function setUp(): void {
