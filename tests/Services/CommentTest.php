@@ -58,6 +58,8 @@ class CommentTest extends TestCase {
 			->once()
 			->with( 'A Comment was just trashed!' );
 
+		\WP_Mock::expectFilter( 'ping_my_slack_comment_client', $this->client );
+
 		$this->comment->ping_on_comment_status_change( 'trash', 'approved', $comment );
 
 		$this->assertConditionsMet();
