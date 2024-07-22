@@ -29,4 +29,13 @@ class PostTest extends TestCase {
 
 		$this->assertConditionsMet();
 	}
+
+	public function test_ping_on_post_status_change_bails_if_status_is_unchanged() {
+		$post = Mockery::mock( \WP_Post::class )->makePartial();
+		$post->shouldAllowMockingProtectedMethods();
+
+		$this->post->ping_on_post_status_change( 'draft', 'draft', $post );
+
+		$this->assertConditionsMet();
+	}
 }
