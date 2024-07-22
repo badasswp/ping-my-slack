@@ -36,6 +36,18 @@ class Client {
 	public array $args;
 
 	/**
+	 * Plugin Settings.
+	 *
+	 * Grab plugin options from Options table specific
+	 * to this plugin.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var mixed[]
+	 */
+	public array $settings;
+
+	/**
 	 * Set up.
 	 *
 	 * @since 1.0.0
@@ -43,11 +55,11 @@ class Client {
 	 * @return void
 	 */
 	public function __construct() {
-		$settings = get_option( 'ping_my_slack', [] );
+		$this->settings = get_option( 'ping_my_slack', [] );
 
 		$this->args = [
-			'channel'  => $settings['channel'] ?? '',
-			'username' => $settings['username'] ?? '',
+			'channel'  => $this->settings['channel'] ?? '',
+			'username' => $this->settings['username'] ?? '',
 		];
 	}
 
@@ -64,7 +76,7 @@ class Client {
 	 */
 	public function ping( $message ): void {
 		$this->slack = new SlackClient(
-			$settings['webhook'] ?? '',
+			$this->settings['webhook'] ?? '',
 			$this->args
 		);
 
