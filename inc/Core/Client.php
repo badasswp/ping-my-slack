@@ -26,6 +26,16 @@ class Client {
 	private SlackClient $slack;
 
 	/**
+	 * Slack Args.
+	 *
+	 * Specify JSON payload here to be sent when
+	 * making API calls.
+	 *
+	 * @var mixed[]
+	 */
+	public array $args;
+
+	/**
 	 * Set up.
 	 *
 	 * @since 1.0.0
@@ -35,13 +45,10 @@ class Client {
 	public function __construct() {
 		$settings = get_option( 'ping_my_slack', [] );
 
-		$this->slack = new SlackClient(
-			$settings['webhook'] ?? '',
-			[
-				'channel'  => $settings['channel'] ?? '',
-				'username' => $settings['username'] ?? '',
-			]
-		);
+		$this->args = [
+			'channel'  => $settings['channel'] ?? '',
+			'username' => $settings['username'] ?? '',
+		];
 	}
 
 	/**
