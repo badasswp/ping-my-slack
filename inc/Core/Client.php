@@ -31,6 +31,8 @@ class Client {
 	 * Specify JSON payload here to be sent when
 	 * making API calls.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @var mixed[]
 	 */
 	public array $args;
