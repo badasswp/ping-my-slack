@@ -64,4 +64,58 @@ class CommentTest extends TestCase {
 
 		$this->assertConditionsMet();
 	}
+
+	public function test_get_message() {
+		$comment = Mockery::mock( \WP_Comment::class )->makePartial();
+		$comment->shouldAllowMockingProtectedMethods();
+
+		$comment->comment_content      = 'What a wonderful world!';
+		$comment->comment_author_email = 'john@doe.com';
+		$comment->comment_post_ID      = 1;
+
+		$this->comment->event   = 'trash';
+		$this->comment->comment = $comment;
+
+		$this->comment->shouldReceive( 'get_date' )
+			->once()
+			->with()
+			->andReturn( '08:57:13, 01-07-2024' );
+
+		\WP_Mock::userFunction(
+			'esc_html__',
+			[
+				'times'  => 5,
+				'return' => function ( $text, $domain = 'ping-my-slack' ) {
+					return $text;
+				},
+			]
+		);
+
+		\WP_Mock::userFunction(
+			'esc_html',
+			[
+				'times'  => 4,
+				'return' => function ( $text ) {
+					return $text;
+				},
+			]
+		);
+
+		\WP_Mock::userFunction( 'get_the_title' )
+			->once()
+			->with( 1 )
+			->andReturn( 'Hello World!' );
+
+		\WP_Mock::expectFilter(
+			'ping_my_slack_comment_message',
+			"Ping: A Comment was just trashed! \nComment: What a wonderful world! \nUser: john@doe.com \nPost: Hello World! \nDate: 08:57:13, 01-07-2024",
+			$comment,
+			'trash'
+		);
+
+		$message = $this->comment->get_message( 'A Comment was just trashed!' );
+
+		$this->assertSame( $message, "Ping: A Comment was just trashed! \nComment: What a wonderful world! \nUser: john@doe.com \nPost: Hello World! \nDate: 08:57:13, 01-07-2024" );
+		$this->assertConditionsMet();
+	}
 }
