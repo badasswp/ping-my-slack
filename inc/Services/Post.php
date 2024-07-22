@@ -10,6 +10,7 @@
 
 namespace PingMySlack\Services;
 
+use PingMySlack\Core\Client;
 use PingMySlack\Abstracts\Service;
 use PingMySlack\Interfaces\Kernel;
 
@@ -64,6 +65,19 @@ class Post extends Service implements Kernel {
 				$message = $this->get_message( 'A Post was just trashed!' );
 				break;
 		}
+
+		/**
+		 * Filter Slack Client.
+		 *
+		 * Customise the Client instance here, you can
+		 * make this extensible.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param Client $client Client Instance.
+		 * @return Client
+		 */
+		$this->client = apply_filters( 'ping_my_slack_post_client', $client = $this->client );
 
 		$this->client->ping( $message );
 	}
