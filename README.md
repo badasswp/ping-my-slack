@@ -71,6 +71,30 @@ public function custom_field( $fields ): array {
 - fields _`{mixed[]}`_ By default this will be an associative array, containing fields options.
 <br/>
 
+#### `ping_my_slack_comment_client`
+
+This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
+
+```php
+add_filter( 'ping_my_slack_comment_client', [ $this, 'comment_client' ], 10, 1 );
+
+public function comment_client( $client ) {
+    $client->args = wp_parse_args(
+        [
+            'username' => 'John Doe'
+        ],
+        $client->args
+    )
+
+    return $client;
+}
+```
+
+**Parameters**
+
+- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+<br/>
+
 #### `ping_my_slack_comment_message`
 
 This custom hook (filter) provides the ability to add a custom `Comment` message to be sent to your Slack Workspace. For e.g. To send a custom message when a Comment is trashed by a user, you could do:
