@@ -23,7 +23,7 @@ class Client {
 	 *
 	 * @var SlackClient
 	 */
-	private SlackClient $slack;
+	public SlackClient $slack;
 
 	/**
 	 * Slack Args.
