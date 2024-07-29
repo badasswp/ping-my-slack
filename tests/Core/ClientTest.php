@@ -5,9 +5,11 @@ namespace PingMySlack\Tests\Core;
 use Mockery;
 use WP_Mock\Tools\TestCase;
 use PingMySlack\Core\Client;
+use Maknz\Slack\Client as SlackClient;
 
 /**
  * @covers \PingMySlack\Core\Client::__construct
+ * @covers \PingMySlack\Core\Client::ping
  */
 class ClientTest extends TestCase {
 	public function setUp(): void {
@@ -20,6 +22,7 @@ class ClientTest extends TestCase {
 				[
 					'channel'  => '#general',
 					'username' => 'Bryan',
+					'webhook'  => 'https://slack.com/services',
 				]
 			);
 
@@ -39,6 +42,24 @@ class ClientTest extends TestCase {
 			'Bryan',
 			$this->client->args['username']
 		);
+		$this->assertConditionsMet();
+	}
+
+	public function test_ping() {
+		$slack = Mockery::mock( SlackClient::class );
+		$slack->shouldReceive( '__construct' )
+			->with(
+				'https://slack.com/services',
+				[
+					'channel'  => '#general',
+					'username' => 'Bryan',
+				]
+			);
+
+		$this->client->slack = $slack;
+
+		$this->client->ping( 'Hello World!' );
+
 		$this->assertConditionsMet();
 	}
 }
