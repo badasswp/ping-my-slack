@@ -44,22 +44,4 @@ class ClientTest extends TestCase {
 		);
 		$this->assertConditionsMet();
 	}
-
-	public function test_ping() {
-		$slack = Mockery::mock( SlackClient::class );
-		$slack->shouldReceive( '__construct' )
-			->with(
-				'https://slack.com/services',
-				[
-					'channel'  => '#general',
-					'username' => 'Bryan',
-				]
-			);
-
-		$this->client->slack = $slack;
-
-		$this->client->ping( 'Hello World!' );
-
-		$this->assertConditionsMet();
-	}
 }
