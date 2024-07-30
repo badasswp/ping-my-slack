@@ -9,7 +9,6 @@ use Maknz\Slack\Client as SlackClient;
 
 /**
  * @covers \PingMySlack\Core\Client::__construct
- * @covers \PingMySlack\Core\Client::ping
  */
 class ClientTest extends TestCase {
 	public function setUp(): void {
