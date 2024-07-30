@@ -15,6 +15,7 @@ use PingMySlack\Services\Comment;
 
 /**
  * @covers \PingMySlack\Core\Container::__construct
+ * @covers \PingMySlack\Core\Container::register
  */
 class ContainerTest extends TestCase {
 	public function setUp(): void {
