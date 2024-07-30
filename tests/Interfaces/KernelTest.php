@@ -29,9 +29,3 @@ class KernelTest extends TestCase {
 		$this->assertConditionsMet();
 	}
 }
-
-class ConcreteClass implements Kernel {
-	public function register(): void {
-		echo 'Hello World!';
-	}
-}
