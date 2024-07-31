@@ -55,7 +55,8 @@ class Access extends Service implements Kernel {
 		$this->client = apply_filters( 'ping_my_slack_login_client', $client = $this->client );
 
 		$message = sprintf(
-			"Ping: %s \n%s: %s \n%s: %s \n%s: %s",
+			"%s: %s \n%s: %s \n%s: %s \n%s: %s",
+			esc_html__( 'Ping', 'ping-my-slack' ),
 			esc_html__( 'A User just logged in!', 'ping-my-slack' ),
 			esc_html__( 'ID', 'ping-my-slack' ),
 			esc_html( $user->ID ),
@@ -109,7 +110,8 @@ class Access extends Service implements Kernel {
 		$this->client = apply_filters( 'ping_my_slack_logout_client', $client = $this->client );
 
 		$message = sprintf(
-			"Ping: %s \n%s: %s \n%s: %s \n%s: %s",
+			"%s: %s \n%s: %s \n%s: %s \n%s: %s",
+			esc_html__( 'Ping', 'ping-my-slack' ),
 			esc_html__( 'A User just logged out!', 'ping-my-slack' ),
 			esc_html__( 'ID', 'ping-my-slack' ),
 			esc_html( $user_id ),
