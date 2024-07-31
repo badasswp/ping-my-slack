@@ -62,7 +62,7 @@ class Access extends Service implements Kernel {
 			esc_html__( 'User', 'ping-my-slack' ),
 			esc_html( $user_login ),
 			esc_html__( 'Date', 'ping-my-slack' ),
-			esc_html( gmdate( 'H:i:s, d-m-Y' ) )
+			esc_html( $this->get_date() )
 		);
 
 		/**
@@ -116,7 +116,7 @@ class Access extends Service implements Kernel {
 			esc_html__( 'User', 'ping-my-slack' ),
 			esc_html( get_user_by( 'id', $user_id )->user_login ),
 			esc_html__( 'Date', 'ping-my-slack' ),
-			esc_html( gmdate( 'H:i:s, d-m-Y' ) )
+			esc_html( $this->get_date() )
 		);
 
 		/**
