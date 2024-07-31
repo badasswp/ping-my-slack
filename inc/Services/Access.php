@@ -10,6 +10,7 @@
 
 namespace PingMySlack\Services;
 
+use PingMySlack\Core\Client;
 use PingMySlack\Abstracts\Service;
 use PingMySlack\Interfaces\Kernel;
 
@@ -40,6 +41,19 @@ class Access extends Service implements Kernel {
 	 * @return void
 	 */
 	public function ping_on_user_login( $user_login, $user ): void {
+		/**
+		 * Filter Slack Client.
+		 *
+		 * Customise the Client instance here, you can
+		 * make this extensible.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param Client $client Client Instance.
+		 * @return Client
+		 */
+		$this->client = apply_filters( 'ping_my_slack_login_client', $client = $this->client );
+
 		$message = sprintf(
 			"Ping: %s \n%s: %s \n%s: %s \n%s: %s",
 			esc_html__( 'A User just logged in!', 'ping-my-slack' ),
@@ -81,6 +95,19 @@ class Access extends Service implements Kernel {
 	 * @return void
 	 */
 	public function ping_on_user_logout( $user_id ): void {
+		/**
+		 * Filter Slack Client.
+		 *
+		 * Customise the Client instance here, you can
+		 * make this extensible.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param Client $client Client Instance.
+		 * @return Client
+		 */
+		$this->client = apply_filters( 'ping_my_slack_logout_client', $client = $this->client );
+
 		$message = sprintf(
 			"Ping: %s \n%s: %s \n%s: %s \n%s: %s",
 			esc_html__( 'A User just logged out!', 'ping-my-slack' ),
