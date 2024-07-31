@@ -73,4 +73,64 @@ class PostTest extends TestCase {
 
 		$this->assertConditionsMet();
 	}
+
+	public function test_get_message() {
+		$post = Mockery::mock( \WP_Post::class )->makePartial();
+		$post->shouldAllowMockingProtectedMethods();
+
+		$user             = Mockery::mock( \WP_User::class )->makePartial();
+		$user->user_login = 'john@doe.com';
+
+		$post->ID          = 1;
+		$post->post_author = 1;
+		$post->post_title  = 'Hello World!';
+		$post->post_type   = 'post';
+
+		$this->post->event = 'publish';
+		$this->post->post  = $post;
+
+		\WP_Mock::userFunction( 'get_user_by' )
+			->once()
+			->with( 'id', 1 )
+			->andReturn( $user );
+
+		$this->post->shouldReceive( 'get_date' )
+			->once()
+			->with()
+			->andReturn( '08:57:13, 01-07-2024' );
+
+		\WP_Mock::userFunction(
+			'esc_html__',
+			[
+				'times'  => 6,
+				'return' => function ( $text, $domain = 'ping-my-slack' ) {
+					return $text;
+				},
+			]
+		);
+
+		\WP_Mock::userFunction(
+			'esc_html',
+			[
+				'times'  => 4,
+				'return' => function ( $text ) {
+					return $text;
+				},
+			]
+		);
+
+		$message = "Ping: A Post was just published! \nID: 1 \nTitle: Hello World! \nUser: john@doe.com \nDate: 08:57:13, 01-07-2024";
+
+		\WP_Mock::expectFilter(
+			'ping_my_slack_post_message',
+			$message,
+			$post,
+			'publish'
+		);
+
+		$expected = $this->post->get_message( 'A Post was just published!' );
+
+		$this->assertSame( $expected, $message );
+		$this->assertConditionsMet();
+	}
 }
