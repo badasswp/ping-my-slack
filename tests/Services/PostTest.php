@@ -11,6 +11,7 @@ use PingMySlack\Services\Post;
  * @covers \PingMySlack\Services\Post::__construct
  * @covers \PingMySlack\Services\Post::register
  * @covers \PingMySlack\Services\Post::ping_on_post_status_change
+ * @covers \PingMySlack\Services\Post::get_message
  */
 class PostTest extends TestCase {
 	public function setUp(): void {
