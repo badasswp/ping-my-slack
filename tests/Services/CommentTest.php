@@ -85,7 +85,7 @@ class CommentTest extends TestCase {
 		\WP_Mock::userFunction(
 			'esc_html__',
 			[
-				'times'  => 5,
+				'times'  => 6,
 				'return' => function ( $text, $domain = 'ping-my-slack' ) {
 					return $text;
 				},
