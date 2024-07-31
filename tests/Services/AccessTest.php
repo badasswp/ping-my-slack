@@ -26,4 +26,13 @@ class AccessTest extends TestCase {
 	public function tearDown(): void {
 		\WP_Mock::tearDown();
 	}
+
+	public function test_register() {
+		\WP_Mock::expectActionAdded( 'wp_login', [ $this->access, 'ping_on_user_login' ], 10, 2 );
+		\WP_Mock::expectActionAdded( 'wp_logout', [ $this->access, 'ping_on_user_logout' ] );
+
+		$this->access->register();
+
+		$this->assertConditionsMet();
+	}
 }
