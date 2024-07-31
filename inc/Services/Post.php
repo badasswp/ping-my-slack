@@ -95,7 +95,8 @@ class Post extends Service implements Kernel {
 	 */
 	public function get_message( $message ): string {
 		$message = sprintf(
-			"Ping: %s \n%s: %s \n%s: %s \n%s: %s \n%s: %s",
+			"%s: %s \n%s: %s \n%s: %s \n%s: %s \n%s: %s",
+			esc_html__( 'Ping', 'ping-my-slack' ),
 			esc_html__( $message, 'ping-my-slack' ),
 			esc_html__( 'ID', 'ping-my-slack' ),
 			esc_html( $this->post->ID ),
