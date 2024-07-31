@@ -107,16 +107,18 @@ class CommentTest extends TestCase {
 			->with( 1 )
 			->andReturn( 'Hello World!' );
 
+		$message = "Ping: A Comment was just trashed! \nComment: What a wonderful world! \nUser: john@doe.com \nPost: Hello World! \nDate: 08:57:13, 01-07-2024";
+
 		\WP_Mock::expectFilter(
 			'ping_my_slack_comment_message',
-			"Ping: A Comment was just trashed! \nComment: What a wonderful world! \nUser: john@doe.com \nPost: Hello World! \nDate: 08:57:13, 01-07-2024",
+			$message,
 			$comment,
 			'trash'
 		);
 
-		$message = $this->comment->get_message( 'A Comment was just trashed!' );
+		$expected = $this->comment->get_message( 'A Comment was just trashed!' );
 
-		$this->assertSame( $message, "Ping: A Comment was just trashed! \nComment: What a wonderful world! \nUser: john@doe.com \nPost: Hello World! \nDate: 08:57:13, 01-07-2024" );
+		$this->assertSame( $expected, $message );
 		$this->assertConditionsMet();
 	}
 }
