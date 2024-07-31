@@ -79,7 +79,7 @@ class Access extends Service implements Kernel {
 		 *
 		 * @return string
 		 */
-		$message = apply_filters( 'ping_my_slack_login_message', $message, $user );
+		$message = (string) apply_filters( 'ping_my_slack_login_message', $message, $user );
 
 		$this->client->ping( $message );
 	}
