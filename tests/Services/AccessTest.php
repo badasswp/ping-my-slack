@@ -89,7 +89,7 @@ class AccessTest extends TestCase {
 	public function test_ping_on_user_logout() {
 		$user_id = 1;
 
-		$user     = Mockery::mock( \WP_User::class )->makePartial();
+		$user             = Mockery::mock( \WP_User::class )->makePartial();
 		$user->user_login = 'john@doe.com';
 
 		\WP_Mock::userFunction( 'get_user_by' )
