@@ -10,6 +10,8 @@ use PingMySlack\Services\Access;
 /**
  * @covers \PingMySlack\Services\Access::__construct
  * @covers \PingMySlack\Services\Access::register
+ * @covers \PingMySlack\Services\Access::ping_on_user_login
+ * @covers \PingMySlack\Services\Access::ping_on_user_logout
  */
 class AccessTest extends TestCase {
 	public function setUp(): void {
