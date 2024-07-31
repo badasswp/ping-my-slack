@@ -6,6 +6,7 @@ phpcs.xml
 phpstan.neon
 phpunit.xml
 README.md
+tests
 assets
 vendor/htmlburger/carbon-fields/assets
 vendor/htmlburger/carbon-fields/.babelrc.js
