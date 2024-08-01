@@ -11,7 +11,7 @@ use PingMySlack\Services\Post;
 use PingMySlack\Services\User;
 use PingMySlack\Services\Admin;
 use PingMySlack\Services\Access;
-use PingMySlack\Services\Themes;
+use PingMySlack\Services\Theme;
 use PingMySlack\Services\Comment;
 
 /**
@@ -41,7 +41,7 @@ class PluginTest extends TestCase {
 			'admin'   => Admin::get_instance(),
 			'comment' => Comment::get_instance(),
 			'post'    => Post::get_instance(),
-			'theme'   => Themes::get_instance(),
+			'theme'   => Theme::get_instance(),
 			'user'    => User::get_instance(),
 		];
 

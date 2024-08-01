@@ -10,7 +10,7 @@ use PingMySlack\Services\Post;
 use PingMySlack\Services\User;
 use PingMySlack\Services\Admin;
 use PingMySlack\Services\Access;
-use PingMySlack\Services\Themes;
+use PingMySlack\Services\Theme;
 use PingMySlack\Services\Comment;
 
 /**
@@ -33,7 +33,7 @@ class ContainerTest extends TestCase {
 		$this->assertTrue( in_array( Admin::class, Container::$services, true ) );
 		$this->assertTrue( in_array( Comment::class, Container::$services, true ) );
 		$this->assertTrue( in_array( Post::class, Container::$services, true ) );
-		$this->assertTrue( in_array( Themes::class, Container::$services, true ) );
+		$this->assertTrue( in_array( Theme::class, Container::$services, true ) );
 		$this->assertTrue( in_array( User::class, Container::$services, true ) );
 		$this->assertConditionsMet();
 	}
@@ -55,7 +55,7 @@ class ContainerTest extends TestCase {
 			'admin'   => Admin::get_instance(),
 			'comment' => Comment::get_instance(),
 			'post'    => Post::get_instance(),
-			'theme'   => Themes::get_instance(),
+			'theme'   => Theme::get_instance(),
 			'user'    => User::get_instance(),
 		];
 

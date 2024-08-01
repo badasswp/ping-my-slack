@@ -11,7 +11,7 @@
 namespace PingMySlack\Core;
 
 use PingMySlack\Services\Post;
-use PingMySlack\Services\Themes;
+use PingMySlack\Services\Theme;
 use PingMySlack\Services\User;
 use PingMySlack\Services\Access;
 use PingMySlack\Services\Admin;
