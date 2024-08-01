@@ -10,8 +10,8 @@ use PingMySlack\Services\Theme;
 /**
  * @covers \PingMySlack\Services\Theme::__construct
  * @covers \PingMySlack\Services\Theme::register
- * @covers \PingMySlack\Services\Theme::ping_on_user_login
- * @covers \PingMySlack\Services\Theme::ping_on_user_logout
+ * @covers \PingMySlack\Services\Theme::ping_on_theme_change
+ * @covers \PingMySlack\Services\Theme::get_message
  */
 class ThemeTest extends TestCase {
 	public function setUp(): void {
