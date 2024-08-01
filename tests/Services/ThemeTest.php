@@ -36,4 +36,13 @@ class ThemeTest extends TestCase {
 
 		$this->assertConditionsMet();
 	}
+
+	public function test_ping_on_theme_change_bails_if_theme_is_unchanged() {
+		$theme = Mockery::mock( \WP_Theme::class )->makePartial();
+		$theme->shouldAllowMockingProtectedMethods();
+
+		$this->theme->ping_on_theme_change( 'Elementor', $theme, $theme );
+
+		$this->assertConditionsMet();
+	}
 }
