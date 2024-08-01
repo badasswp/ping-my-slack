@@ -1,6 +1,6 @@
 <?php
 /**
- * Themes Class.
+ * Theme Class.
  *
  * This class is responsible for pinging theme events
  * to the Slack workspace.
@@ -13,7 +13,7 @@ namespace PingMySlack\Services;
 use PingMySlack\Abstracts\Service;
 use PingMySlack\Interfaces\Kernel;
 
-class Themes extends Service implements Kernel {
+class Theme extends Service implements Kernel {
 	/**
 	 * Bind to WP.
 	 *
