@@ -48,6 +48,19 @@ class Theme extends Service implements Kernel {
 
 		$message = $this->get_message( 'A Theme was just switched!' );
 
+		/**
+		 * Filter Slack Client.
+		 *
+		 * Customise the Client instance here, you can
+		 * make this extensible.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param Client $client Client Instance.
+		 * @return Client
+		 */
+		$this->client = apply_filters( 'ping_my_slack_theme_client', $client = $this->client );
+
 		$this->client->ping( $message );
 	}
 
