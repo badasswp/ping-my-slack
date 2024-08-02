@@ -45,4 +45,27 @@ class ThemeTest extends TestCase {
 
 		$this->assertConditionsMet();
 	}
+
+	public function test_ping_on_theme_change_passes() {
+		$theme1 = Mockery::mock( \WP_Theme::class )->makePartial();
+		$theme1->shouldAllowMockingProtectedMethods();
+
+		$theme2 = Mockery::mock( \WP_Theme::class )->makePartial();
+		$theme2->shouldAllowMockingProtectedMethods();
+
+		$this->theme->shouldReceive( 'get_message' )
+			->once()
+			->with( 'A Theme was just switched!' )
+			->andReturn( 'A Theme was just switched!' );
+
+		$this->client->shouldReceive( 'ping' )
+			->once()
+			->with( 'A Theme was just switched!' );
+
+		\WP_Mock::expectFilter( 'ping_my_slack_theme_client', $this->client );
+
+		$this->theme->ping_on_theme_change( 'Divi', $theme1, $theme2 );
+
+		$this->assertConditionsMet();
+	}
 }
