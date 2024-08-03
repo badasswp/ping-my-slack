@@ -55,7 +55,8 @@ class User extends Service implements Kernel {
 		$this->client = apply_filters( 'ping_my_slack_user_creation_client', $client = $this->client );
 
 		$message = sprintf(
-			"Ping: %s \n%s: %s \n%s: %s \n%s: %s",
+			"%s: %s \n%s: %s \n%s: %s \n%s: %s",
+			esc_html__( 'Ping', 'ping-my-slack' ),
 			esc_html__( 'A User was just created!', 'ping-my-slack' ),
 			esc_html__( 'ID', 'ping-my-slack' ),
 			esc_html( $user_id ),
@@ -110,7 +111,8 @@ class User extends Service implements Kernel {
 		$this->client = apply_filters( 'ping_my_slack_user_modification_client', $client = $this->client );
 
 		$message = sprintf(
-			"Ping: %s \n%s: %s \n%s: %s \n%s: %s",
+			"%s: %s \n%s: %s \n%s: %s \n%s: %s",
+			esc_html__( 'Ping', 'ping-my-slack' ),
 			esc_html__( 'A User was just modified!', 'ping-my-slack' ),
 			esc_html__( 'ID', 'ping-my-slack' ),
 			esc_html( $user_id ),
@@ -166,7 +168,8 @@ class User extends Service implements Kernel {
 		$this->client = apply_filters( 'ping_my_slack_user_deletion_client', $client = $this->client );
 
 		$message = sprintf(
-			"Ping: %s \n%s: %s \n%s: %s \n%s: %s",
+			"%s: %s \n%s: %s \n%s: %s \n%s: %s",
+			esc_html__( 'Ping', 'ping-my-slack' ),
 			esc_html__( 'A User was just deleted!', 'ping-my-slack' ),
 			esc_html__( 'ID', 'ping-my-slack' ),
 			esc_html( $user_id ),
