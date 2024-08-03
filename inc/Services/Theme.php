@@ -103,6 +103,6 @@ class Theme extends Service implements Kernel {
 		 *
 		 * @return string
 		 */
-		return apply_filters( 'ping_my_slack_theme_message', $message, $this->theme );
+		return (string) apply_filters( 'ping_my_slack_theme_message', $message, $this->theme );
 	}
 }
