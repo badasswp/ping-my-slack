@@ -41,6 +41,19 @@ class User extends Service implements Kernel {
 	 * @return void
 	 */
 	public function ping_on_user_creation( $user_id, $user_data ): void {
+		/**
+		 * Filter Slack Client.
+		 *
+		 * Customise the Client instance here, you can
+		 * make this extensible.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param Client $client Client Instance.
+		 * @return Client
+		 */
+		$this->client = apply_filters( 'ping_my_slack_user_creation_client', $client = $this->client );
+
 		$message = sprintf(
 			"Ping: %s \n%s: %s \n%s: %s \n%s: %s",
 			esc_html__( 'A User was just created!', 'ping-my-slack' ),
@@ -83,6 +96,19 @@ class User extends Service implements Kernel {
 	 * @param array $userdata_raw The unedited array of user data that was updated.
 	 */
 	public function ping_on_user_modification( $user_id, $userdata, $userdata_raw ) {
+		/**
+		 * Filter Slack Client.
+		 *
+		 * Customise the Client instance here, you can
+		 * make this extensible.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param Client $client Client Instance.
+		 * @return Client
+		 */
+		$this->client = apply_filters( 'ping_my_slack_user_modification_client', $client = $this->client );
+
 		$message = sprintf(
 			"Ping: %s \n%s: %s \n%s: %s \n%s: %s",
 			esc_html__( 'A User was just modified!', 'ping-my-slack' ),
@@ -126,6 +152,19 @@ class User extends Service implements Kernel {
 	 * @param WP_User  $user     WP_User object of the deleted user.
 	 */
 	public function ping_on_user_deletion( $user_id, $reassign, $user ) {
+		/**
+		 * Filter Slack Client.
+		 *
+		 * Customise the Client instance here, you can
+		 * make this extensible.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param Client $client Client Instance.
+		 * @return Client
+		 */
+		$this->client = apply_filters( 'ping_my_slack_user_deletion_client', $client = $this->client );
+
 		$message = sprintf(
 			"Ping: %s \n%s: %s \n%s: %s \n%s: %s",
 			esc_html__( 'A User was just deleted!', 'ping-my-slack' ),
