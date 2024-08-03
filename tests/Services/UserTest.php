@@ -29,4 +29,14 @@ class UserTest extends TestCase {
 	public function tearDown(): void {
 		\WP_Mock::tearDown();
 	}
+
+	public function test_register() {
+		\WP_Mock::expectActionAdded( 'user_register', [ $this->user, 'ping_on_user_creation' ], 10, 2 );
+		\WP_Mock::expectActionAdded( 'wp_update_user', [ $this->user, 'ping_on_user_modification' ], 10, 3 );
+		\WP_Mock::expectActionAdded( 'deleted_user', [ $this->user, 'ping_on_user_deletion' ], 10, 3 );
+
+		$this->user->register();
+
+		$this->assertConditionsMet();
+	}
 }
