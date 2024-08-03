@@ -95,4 +95,60 @@ class UserTest extends TestCase {
 
 		$this->assertConditionsMet();
 	}
+
+	public function test_ping_on_user_modification() {
+		$user_login = 'john@doe.com';
+
+		$user             = Mockery::mock( \WP_User::class )->makePartial();
+		$user->ID         = 1;
+		$user->user_login = 'john@doe.com';
+
+		\WP_Mock::expectFilter( 'ping_my_slack_user_modification_client', $this->user->client );
+
+		\WP_Mock::userFunction(
+			'esc_html__',
+			[
+				'times'  => 5,
+				'return' => function ( $text, $domain = 'ping-my-slack' ) {
+					return $text;
+				},
+			]
+		);
+
+		\WP_Mock::userFunction(
+			'esc_html',
+			[
+				'times'  => 3,
+				'return' => function ( $text ) {
+					return $text;
+				},
+			]
+		);
+
+		\WP_Mock::userFunction( 'get_user_by' )
+			->once()
+			->with( 'id', 1 )
+			->andReturn( $user );
+
+		$message = "Ping: A User was just modified! \nID: 1 \nUser: john@doe.com \nDate: 08:57:13, 01-07-2024";
+
+		\WP_Mock::expectFilter(
+			'ping_my_slack_user_modification_message',
+			$message,
+			$user->ID
+		);
+
+		$this->user->shouldReceive( 'get_date' )
+			->once()
+			->with()
+			->andReturn( '08:57:13, 01-07-2024' );
+
+		$this->user->client->shouldReceive( 'ping' )
+			->once()
+			->with( $message );
+
+		$this->user->ping_on_user_modification( $user->ID, [], [] );
+
+		$this->assertConditionsMet();
+	}
 }
