@@ -85,7 +85,7 @@ class Theme extends Service implements Kernel {
 			esc_html__( 'Title', 'ping-my-slack' ),
 			esc_html( $this->theme->title ),
 			esc_html__( 'User', 'ping-my-slack' ),
-			esc_html( get_user_by( 'id', $this->post->post_author )->user_login ),
+			esc_html( wp_get_current_user()->user_login ),
 			esc_html__( 'Date', 'ping-my-slack' ),
 			esc_html( gmdate( 'H:i:s, d-m-Y' ) )
 		);
