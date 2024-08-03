@@ -68,4 +68,60 @@ class ThemeTest extends TestCase {
 
 		$this->assertConditionsMet();
 	}
+
+	public function test_get_message() {
+		$theme = Mockery::mock( \WP_Theme::class )->makePartial();
+		$theme->shouldAllowMockingProtectedMethods();
+
+		$user             = Mockery::mock( \WP_User::class )->makePartial();
+		$user->user_login = 'john@doe.com';
+
+		$theme->ID    = 1;
+		$theme->title = 'Diva';
+
+		$this->theme->theme = $theme;
+
+		\WP_Mock::userFunction( 'wp_get_current_user' )
+			->once()
+			->with()
+			->andReturn( $user );
+
+		$this->theme->shouldReceive( 'get_date' )
+			->once()
+			->with()
+			->andReturn( '08:57:13, 01-07-2024' );
+
+		\WP_Mock::userFunction(
+			'esc_html__',
+			[
+				'times'  => 6,
+				'return' => function ( $text, $domain = 'ping-my-slack' ) {
+					return $text;
+				},
+			]
+		);
+
+		\WP_Mock::userFunction(
+			'esc_html',
+			[
+				'times'  => 4,
+				'return' => function ( $text ) {
+					return $text;
+				},
+			]
+		);
+
+		$message = "Ping: A Theme was just switched! \nID: 1 \nTitle: Diva \nUser: john@doe.com \nDate: 08:57:13, 01-07-2024";
+
+		\WP_Mock::expectFilter(
+			'ping_my_slack_theme_message',
+			$message,
+			$theme,
+		);
+
+		$expected = $this->theme->get_message( 'A Theme was just switched!' );
+
+		$this->assertSame( $expected, $message );
+		$this->assertConditionsMet();
+	}
 }
