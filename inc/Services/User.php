@@ -78,7 +78,7 @@ class User extends Service implements Kernel {
 		 *
 		 * @return string
 		 */
-		$message = apply_filters( 'ping_my_slack_user_creation_message', $message, $user_id );
+		$message = (string) apply_filters( 'ping_my_slack_user_creation_message', $message, $user_id );
 
 		$this->client->ping( $message );
 	}
@@ -133,7 +133,7 @@ class User extends Service implements Kernel {
 		 *
 		 * @return string
 		 */
-		$message = apply_filters( 'ping_my_slack_user_modification_message', $message, $user_id );
+		$message = (string) apply_filters( 'ping_my_slack_user_modification_message', $message, $user_id );
 
 		$this->client->ping( $message );
 	}
@@ -189,7 +189,7 @@ class User extends Service implements Kernel {
 		 *
 		 * @return string
 		 */
-		$message = apply_filters( 'ping_my_slack_user_deletion_message', $message, $user_id );
+		$message = (string) apply_filters( 'ping_my_slack_user_deletion_message', $message, $user_id );
 
 		$this->client->ping( $message );
 	}
