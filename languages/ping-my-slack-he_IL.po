@@ -1,0 +1,166 @@
+# Copyright (C) badasswp
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ping My Slack\n"
+"POT-Creation-Date: 2024-08-05 05:33+0100\n"
+"PO-Revision-Date: 2024-08-05 10:03+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: ping-my-slack.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: inc/Services/Access.php:59 inc/Services/Access.php:116
+#: inc/Services/Comment.php:95 inc/Services/Post.php:99
+#: inc/Services/Theme.php:81 inc/Services/User.php:59 inc/Services/User.php:115
+#: inc/Services/User.php:172
+msgid "Ping"
+msgstr "פינג"
+
+#. Plugin Name of the plugin/theme
+msgid "Ping My Slack"
+msgstr "פינג הרפיון שלי"
+
+#. Description of the plugin/theme
+#: inc/Services/Admin.php:99
+msgid "Get notifications on Slack when changes are made on your WP website."
+msgstr "קבל התראות על Slack כאשר שינויים מתבצעים באתר WP שלך."
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/badasswp/ping-my-slack"
+msgstr "https://github.com/badasswp/ping-my-slack"
+
+#. Author of the plugin/theme
+msgid "badasswp"
+msgstr "‫badasswp"
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/badasswp"
+msgstr "https://github.com/badasswp"
+
+#: init.php:15
+msgid "Error: Composer is not installed!"
+msgstr "שגיאה: Composer אינו מותקן!"
+
+#: inc/Services/Access.php:61 inc/Services/Access.php:118
+#: inc/Services/Post.php:101 inc/Services/Theme.php:83 inc/Services/User.php:61
+#: inc/Services/User.php:117 inc/Services/User.php:174
+msgid "ID"
+msgstr "מזהה"
+
+#: inc/Services/Access.php:63 inc/Services/Access.php:120
+#: inc/Services/Comment.php:99 inc/Services/Post.php:105
+#: inc/Services/Theme.php:87 inc/Services/User.php:63 inc/Services/User.php:119
+#: inc/Services/User.php:176
+msgid "User"
+msgstr "משתמש"
+
+#: inc/Services/Comment.php:97
+msgid "Comment"
+msgstr "תגובה"
+
+#: inc/Services/Comment.php:101
+msgid "Post"
+msgstr "פוסט"
+
+#: inc/Services/Post.php:103 inc/Services/Theme.php:85
+msgid "Title"
+msgstr "כותרת"
+
+#: inc/Services/Access.php:65 inc/Services/Access.php:122
+#: inc/Services/Comment.php:103 inc/Services/Post.php:107
+#: inc/Services/Theme.php:89 inc/Services/User.php:65 inc/Services/User.php:121
+#: inc/Services/User.php:178
+msgid "Date"
+msgstr "תַאֲרִיך"
+
+#: inc/Services/Admin.php:105
+msgid "John Doe"
+msgstr "ישראל ישראלי"
+
+#: inc/Services/Admin.php:104
+msgid "Slack Username"
+msgstr "Slack שם משתמש"
+
+#: inc/Services/Admin.php:111
+msgid "Slack Channel"
+msgstr "ערוץ Slack"
+
+#: inc/Services/Admin.php:118
+msgid "Slack Webhook"
+msgstr "Slack Webhook"
+
+#: inc/Services/Admin.php:112
+msgid "e.g. #general"
+msgstr "לדוגמה #general"
+
+#: inc/Services/Admin.php:119
+msgid "e.g. https://hooks.slack.com/services/xxxxxx"
+msgstr "לדוגמה https://hooks.slack.com/services/xxxxxx"
+
+#: inc/Services/User.php:60
+msgid "A User was just created!"
+msgstr "משתמש נוצר זה עתה!"
+
+#: inc/Services/User.php:116
+msgid "A User was just modified!"
+msgstr "משתמש פשוט השתנה!"
+
+#: inc/Services/User.php:173
+msgid "A User was just deleted!"
+msgstr "משתמש פשוט נמחק!"
+
+#: inc/Services/Access.php:60
+msgid "A User just logged in!"
+msgstr "משתמש שזה עתה התחבר!"
+
+#: inc/Services/Access.php:117
+msgid "A User just logged out!"
+msgstr "משתמש פשוט התנתק!"
+
+msgid "A Comment was just published!"
+msgstr "תגובה פורסמה זה עתה!"
+
+msgid "A Comment was just trashed!"
+msgstr "תגובה הייתה פשוט זבל!"
+
+msgid "A Post draft was just created!"
+msgstr "טיוטת פוסט נוצרה זה עתה!"
+
+msgid "A Post was just published!"
+msgstr "פוסט בדיוק פורסם!"
+
+msgid "A Post was just trashed!"
+msgstr "פוסט היה פשוט זבל!"
+
+msgid "A Theme was just switched!"
+msgstr "נושא פשוט הוחלף!"
+
+msgid "A Plugin was just installed!"
+msgstr "תוסף הותקן זה עתה!"
+
+msgid "A Plugin was just removed!"
+msgstr "תוסף הוסר זה עתה!"
+
+msgid "A Plugin was just activated!"
+msgstr "תוסף הופעל זה עתה!"
+
+msgid "A Plugin was just de-activated!"
+msgstr "תוסף פשוט הושבת!"
+
+msgid "An Image was just uploaded!"
+msgstr "תמונה הועלתה זה עתה!"
+
+msgid "An Image was just deleted!"
+msgstr "תמונה נמחקה זה עתה!"
