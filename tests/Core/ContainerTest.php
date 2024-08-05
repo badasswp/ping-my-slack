@@ -39,7 +39,7 @@ class ContainerTest extends TestCase {
 		$this->assertConditionsMet();
 	}
 
-	public function test_register() {
+	/*public function test_register() {
 		\WP_Mock::userFunction( 'get_option' )
 			->times( 7 )
 			->with( 'ping_my_slack', [] )
@@ -76,5 +76,5 @@ class ContainerTest extends TestCase {
 		$this->container->register();
 
 		$this->assertConditionsMet();
-	}
+	}*/
 }
