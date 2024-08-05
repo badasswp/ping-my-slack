@@ -10,6 +10,9 @@
 
 namespace PingMySlack\Services;
 
+use PingMySlack\Abstracts\Service;
+use PingMySlack\Interfaces\Kernel;
+
 class Boot extends Service implements Kernel {
 	/**
 	 * Bind to WP.
