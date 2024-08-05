@@ -4,13 +4,13 @@ namespace PingMySlack\Tests\Core;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use PingMySlack\Core\Container;
-
+use PingMySlack\Services\Boot;
 use PingMySlack\Services\Post;
 use PingMySlack\Services\User;
+use PingMySlack\Core\Container;
 use PingMySlack\Services\Admin;
-use PingMySlack\Services\Access;
 use PingMySlack\Services\Theme;
+use PingMySlack\Services\Access;
 use PingMySlack\Services\Comment;
 
 /**
@@ -31,6 +31,7 @@ class ContainerTest extends TestCase {
 	public function test_container_has_list_of_services() {
 		$this->assertTrue( in_array( Access::class, Container::$services, true ) );
 		$this->assertTrue( in_array( Admin::class, Container::$services, true ) );
+		$this->assertTrue( in_array( Boot::class, Container::$services, true ) );
 		$this->assertTrue( in_array( Comment::class, Container::$services, true ) );
 		$this->assertTrue( in_array( Post::class, Container::$services, true ) );
 		$this->assertTrue( in_array( Theme::class, Container::$services, true ) );
@@ -39,26 +40,17 @@ class ContainerTest extends TestCase {
 	}
 
 	public function test_register() {
-		\WP_Mock::userFunction( 'get_option' )
-			->times( 6 )
-			->with( 'ping_my_slack', [] )
-			->andReturn(
-				[
-					'webhook'  => 'https://hooks.services.slack.com',
-					'channel'  => '#general',
-					'username' => 'Bryan',
-				]
-			);
-
 		$this->services = [
 			'access'  => Access::get_instance(),
 			'admin'   => Admin::get_instance(),
+			'boot'    => Boot::get_instance(),
 			'comment' => Comment::get_instance(),
 			'post'    => Post::get_instance(),
 			'theme'   => Theme::get_instance(),
 			'user'    => User::get_instance(),
 		];
 
+		\WP_Mock::expectActionAdded( 'init', [ $this->services['boot'], 'ping_my_slack_translation' ] );
 		\WP_Mock::expectActionAdded( 'wp_login', [ $this->services['access'], 'ping_on_user_login' ], 10, 2 );
 		\WP_Mock::expectActionAdded( 'wp_logout', [ $this->services['access'], 'ping_on_user_logout' ] );
 		\WP_Mock::expectActionAdded( 'plugins_loaded', [ $this->services['admin'], 'carbon_fields_init' ] );
