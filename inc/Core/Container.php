@@ -11,6 +11,7 @@
 namespace PingMySlack\Core;
 
 use PingMySlack\Services\Post;
+use PingMySlack\Services\Boot;
 use PingMySlack\Services\Theme;
 use PingMySlack\Services\User;
 use PingMySlack\Services\Access;
@@ -36,6 +37,7 @@ class Container {
 		static::$services = [
 			Access::class,
 			Admin::class,
+			Boot::class,
 			Comment::class,
 			Post::class,
 			Theme::class,

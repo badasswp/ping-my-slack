@@ -8,6 +8,8 @@
  * @package PingMySlack
  */
 
+namespace PingMySlack\Services;
+
 class Boot extends Service implements Kernel {
 	/**
 	 * Bind to WP.
