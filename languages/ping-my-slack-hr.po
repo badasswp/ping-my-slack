@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ping My Slack\n"
 "POT-Creation-Date: 2024-08-05 05:33+0100\n"
-"PO-Revision-Date: 2024-08-05 06:55+0100\n"
+"PO-Revision-Date: 2024-08-05 06:57+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: hr\n"
@@ -57,7 +57,7 @@ msgstr "Pogreška: Composer nije instaliran!"
 #: inc/Services/Post.php:101 inc/Services/Theme.php:83 inc/Services/User.php:61
 #: inc/Services/User.php:117 inc/Services/User.php:174
 msgid "ID"
-msgstr "ID oznaka"
+msgstr "ID"
 
 #: inc/Services/Access.php:63 inc/Services/Access.php:120
 #: inc/Services/Comment.php:99 inc/Services/Post.php:105
