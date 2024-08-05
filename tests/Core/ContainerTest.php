@@ -40,6 +40,17 @@ class ContainerTest extends TestCase {
 	}
 
 	public function test_register() {
+		\WP_Mock::userFunction( 'get_option' )
+			->times( 7 )
+			->with( 'ping_my_slack', [] )
+			->andReturn(
+				[
+					'webhook'  => 'https://hooks.services.slack.com',
+					'channel'  => '#general',
+					'username' => 'Bryan',
+				]
+			);
+
 		$this->services = [
 			'access'  => Access::get_instance(),
 			'admin'   => Admin::get_instance(),
