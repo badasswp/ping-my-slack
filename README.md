@@ -149,6 +149,30 @@ public function log_ping_errors( $e ): void {
 - e _`{Exception}`_ By default this will be an Exception.
 <br/>
 
+#### `ping_my_slack_login_client`
+
+This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
+
+```php
+add_filter( 'ping_my_slack_login_client', [ $this, 'login_client' ], 10, 1 );
+
+public function login_client( $client ) {
+    $client->args = wp_parse_args(
+        [
+            'username' => 'John Doe'
+        ],
+        $client->args
+    )
+
+    return $client;
+}
+```
+
+**Parameters**
+
+- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+<br/>
+
 #### `ping_my_slack_login_message`
 
 This custom hook (filter) provides the ability to add a custom `Login` message to be sent to your Slack Workspace. For e.g. To send a custom message when an Administrator logs in, you could do:
@@ -172,6 +196,30 @@ public function login_message( $message, $user ): string {
 
 - message _`{string}`_ By default this will be the passed message.
 - user _`{WP_User}`_ By default this will be the WP User object.
+<br/>
+
+#### `ping_my_slack_logout_client`
+
+This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
+
+```php
+add_filter( 'ping_my_slack_logout_client', [ $this, 'logout_client' ], 10, 1 );
+
+public function logout_client( $client ) {
+    $client->args = wp_parse_args(
+        [
+            'username' => 'John Doe'
+        ],
+        $client->args
+    )
+
+    return $client;
+}
+```
+
+**Parameters**
+
+- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
 #### `ping_my_slack_logout_message`
