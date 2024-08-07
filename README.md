@@ -17,6 +17,30 @@ Ever needed to keep track of what's happening on your website? No need to look f
 
 ### Hooks
 
+#### `ping_my_slack_{$post_type}_client`
+
+This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
+
+```php
+add_filter( 'ping_my_slack_post_client', [ $this, 'post_client' ], 10, 1 );
+
+public function post_client( $client ) {
+    $client->args = wp_parse_args(
+        [
+            'username' => 'John Doe'
+        ],
+        $client->args
+    )
+
+    return $client;
+}
+```
+
+**Parameters**
+
+- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+<br/>
+
 #### `ping_my_slack_{$post_type}_message`
 
 This custom hook (filter) provides the ability to add a custom `Post` message to be sent to your Slack Workspace. For e.g. To send a custom message when a Post draft is created by a user, you could do:
@@ -245,4 +269,53 @@ public function logout_message( $message, $user ): string {
 
 - message _`{string}`_ By default this will be the passed message.
 - user _`{WP_User}`_ By default this will be the WP User object.
+<br/>
+
+#### `ping_my_slack_theme_client`
+
+This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
+
+```php
+add_filter( 'ping_my_slack_theme_client', [ $this, 'theme_client' ], 10, 1 );
+
+public function theme_client( $client ) {
+    $client->args = wp_parse_args(
+        [
+            'username' => 'John Doe'
+        ],
+        $client->args
+    )
+
+    return $client;
+}
+```
+
+**Parameters**
+
+- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+<br/>
+
+#### `ping_my_slack_theme_message`
+
+This custom hook (filter) provides the ability to add a custom `theme` message to be sent to your Slack Workspace. For e.g. To send a custom message when a user switches a theme:
+
+```php
+add_filter( 'ping_my_slack_theme_message', [ $this, 'theme_message' ], 10, 2 );
+
+public function theme_message( $message, $user ): string {
+    if ( in_array( 'administrator', $user->roles, true ) ) {
+        $message = sprintf(
+            'Attention: An Administrator with ID: %d just logged out!',
+            $user->ID
+        );
+    }
+
+    return (string) $message;
+}
+```
+
+**Parameters**
+
+- message _`{string}`_ By default this will be the passed message.
+- theme _`{WP_Theme}`_ By default this will be the WP Theme object.
 <br/>
