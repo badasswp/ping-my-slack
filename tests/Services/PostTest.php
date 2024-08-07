@@ -58,6 +58,9 @@ class PostTest extends TestCase {
 	public function test_ping_on_post_status_change_passes() {
 		$post = Mockery::mock( \WP_Post::class )->makePartial();
 		$post->shouldAllowMockingProtectedMethods();
+		$post->post_type = 'post';
+
+		$this->post->post = $post;
 
 		$this->post->shouldReceive( 'get_message' )
 			->once()
