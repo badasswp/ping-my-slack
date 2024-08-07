@@ -77,7 +77,7 @@ class Post extends Service implements Kernel {
 		 * @param Client $client Client Instance.
 		 * @return Client
 		 */
-		$this->client = apply_filters( 'ping_my_slack_post_client', $client = $this->client );
+		$this->client = apply_filters( "ping_my_slack_{$this->post->post_type}_client", $client = $this->client );
 
 		$this->client->ping( $message );
 	}
