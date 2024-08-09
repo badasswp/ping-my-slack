@@ -12,7 +12,7 @@ namespace PingMySlack;
 
 use PingMySlack\Core\Container;
 
-class Plugin {
+final class Plugin {
 	/**
 	 * Plugin instance.
 	 *

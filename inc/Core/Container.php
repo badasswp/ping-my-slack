@@ -18,7 +18,7 @@ use PingMySlack\Services\Access;
 use PingMySlack\Services\Admin;
 use PingMySlack\Services\Comment;
 
-class Container {
+final class Container {
 	/**
 	 * Plugin Services
 	 *
