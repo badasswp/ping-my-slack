@@ -74,8 +74,8 @@ class User extends Service implements Kernel {
 		 *
 		 * @since 1.0.0
 		 *
-		 * @param string   $message Slack Message.
-		 * @param int      $user_id User ID.
+		 * @param string $message Slack Message.
+		 * @param int    $user_id User ID.
 		 *
 		 * @return string
 		 */
@@ -130,8 +130,8 @@ class User extends Service implements Kernel {
 		 *
 		 * @since 1.0.0
 		 *
-		 * @param string   $message Slack Message.
-		 * @param int      $user_id User ID.
+		 * @param string $message Slack Message.
+		 * @param int    $user_id User ID.
 		 *
 		 * @return string
 		 */
@@ -187,8 +187,8 @@ class User extends Service implements Kernel {
 		 *
 		 * @since 1.0.0
 		 *
-		 * @param string   $message Slack Message.
-		 * @param int      $user_id User ID.
+		 * @param string $message Slack Message.
+		 * @param int    $user_id User ID.
 		 *
 		 * @return string
 		 */
