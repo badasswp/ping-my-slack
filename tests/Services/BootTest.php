@@ -34,4 +34,25 @@ class BootTest extends TestCase {
 
 		$this->assertConditionsMet();
 	}
+
+	public function test_translation_setup() {
+		$boot = new \ReflectionClass( Boot::class );
+
+		\WP_Mock::userFunction( 'plugin_basename' )
+			->once()
+			->with( $boot->getFileName() )
+			->andReturn( '/inc/Services/Boot.php' );
+
+		\WP_Mock::userFunction( 'load_plugin_textdomain' )
+			->once()
+			->with(
+				'ping-my-slack',
+				false,
+				'/inc/Services/../../languages'
+			);
+
+		$this->boot->ping_my_slack_translation();
+
+		$this->assertConditionsMet();
+	}
 }
