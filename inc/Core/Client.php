@@ -12,7 +12,7 @@ namespace PingMySlack\Core;
 
 use Maknz\Slack\Client as SlackClient;
 
-final class Client {
+class Client {
 	/**
 	 * Slack Client.
 	 *
