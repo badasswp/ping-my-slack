@@ -319,3 +319,75 @@ public function theme_message( $message, $user ): string {
 - message _`{string}`_ By default this will be the passed message.
 - theme _`{WP_Theme}`_ By default this will be the WP Theme object.
 <br/>
+
+#### `ping_my_slack_user_creation_client`
+
+This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
+
+```php
+add_filter( 'ping_my_slack_user_creation_client', [ $this, 'user_creation_client' ], 10, 1 );
+
+public function user_creation_client( $client ) {
+    $client->args = wp_parse_args(
+        [
+            'username' => 'John Doe'
+        ],
+        $client->args
+    )
+
+    return $client;
+}
+```
+
+**Parameters**
+
+- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+<br/>
+
+#### `ping_my_slack_user_modification_client`
+
+This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
+
+```php
+add_filter( 'ping_my_slack_user_modification_client', [ $this, 'user_modification_client' ], 10, 1 );
+
+public function user_modification_client( $client ) {
+    $client->args = wp_parse_args(
+        [
+            'username' => 'John Doe'
+        ],
+        $client->args
+    )
+
+    return $client;
+}
+```
+
+**Parameters**
+
+- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+<br/>
+
+#### `ping_my_slack_user_deletion_client`
+
+This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
+
+```php
+add_filter( 'ping_my_slack_user_deletion_client', [ $this, 'user_deletion_client' ], 10, 1 );
+
+public function user_deletion_client( $client ) {
+    $client->args = wp_parse_args(
+        [
+            'username' => 'John Doe'
+        ],
+        $client->args
+    )
+
+    return $client;
+}
+```
+
+**Parameters**
+
+- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+<br/>
