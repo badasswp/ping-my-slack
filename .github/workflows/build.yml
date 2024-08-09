@@ -1,4 +1,4 @@
-name: SearchAndReplace Build
+name: PingMySlack Build
 
 on:
   workflow_run:
