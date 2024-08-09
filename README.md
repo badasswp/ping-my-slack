@@ -367,53 +367,6 @@ public function user_creation_message( $message, $user_id ): string {
 - user_id _`{int}`_ By default this will be the User ID.
 <br/>
 
-#### `ping_my_slack_user_modification_client`
-
-This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
-
-```php
-add_filter( 'ping_my_slack_user_modification_client', [ $this, 'user_modification_client' ], 10, 1 );
-
-public function user_modification_client( $client ) {
-    $client->args = wp_parse_args(
-        [
-            'username' => 'John Doe'
-        ],
-        $client->args
-    )
-
-    return $client;
-}
-```
-
-**Parameters**
-
-- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
-<br/>
-
-#### `ping_my_slack_user_modification_message`
-
-This custom hook (filter) provides the ability to add a custom `user_modification` message to be sent to your Slack Workspace. For e.g. To send a custom message when a User is created, you could do:
-
-```php
-add_filter( 'ping_my_slack_user_modification_message', [ $this, 'user_modification_message' ], 10, 2 );
-
-public function user_modification_message( $message, $user_id ): string {
-    $message = sprintf(
-        'Attention: A User with ID: %d was just modified!',
-        $user_id
-    );
-
-    return (string) $message;
-}
-```
-
-**Parameters**
-
-- message _`{string}`_ By default this will be the passed message.
-- user_id _`{int}`_ By default this will be the User ID.
-<br/>
-
 #### `ping_my_slack_user_deletion_client`
 
 This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
@@ -448,6 +401,53 @@ add_filter( 'ping_my_slack_user_deletion_message', [ $this, 'user_deletion_messa
 public function user_deletion_message( $message, $user_id ): string {
     $message = sprintf(
         'Attention: A User with ID: %d was just deleted!',
+        $user_id
+    );
+
+    return (string) $message;
+}
+```
+
+**Parameters**
+
+- message _`{string}`_ By default this will be the passed message.
+- user_id _`{int}`_ By default this will be the User ID.
+<br/>
+
+#### `ping_my_slack_user_modification_client`
+
+This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
+
+```php
+add_filter( 'ping_my_slack_user_modification_client', [ $this, 'user_modification_client' ], 10, 1 );
+
+public function user_modification_client( $client ) {
+    $client->args = wp_parse_args(
+        [
+            'username' => 'John Doe'
+        ],
+        $client->args
+    )
+
+    return $client;
+}
+```
+
+**Parameters**
+
+- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+<br/>
+
+#### `ping_my_slack_user_modification_message`
+
+This custom hook (filter) provides the ability to add a custom `user_modification` message to be sent to your Slack Workspace. For e.g. To send a custom message when a User is created, you could do:
+
+```php
+add_filter( 'ping_my_slack_user_modification_message', [ $this, 'user_modification_message' ], 10, 2 );
+
+public function user_modification_message( $message, $user_id ): string {
+    $message = sprintf(
+        'Attention: A User with ID: %d was just modified!',
         $user_id
     );
 
