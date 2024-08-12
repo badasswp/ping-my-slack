@@ -17,6 +17,7 @@ use PingMySlack\Services\User;
 use PingMySlack\Services\Access;
 use PingMySlack\Services\Admin;
 use PingMySlack\Services\Comment;
+use PingMySlack\Services\Options;
 
 final class Container {
 	/**
@@ -42,6 +43,7 @@ final class Container {
 			Post::class,
 			Theme::class,
 			User::class,
+			Options::class,
 		];
 	}
 
