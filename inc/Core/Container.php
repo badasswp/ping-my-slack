@@ -43,7 +43,6 @@ final class Container {
 			Post::class,
 			Theme::class,
 			User::class,
-			Options::class,
 		];
 	}
 
