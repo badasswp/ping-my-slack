@@ -2,7 +2,7 @@
 
 Get notifications on Slack when changes are made on your WP website.
 
-![screenshot-1](https://github.com/user-attachments/assets/2d6c317d-cd68-4fda-bbce-43c3d30587c9)
+![screenshot-1](https://github.com/user-attachments/assets/667ab2fb-24c1-4d4d-ae83-5a89fc848710)
 
 ![ping-my-slack](https://github.com/badasswp/ping-my-slack/assets/149586343/1da2be61-ab22-42ac-bf9b-63df814c093d)
 
