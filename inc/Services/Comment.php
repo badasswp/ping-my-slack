@@ -54,11 +54,15 @@ class Comment extends Service implements Kernel {
 
 		switch ( $new_status ) {
 			case 'approved':
-				$message = $this->get_message( 'A Comment was just published!' );
+				$message = $this->get_message(
+					esc_html__( 'A Comment was just published!', 'ping-my-slack' )
+				);
 				break;
 
 			case 'trash':
-				$message = $this->get_message( 'A Comment was just trashed!' );
+				$message = $this->get_message(
+					esc_html__( 'A Comment was just trashed!', 'ping-my-slack' )
+				);
 				break;
 		}
 
@@ -93,7 +97,7 @@ class Comment extends Service implements Kernel {
 		$message = sprintf(
 			"%s: %s \n%s: %s \n%s: %s \n%s: %s \n%s: %s",
 			esc_html__( 'Ping', 'ping-my-slack' ),
-			esc_html__( $message, 'ping-my-slack' ),
+			esc_html( $message ),
 			esc_html__( 'Comment', 'ping-my-slack' ),
 			esc_html( $this->comment->comment_content ),
 			esc_html__( 'User', 'ping-my-slack' ),

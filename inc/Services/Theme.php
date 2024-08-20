@@ -46,7 +46,9 @@ class Theme extends Service implements Kernel {
 			return;
 		}
 
-		$message = $this->get_message( 'A Theme was just switched!' );
+		$message = $this->get_message(
+			esc_html__( 'A Theme was just switched!', 'ping-my-slack' )
+		);
 
 		/**
 		 * Filter Slack Client.
@@ -79,7 +81,7 @@ class Theme extends Service implements Kernel {
 		$message = sprintf(
 			"%s: %s \n%s: %s \n%s: %s \n%s: %s \n%s: %s",
 			esc_html__( 'Ping', 'ping-my-slack' ),
-			esc_html__( $message, 'ping-my-slack' ),
+			esc_html( $message ),
 			esc_html__( 'ID', 'ping-my-slack' ),
 			esc_html( $this->theme->ID ),
 			esc_html__( 'Title', 'ping-my-slack' ),

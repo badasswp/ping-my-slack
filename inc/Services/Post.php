@@ -54,15 +54,21 @@ class Post extends Service implements Kernel {
 
 		switch ( $new_status ) {
 			case 'draft':
-				$message = $this->get_message( 'A Post draft was just created!' );
+				$message = $this->get_message(
+					esc_html__( 'A Post draft was just created!', 'ping-my-slack' )
+				);
 				break;
 
 			case 'publish':
-				$message = $this->get_message( 'A Post was just published!' );
+				$message = $this->get_message(
+					esc_html__( 'A Post was just published!', 'ping-my-slack' )
+				);
 				break;
 
 			case 'trash':
-				$message = $this->get_message( 'A Post was just trashed!' );
+				$message = $this->get_message(
+					esc_html__( 'A Post was just trashed!', 'ping-my-slack' )
+				);
 				break;
 		}
 
@@ -97,7 +103,7 @@ class Post extends Service implements Kernel {
 		$message = sprintf(
 			"%s: %s \n%s: %s \n%s: %s \n%s: %s \n%s: %s",
 			esc_html__( 'Ping', 'ping-my-slack' ),
-			esc_html__( $message, 'ping-my-slack' ),
+			esc_html( $message ),
 			esc_html__( 'ID', 'ping-my-slack' ),
 			esc_html( $this->post->ID ),
 			esc_html__( 'Title', 'ping-my-slack' ),
