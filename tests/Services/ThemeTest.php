@@ -53,6 +53,16 @@ class ThemeTest extends TestCase {
 		$theme2 = Mockery::mock( \WP_Theme::class )->makePartial();
 		$theme2->shouldAllowMockingProtectedMethods();
 
+		\WP_Mock::userFunction(
+			'esc_html__',
+			[
+				'times'  => 1,
+				'return' => function ( $text ) {
+					return $text;
+				},
+			]
+		);
+
 		$this->theme->shouldReceive( 'get_message' )
 			->once()
 			->with( 'A Theme was just switched!' )
@@ -94,7 +104,7 @@ class ThemeTest extends TestCase {
 		\WP_Mock::userFunction(
 			'esc_html__',
 			[
-				'times'  => 6,
+				'times'  => 5,
 				'return' => function ( $text, $domain = 'ping-my-slack' ) {
 					return $text;
 				},
@@ -104,7 +114,7 @@ class ThemeTest extends TestCase {
 		\WP_Mock::userFunction(
 			'esc_html',
 			[
-				'times'  => 4,
+				'times'  => 5,
 				'return' => function ( $text ) {
 					return $text;
 				},

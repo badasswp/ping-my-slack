@@ -50,6 +50,16 @@ class CommentTest extends TestCase {
 		$comment = Mockery::mock( \WP_Comment::class )->makePartial();
 		$comment->shouldAllowMockingProtectedMethods();
 
+		\WP_Mock::userFunction(
+			'esc_html__',
+			[
+				'times'  => 1,
+				'return' => function ( $text ) {
+					return $text;
+				},
+			]
+		);
+
 		$this->comment->shouldReceive( 'get_message' )
 			->once()
 			->with( 'A Comment was just trashed!' )
@@ -85,7 +95,7 @@ class CommentTest extends TestCase {
 		\WP_Mock::userFunction(
 			'esc_html__',
 			[
-				'times'  => 6,
+				'times'  => 5,
 				'return' => function ( $text, $domain = 'ping-my-slack' ) {
 					return $text;
 				},
@@ -95,7 +105,7 @@ class CommentTest extends TestCase {
 		\WP_Mock::userFunction(
 			'esc_html',
 			[
-				'times'  => 4,
+				'times'  => 5,
 				'return' => function ( $text ) {
 					return $text;
 				},
