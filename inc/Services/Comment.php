@@ -77,7 +77,7 @@ class Comment extends Service implements Kernel {
 		 * @param Client $client Client Instance.
 		 * @return Client
 		 */
-		$this->client = apply_filters( 'ping_my_slack_comment_client', $client = $this->client );
+		$this->client = apply_filters( 'ping_me_on_slack_comment_client', $client = $this->client );
 
 		$this->client->ping( $message );
 	}
@@ -122,6 +122,6 @@ class Comment extends Service implements Kernel {
 		 *
 		 * @return string
 		 */
-		return (string) apply_filters( 'ping_my_slack_comment_message', $message, $this->comment, $this->event );
+		return (string) apply_filters( 'ping_me_on_slack_comment_message', $message, $this->comment, $this->event );
 	}
 }

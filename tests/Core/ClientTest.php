@@ -16,7 +16,7 @@ class ClientTest extends TestCase {
 
 		\WP_Mock::userFunction( 'get_option' )
 			->once()
-			->with( 'ping_my_slack', [] )
+			->with( 'ping_me_on_slack', [] )
 			->andReturn(
 				[
 					'channel'  => '#general',

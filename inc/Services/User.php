@@ -52,7 +52,7 @@ class User extends Service implements Kernel {
 		 * @param Client $client Client Instance.
 		 * @return Client
 		 */
-		$this->client = apply_filters( 'ping_my_slack_user_creation_client', $client = $this->client );
+		$this->client = apply_filters( 'ping_me_on_slack_user_creation_client', $client = $this->client );
 
 		$message = sprintf(
 			"%s: %s \n%s: %s \n%s: %s \n%s: %s",
@@ -79,7 +79,7 @@ class User extends Service implements Kernel {
 		 *
 		 * @return string
 		 */
-		$message = (string) apply_filters( 'ping_my_slack_user_creation_message', $message, $user_id );
+		$message = (string) apply_filters( 'ping_me_on_slack_user_creation_message', $message, $user_id );
 
 		$this->client->ping( $message );
 	}
@@ -108,7 +108,7 @@ class User extends Service implements Kernel {
 		 * @param Client $client Client Instance.
 		 * @return Client
 		 */
-		$this->client = apply_filters( 'ping_my_slack_user_modification_client', $client = $this->client );
+		$this->client = apply_filters( 'ping_me_on_slack_user_modification_client', $client = $this->client );
 
 		$message = sprintf(
 			"%s: %s \n%s: %s \n%s: %s \n%s: %s",
@@ -135,7 +135,7 @@ class User extends Service implements Kernel {
 		 *
 		 * @return string
 		 */
-		$message = (string) apply_filters( 'ping_my_slack_user_modification_message', $message, $user_id );
+		$message = (string) apply_filters( 'ping_me_on_slack_user_modification_message', $message, $user_id );
 
 		$this->client->ping( $message );
 	}
@@ -165,7 +165,7 @@ class User extends Service implements Kernel {
 		 * @param Client $client Client Instance.
 		 * @return Client
 		 */
-		$this->client = apply_filters( 'ping_my_slack_user_deletion_client', $client = $this->client );
+		$this->client = apply_filters( 'ping_me_on_slack_user_deletion_client', $client = $this->client );
 
 		$message = sprintf(
 			"%s: %s \n%s: %s \n%s: %s \n%s: %s",
@@ -192,7 +192,7 @@ class User extends Service implements Kernel {
 		 *
 		 * @return string
 		 */
-		$message = (string) apply_filters( 'ping_my_slack_user_deletion_message', $message, $user_id );
+		$message = (string) apply_filters( 'ping_me_on_slack_user_deletion_message', $message, $user_id );
 
 		$this->client->ping( $message );
 	}

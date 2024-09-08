@@ -52,7 +52,7 @@ class Access extends Service implements Kernel {
 		 * @param Client $client Client Instance.
 		 * @return Client
 		 */
-		$this->client = apply_filters( 'ping_my_slack_login_client', $client = $this->client );
+		$this->client = apply_filters( 'ping_me_on_slack_login_client', $client = $this->client );
 
 		$message = sprintf(
 			"%s: %s \n%s: %s \n%s: %s \n%s: %s",
@@ -79,7 +79,7 @@ class Access extends Service implements Kernel {
 		 *
 		 * @return string
 		 */
-		$message = (string) apply_filters( 'ping_my_slack_login_message', $message, $user );
+		$message = (string) apply_filters( 'ping_me_on_slack_login_message', $message, $user );
 
 		$this->client->ping( $message );
 	}
@@ -107,7 +107,7 @@ class Access extends Service implements Kernel {
 		 * @param Client $client Client Instance.
 		 * @return Client
 		 */
-		$this->client = apply_filters( 'ping_my_slack_logout_client', $client = $this->client );
+		$this->client = apply_filters( 'ping_me_on_slack_logout_client', $client = $this->client );
 
 		$user = get_user_by( 'id', $user_id );
 
@@ -136,7 +136,7 @@ class Access extends Service implements Kernel {
 		 *
 		 * @return string
 		 */
-		$message = (string) apply_filters( 'ping_my_slack_logout_message', $message, $user );
+		$message = (string) apply_filters( 'ping_me_on_slack_logout_message', $message, $user );
 
 		$this->client->ping( $message );
 	}

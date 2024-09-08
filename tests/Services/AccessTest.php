@@ -44,7 +44,7 @@ class AccessTest extends TestCase {
 		$user     = Mockery::mock( \WP_User::class )->makePartial();
 		$user->ID = 1;
 
-		\WP_Mock::expectFilter( 'ping_my_slack_login_client', $this->access->client );
+		\WP_Mock::expectFilter( 'ping_me_on_slack_login_client', $this->access->client );
 
 		\WP_Mock::userFunction(
 			'esc_html__',
@@ -69,7 +69,7 @@ class AccessTest extends TestCase {
 		$message = "Ping: A User just logged in! \nID: 1 \nUser: john@doe.com \nDate: 08:57:13, 01-07-2024";
 
 		\WP_Mock::expectFilter(
-			'ping_my_slack_login_message',
+			'ping_me_on_slack_login_message',
 			$message,
 			$user
 		);
@@ -99,7 +99,7 @@ class AccessTest extends TestCase {
 			->with( 'id', 1 )
 			->andReturn( $user );
 
-		\WP_Mock::expectFilter( 'ping_my_slack_logout_client', $this->access->client );
+		\WP_Mock::expectFilter( 'ping_me_on_slack_logout_client', $this->access->client );
 
 		\WP_Mock::userFunction(
 			'esc_html__',
@@ -124,7 +124,7 @@ class AccessTest extends TestCase {
 		$message = "Ping: A User just logged out! \nID: 1 \nUser: john@doe.com \nDate: 08:57:13, 01-07-2024";
 
 		\WP_Mock::expectFilter(
-			'ping_my_slack_logout_message',
+			'ping_me_on_slack_logout_message',
 			$message,
 			$user
 		);

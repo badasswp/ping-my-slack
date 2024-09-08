@@ -40,7 +40,7 @@ class PluginTest extends TestCase {
 	public function test_plugin_runs_singleton_instance() {
 		\WP_Mock::userFunction( 'get_option' )
 			->times( 7 )
-			->with( 'ping_my_slack', [] )
+			->with( 'ping_me_on_slack', [] )
 			->andReturn(
 				[
 					'webhook'  => 'https://hooks.services.slack.com',
@@ -63,7 +63,7 @@ class PluginTest extends TestCase {
 			'init',
 			[
 				Service::$services['PingMySlack\Services\Boot'],
-				'ping_my_slack_translation',
+				'ping_me_on_slack_translation',
 			]
 		);
 

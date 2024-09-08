@@ -69,7 +69,7 @@ class CommentTest extends TestCase {
 			->once()
 			->with( 'A Comment was just trashed!' );
 
-		\WP_Mock::expectFilter( 'ping_my_slack_comment_client', $this->client );
+		\WP_Mock::expectFilter( 'ping_me_on_slack_comment_client', $this->client );
 
 		$this->comment->ping_on_comment_status_change( 'trash', 'approved', $comment );
 
@@ -120,7 +120,7 @@ class CommentTest extends TestCase {
 		$message = "Ping: A Comment was just trashed! \nComment: What a wonderful world! \nUser: john@doe.com \nPost: Hello World! \nDate: 08:57:13, 01-07-2024";
 
 		\WP_Mock::expectFilter(
-			'ping_my_slack_comment_message',
+			'ping_me_on_slack_comment_message',
 			$message,
 			$comment,
 			'trash'

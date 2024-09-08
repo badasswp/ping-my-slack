@@ -57,7 +57,7 @@ class Client {
 	 * @return void
 	 */
 	public function __construct() {
-		$this->settings = get_option( 'ping_my_slack', [] );
+		$this->settings = get_option( 'ping_me_on_slack', [] );
 
 		$this->args = [
 			'channel'  => $this->settings['channel'] ?? '',
@@ -103,7 +103,7 @@ class Client {
 			 * @param \RuntimeException $e Exception object.
 			 * @return void
 			 */
-			do_action( 'ping_my_slack_on_ping_error', $e );
+			do_action( 'ping_me_on_slack_on_ping_error', $e );
 		}
 	}
 }

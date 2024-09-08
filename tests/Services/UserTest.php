@@ -47,7 +47,7 @@ class UserTest extends TestCase {
 		$user->ID         = 1;
 		$user->user_login = 'john@doe.com';
 
-		\WP_Mock::expectFilter( 'ping_my_slack_user_creation_client', $this->user->client );
+		\WP_Mock::expectFilter( 'ping_me_on_slack_user_creation_client', $this->user->client );
 
 		\WP_Mock::userFunction(
 			'esc_html__',
@@ -77,7 +77,7 @@ class UserTest extends TestCase {
 		$message = "Ping: A User was just created! \nID: 1 \nUser: john@doe.com \nDate: 08:57:13, 01-07-2024";
 
 		\WP_Mock::expectFilter(
-			'ping_my_slack_user_creation_message',
+			'ping_me_on_slack_user_creation_message',
 			$message,
 			$user->ID
 		);
@@ -103,7 +103,7 @@ class UserTest extends TestCase {
 		$user->ID         = 1;
 		$user->user_login = 'john@doe.com';
 
-		\WP_Mock::expectFilter( 'ping_my_slack_user_modification_client', $this->user->client );
+		\WP_Mock::expectFilter( 'ping_me_on_slack_user_modification_client', $this->user->client );
 
 		\WP_Mock::userFunction(
 			'esc_html__',
@@ -133,7 +133,7 @@ class UserTest extends TestCase {
 		$message = "Ping: A User was just modified! \nID: 1 \nUser: john@doe.com \nDate: 08:57:13, 01-07-2024";
 
 		\WP_Mock::expectFilter(
-			'ping_my_slack_user_modification_message',
+			'ping_me_on_slack_user_modification_message',
 			$message,
 			$user->ID
 		);
@@ -159,7 +159,7 @@ class UserTest extends TestCase {
 		$user->ID         = 1;
 		$user->user_login = 'john@doe.com';
 
-		\WP_Mock::expectFilter( 'ping_my_slack_user_deletion_client', $this->user->client );
+		\WP_Mock::expectFilter( 'ping_me_on_slack_user_deletion_client', $this->user->client );
 
 		\WP_Mock::userFunction(
 			'esc_html__',
@@ -184,7 +184,7 @@ class UserTest extends TestCase {
 		$message = "Ping: A User was just deleted! \nID: 1 \nUser: john@doe.com \nDate: 08:57:13, 01-07-2024";
 
 		\WP_Mock::expectFilter(
-			'ping_my_slack_user_deletion_message',
+			'ping_me_on_slack_user_deletion_message',
 			$message,
 			$user->ID
 		);

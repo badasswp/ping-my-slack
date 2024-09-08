@@ -72,7 +72,7 @@ class ThemeTest extends TestCase {
 			->once()
 			->with( 'A Theme was just switched!' );
 
-		\WP_Mock::expectFilter( 'ping_my_slack_theme_client', $this->client );
+		\WP_Mock::expectFilter( 'ping_me_on_slack_theme_client', $this->client );
 
 		$this->theme->ping_on_theme_change( 'Divi', $theme1, $theme2 );
 
@@ -124,7 +124,7 @@ class ThemeTest extends TestCase {
 		$message = "Ping: A Theme was just switched! \nID: 1 \nTitle: Diva \nUser: john@doe.com \nDate: 08:57:13, 01-07-2024";
 
 		\WP_Mock::expectFilter(
-			'ping_my_slack_theme_message',
+			'ping_me_on_slack_theme_message',
 			$message,
 			$theme,
 		);

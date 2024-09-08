@@ -16,7 +16,7 @@ class ServiceTest extends TestCase {
 
 		\WP_Mock::userFunction( 'get_option' )
 			->once()
-			->with( 'ping_my_slack', [] )
+			->with( 'ping_me_on_slack', [] )
 			->andReturn(
 				[
 					'channel'  => '#general',
@@ -34,7 +34,7 @@ class ServiceTest extends TestCase {
 	public function test_get_instance_returns_singleton() {
 		\WP_Mock::userFunction( 'get_option' )
 			->once()
-			->with( 'ping_my_slack', [] )
+			->with( 'ping_me_on_slack', [] )
 			->andReturn(
 				[
 					'channel'  => '#general',

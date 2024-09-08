@@ -28,7 +28,7 @@ class BootTest extends TestCase {
 	}
 
 	public function test_register() {
-		\WP_Mock::expectActionAdded( 'init', [ $this->boot, 'ping_my_slack_translation' ] );
+		\WP_Mock::expectActionAdded( 'init', [ $this->boot, 'ping_me_on_slack_translation' ] );
 
 		$this->boot->register();
 
@@ -51,7 +51,7 @@ class BootTest extends TestCase {
 				'/inc/Services/../../languages'
 			);
 
-		$this->boot->ping_my_slack_translation();
+		$this->boot->ping_me_on_slack_translation();
 
 		$this->assertConditionsMet();
 	}

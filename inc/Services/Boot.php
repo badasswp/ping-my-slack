@@ -22,7 +22,7 @@ class Boot extends Service implements Kernel {
 	 * @return void
 	 */
 	public function register(): void {
-		add_action( 'init', [ $this, 'ping_my_slack_translation' ] );
+		add_action( 'init', [ $this, 'ping_me_on_slack_translation' ] );
 	}
 
 	/**
@@ -32,7 +32,7 @@ class Boot extends Service implements Kernel {
 	 *
 	 * @return void
 	 */
-	public function ping_my_slack_translation(): void {
+	public function ping_me_on_slack_translation(): void {
 		load_plugin_textdomain(
 			'ping-my-slack',
 			false,

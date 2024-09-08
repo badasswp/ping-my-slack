@@ -81,7 +81,7 @@ class PostTest extends TestCase {
 			->once()
 			->with( 'A Post was just published!' );
 
-		\WP_Mock::expectFilter( 'ping_my_slack_post_client', $this->client );
+		\WP_Mock::expectFilter( 'ping_me_on_slack_post_client', $this->client );
 
 		$this->post->ping_on_post_status_change( 'publish', 'draft', $post );
 
@@ -136,7 +136,7 @@ class PostTest extends TestCase {
 		$message = "Ping: A Post was just published! \nID: 1 \nTitle: Hello World! \nUser: john@doe.com \nDate: 08:57:13, 01-07-2024";
 
 		\WP_Mock::expectFilter(
-			'ping_my_slack_post_message',
+			'ping_me_on_slack_post_message',
 			$message,
 			$post,
 			'publish'

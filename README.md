@@ -32,12 +32,12 @@ Ever needed to keep track of what's happening on your website? No need to look f
 
 ### Hooks
 
-#### `ping_my_slack_{$post_type}_client`
+#### `ping_me_on_slack_{$post_type}_client`
 
 This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
 
 ```php
-add_filter( 'ping_my_slack_post_client', [ $this, 'post_client' ], 10, 1 );
+add_filter( 'ping_me_on_slack_post_client', [ $this, 'post_client' ], 10, 1 );
 
 public function post_client( $client ) {
     $client->args = wp_parse_args(
@@ -56,12 +56,12 @@ public function post_client( $client ) {
 - client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
-#### `ping_my_slack_{$post_type}_message`
+#### `ping_me_on_slack_{$post_type}_message`
 
 This custom hook (filter) provides the ability to add a custom `Post` message to be sent to your Slack Workspace. For e.g. To send a custom message when a Post draft is created by a user, you could do:
 
 ```php
-add_filter( 'ping_my_slack_post_message', [ $this, 'post_message' ], 10, 3 );
+add_filter( 'ping_me_on_slack_post_message', [ $this, 'post_message' ], 10, 3 );
 
 public function post_message( $message, $post, $event ): string {
     if ( 'draft' === $event ) {
@@ -83,19 +83,19 @@ public function post_message( $message, $post, $event ): string {
 - event _`{string}`_ By default this will be the event that just happened.
 <br/>
 
-#### `ping_my_slack_admin_fields`
+#### `ping_me_on_slack_admin_fields`
 
 This custom hook (filter) provides a way to implement new Admin fields in the plugin's admin page. For e.g. To add a new text field, you could do:
 
 ```php
-add_filter( 'ping_my_slack_admin_fields', [ $this, 'custom_field' ] );
+add_filter( 'ping_me_on_slack_admin_fields', [ $this, 'custom_field' ] );
 
 public function custom_field( $fields ): array {
     return wp_parse_args(
         [
             'telephone' => [
                 'type'  => 'text',
-                'name'  => 'ping_my_slack_telephone',
+                'name'  => 'ping_me_on_slack_telephone',
                 'html'  => esc_html__( 'My Telephone', 'ping-my-slack' ),
                 'label' => esc_html__( '(555) 555-1234', 'ping-my-slack' ),
             ]
@@ -110,12 +110,12 @@ public function custom_field( $fields ): array {
 - fields _`{mixed[]}`_ By default this will be an associative array, containing fields options.
 <br/>
 
-#### `ping_my_slack_comment_client`
+#### `ping_me_on_slack_comment_client`
 
 This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
 
 ```php
-add_filter( 'ping_my_slack_comment_client', [ $this, 'comment_client' ], 10, 1 );
+add_filter( 'ping_me_on_slack_comment_client', [ $this, 'comment_client' ], 10, 1 );
 
 public function comment_client( $client ) {
     $client->args = wp_parse_args(
@@ -134,12 +134,12 @@ public function comment_client( $client ) {
 - client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
-#### `ping_my_slack_comment_message`
+#### `ping_me_on_slack_comment_message`
 
 This custom hook (filter) provides the ability to add a custom `Comment` message to be sent to your Slack Workspace. For e.g. To send a custom message when a Comment is trashed by a user, you could do:
 
 ```php
-add_filter( 'ping_my_slack_comment_message', [ $this, 'comment_message' ], 10, 3 );
+add_filter( 'ping_me_on_slack_comment_message', [ $this, 'comment_message' ], 10, 3 );
 
 public function comment_message( $message, $comment, $event ): string {
     if ( 'trash' === $event ) {
@@ -161,18 +161,18 @@ public function comment_message( $message, $comment, $event ): string {
 - event _`{string}`_ By default this will be the event that just happened.
 <br/>
 
-#### `ping_my_slack_on_ping_error`
+#### `ping_me_on_slack_on_ping_error`
 
 This custom hook (action) fires immediately after the Ping call is made and an exception is thrown. For e.g. you can capture errors here like so:
 
 ```php
-add_action( 'ping_my_slack_on_ping_error', [ $this, 'log_ping_errors' ], 10, 1 );
+add_action( 'ping_me_on_slack_on_ping_error', [ $this, 'log_ping_errors' ], 10, 1 );
 
 public function log_ping_errors( $e ): void {
     if ( $e instanceOf \Exception ) {
         wp_insert_post(
             [
-                'post_type'   => 'ping_my_slack_logs',
+                'post_type'   => 'ping_me_on_slack_logs',
                 'post_title'  => sprintf(
                   'Fatal Error: %s'
                   (string) $e->getMessage()
@@ -188,12 +188,12 @@ public function log_ping_errors( $e ): void {
 - e _`{Exception}`_ By default this will be an Exception.
 <br/>
 
-#### `ping_my_slack_login_client`
+#### `ping_me_on_slack_login_client`
 
 This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
 
 ```php
-add_filter( 'ping_my_slack_login_client', [ $this, 'login_client' ], 10, 1 );
+add_filter( 'ping_me_on_slack_login_client', [ $this, 'login_client' ], 10, 1 );
 
 public function login_client( $client ) {
     $client->args = wp_parse_args(
@@ -212,12 +212,12 @@ public function login_client( $client ) {
 - client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
-#### `ping_my_slack_login_message`
+#### `ping_me_on_slack_login_message`
 
 This custom hook (filter) provides the ability to add a custom `Login` message to be sent to your Slack Workspace. For e.g. To send a custom message when an Administrator logs in, you could do:
 
 ```php
-add_filter( 'ping_my_slack_login_message', [ $this, 'login_message' ], 10, 2 );
+add_filter( 'ping_me_on_slack_login_message', [ $this, 'login_message' ], 10, 2 );
 
 public function login_message( $message, $user ): string {
     if ( in_array( 'administrator', $user->roles, true ) ) {
@@ -237,12 +237,12 @@ public function login_message( $message, $user ): string {
 - user _`{WP_User}`_ By default this will be the WP User object.
 <br/>
 
-#### `ping_my_slack_logout_client`
+#### `ping_me_on_slack_logout_client`
 
 This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
 
 ```php
-add_filter( 'ping_my_slack_logout_client', [ $this, 'logout_client' ], 10, 1 );
+add_filter( 'ping_me_on_slack_logout_client', [ $this, 'logout_client' ], 10, 1 );
 
 public function logout_client( $client ) {
     $client->args = wp_parse_args(
@@ -261,12 +261,12 @@ public function logout_client( $client ) {
 - client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
-#### `ping_my_slack_logout_message`
+#### `ping_me_on_slack_logout_message`
 
 This custom hook (filter) provides the ability to add a custom `Logout` message to be sent to your Slack Workspace. For e.g. To send a custom message when an Administrator logs out, you could do:
 
 ```php
-add_filter( 'ping_my_slack_logout_message', [ $this, 'logout_message' ], 10, 2 );
+add_filter( 'ping_me_on_slack_logout_message', [ $this, 'logout_message' ], 10, 2 );
 
 public function logout_message( $message, $user ): string {
     if ( in_array( 'administrator', $user->roles, true ) ) {
@@ -286,12 +286,12 @@ public function logout_message( $message, $user ): string {
 - user _`{WP_User}`_ By default this will be the WP User object.
 <br/>
 
-#### `ping_my_slack_theme_client`
+#### `ping_me_on_slack_theme_client`
 
 This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
 
 ```php
-add_filter( 'ping_my_slack_theme_client', [ $this, 'theme_client' ], 10, 1 );
+add_filter( 'ping_me_on_slack_theme_client', [ $this, 'theme_client' ], 10, 1 );
 
 public function theme_client( $client ) {
     $client->args = wp_parse_args(
@@ -310,12 +310,12 @@ public function theme_client( $client ) {
 - client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
-#### `ping_my_slack_theme_message`
+#### `ping_me_on_slack_theme_message`
 
 This custom hook (filter) provides the ability to add a custom `theme` message to be sent to your Slack Workspace. For e.g. To send a custom message when a user switches a theme:
 
 ```php
-add_filter( 'ping_my_slack_theme_message', [ $this, 'theme_message' ], 10, 2 );
+add_filter( 'ping_me_on_slack_theme_message', [ $this, 'theme_message' ], 10, 2 );
 
 public function theme_message( $message, $user ): string {
     if ( in_array( 'administrator', $user->roles, true ) ) {
@@ -335,12 +335,12 @@ public function theme_message( $message, $user ): string {
 - theme _`{WP_Theme}`_ By default this will be the WP Theme object.
 <br/>
 
-#### `ping_my_slack_user_creation_client`
+#### `ping_me_on_slack_user_creation_client`
 
 This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
 
 ```php
-add_filter( 'ping_my_slack_user_creation_client', [ $this, 'user_creation_client' ], 10, 1 );
+add_filter( 'ping_me_on_slack_user_creation_client', [ $this, 'user_creation_client' ], 10, 1 );
 
 public function user_creation_client( $client ) {
     $client->args = wp_parse_args(
@@ -359,12 +359,12 @@ public function user_creation_client( $client ) {
 - client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
-#### `ping_my_slack_user_creation_message`
+#### `ping_me_on_slack_user_creation_message`
 
 This custom hook (filter) provides the ability to add a custom `user_creation` message to be sent to your Slack Workspace. For e.g. To send a custom message when a User is created, you could do:
 
 ```php
-add_filter( 'ping_my_slack_user_creation_message', [ $this, 'user_creation_message' ], 10, 2 );
+add_filter( 'ping_me_on_slack_user_creation_message', [ $this, 'user_creation_message' ], 10, 2 );
 
 public function user_creation_message( $message, $user_id ): string {
     $message = sprintf(
@@ -382,12 +382,12 @@ public function user_creation_message( $message, $user_id ): string {
 - user_id _`{int}`_ By default this will be the User ID.
 <br/>
 
-#### `ping_my_slack_user_deletion_client`
+#### `ping_me_on_slack_user_deletion_client`
 
 This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
 
 ```php
-add_filter( 'ping_my_slack_user_deletion_client', [ $this, 'user_deletion_client' ], 10, 1 );
+add_filter( 'ping_me_on_slack_user_deletion_client', [ $this, 'user_deletion_client' ], 10, 1 );
 
 public function user_deletion_client( $client ) {
     $client->args = wp_parse_args(
@@ -406,12 +406,12 @@ public function user_deletion_client( $client ) {
 - client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
-#### `ping_my_slack_user_deletion_message`
+#### `ping_me_on_slack_user_deletion_message`
 
 This custom hook (filter) provides the ability to add a custom `user_deletion` message to be sent to your Slack Workspace. For e.g. To send a custom message when a User is created, you could do:
 
 ```php
-add_filter( 'ping_my_slack_user_deletion_message', [ $this, 'user_deletion_message' ], 10, 2 );
+add_filter( 'ping_me_on_slack_user_deletion_message', [ $this, 'user_deletion_message' ], 10, 2 );
 
 public function user_deletion_message( $message, $user_id ): string {
     $message = sprintf(
@@ -429,12 +429,12 @@ public function user_deletion_message( $message, $user_id ): string {
 - user_id _`{int}`_ By default this will be the User ID.
 <br/>
 
-#### `ping_my_slack_user_modification_client`
+#### `ping_me_on_slack_user_modification_client`
 
 This custom hook (filter) provides the ability to customise the Slack client. For e.g. To send with a custom username, you could do:
 
 ```php
-add_filter( 'ping_my_slack_user_modification_client', [ $this, 'user_modification_client' ], 10, 1 );
+add_filter( 'ping_me_on_slack_user_modification_client', [ $this, 'user_modification_client' ], 10, 1 );
 
 public function user_modification_client( $client ) {
     $client->args = wp_parse_args(
@@ -453,12 +453,12 @@ public function user_modification_client( $client ) {
 - client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
-#### `ping_my_slack_user_modification_message`
+#### `ping_me_on_slack_user_modification_message`
 
 This custom hook (filter) provides the ability to add a custom `user_modification` message to be sent to your Slack Workspace. For e.g. To send a custom message when a User is created, you could do:
 
 ```php
-add_filter( 'ping_my_slack_user_modification_message', [ $this, 'user_modification_message' ], 10, 2 );
+add_filter( 'ping_me_on_slack_user_modification_message', [ $this, 'user_modification_message' ], 10, 2 );
 
 public function user_modification_message( $message, $user_id ): string {
     $message = sprintf(

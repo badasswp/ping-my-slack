@@ -59,11 +59,11 @@ class Admin extends Service implements Kernel {
 			->add_fields( $this->get_admin_fields() );
 
 		update_option(
-			'ping_my_slack',
+			'ping_me_on_slack',
 			[
-				'webhook'  => carbon_get_theme_option( 'ping_my_slack_webhook' ),
-				'username' => carbon_get_theme_option( 'ping_my_slack_username' ),
-				'channel'  => carbon_get_theme_option( 'ping_my_slack_channel' ),
+				'webhook'  => carbon_get_theme_option( 'ping_me_on_slack_webhook' ),
+				'username' => carbon_get_theme_option( 'ping_me_on_slack_username' ),
+				'channel'  => carbon_get_theme_option( 'ping_me_on_slack_channel' ),
 			]
 		);
 
@@ -78,7 +78,7 @@ class Admin extends Service implements Kernel {
 		 * @param mixed[] $options Plugin options.
 		 * @return void
 		 */
-		do_action( 'ping_my_slack_admin_page', get_option( 'ping_my_slack', [] ) );
+		do_action( 'ping_me_on_slack_admin_page', get_option( 'ping_me_on_slack', [] ) );
 	}
 
 	/**
@@ -95,26 +95,26 @@ class Admin extends Service implements Kernel {
 		$fields = [
 			'summary'  => [
 				'type' => 'html',
-				'name' => 'ping_my_slack_summary',
+				'name' => 'ping_me_on_slack_summary',
 				'html' => esc_html__( 'Get notifications on Slack when changes are made on your WP website.', 'ping-my-slack' ),
 			],
 			'username' => [
 				'type'  => 'text',
-				'name'  => 'ping_my_slack_username',
+				'name'  => 'ping_me_on_slack_username',
 				'html'  => esc_html__( 'Slack Username', 'ping-my-slack' ),
 				'label' => esc_html__( 'John Doe', 'ping-my-slack' ),
 				'width' => 50,
 			],
 			'channel'  => [
 				'type'  => 'text',
-				'name'  => 'ping_my_slack_channel',
+				'name'  => 'ping_me_on_slack_channel',
 				'html'  => esc_html__( 'Slack Channel', 'ping-my-slack' ),
 				'label' => esc_html__( 'e.g. #general', 'ping-my-slack' ),
 				'width' => 50,
 			],
 			'webhook'  => [
 				'type'  => 'text',
-				'name'  => 'ping_my_slack_webhook',
+				'name'  => 'ping_me_on_slack_webhook',
 				'html'  => esc_html__( 'Slack Webhook', 'ping-my-slack' ),
 				'label' => esc_html__( 'e.g. https://hooks.slack.com/services/xxxxxx', 'ping-my-slack' ),
 			],
@@ -131,7 +131,7 @@ class Admin extends Service implements Kernel {
 		 * @param mixed[] $fields Admin Fields.
 		 * @return mixed[]
 		 */
-		$fields = (array) apply_filters( 'ping_my_slack_admin_fields', $fields );
+		$fields = (array) apply_filters( 'ping_me_on_slack_admin_fields', $fields );
 
 		return array_map(
 			function ( $field ) {
