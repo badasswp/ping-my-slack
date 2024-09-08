@@ -23,10 +23,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once __DIR__ . '/init.php';
 
 // Bail out, if Composer is NOT installed.
-if ( ! file_exists( PINGMEONSLACK ) ) {
+if ( ! file_exists( PING_ME_ON_SLACK ) ) {
 	add_action( 'admin_notices', 'ping_me_on_slack_notice' );
 	return;
 }
 
 // Run Plugin.
-ping_me_on_slack_run( PINGMYSLACK );
+ping_me_on_slack_run( PING_ME_ON_SLACK );
