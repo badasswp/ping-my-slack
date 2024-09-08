@@ -4,10 +4,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ping My Slack\n"
 "POT-Creation-Date: 2024-08-05 05:33+0100\n"
-"PO-Revision-Date: 2024-08-05 06:57+0100\n"
+"PO-Revision-Date: 2024-08-05 09:55+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: hr\n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,16 +26,16 @@ msgstr ""
 #: inc/Services/Theme.php:81 inc/Services/User.php:59 inc/Services/User.php:115
 #: inc/Services/User.php:172
 msgid "Ping"
-msgstr "Zviždati"
+msgstr "Ping"
 
 #. Plugin Name of the plugin/theme
-msgid "Ping My Slack"
-msgstr "Pingajte moju opuštenost"
+msgid "Ping Me On Slack"
+msgstr "Esegui il ping del mio Slack"
 
 #. Description of the plugin/theme
 #: inc/Services/Admin.php:99
 msgid "Get notifications on Slack when changes are made on your WP website."
-msgstr "Primajte obavijesti na Slacku kada se naprave promjene na vašoj WP web stranici."
+msgstr "Ricevi notifiche su Slack quando vengono apportate modifiche al tuo sito web WP."
 
 #. Plugin URI of the plugin/theme
 msgid "https://github.com/badasswp/ping-me-on-slack"
@@ -51,7 +51,7 @@ msgstr "https://github.com/badasswp"
 
 #: init.php:15
 msgid "Error: Composer is not installed!"
-msgstr "Pogreška: Composer nije instaliran!"
+msgstr "Errore: Composer non è installato!"
 
 #: inc/Services/Access.php:61 inc/Services/Access.php:118
 #: inc/Services/Post.php:101 inc/Services/Theme.php:83 inc/Services/User.php:61
@@ -64,103 +64,103 @@ msgstr "ID"
 #: inc/Services/Theme.php:87 inc/Services/User.php:63 inc/Services/User.php:119
 #: inc/Services/User.php:176
 msgid "User"
-msgstr "Korisnik"
+msgstr "Utente"
 
 #: inc/Services/Comment.php:97
 msgid "Comment"
-msgstr "Komentar"
+msgstr "Commento"
 
 #: inc/Services/Comment.php:101
 msgid "Post"
-msgstr "Objava"
+msgstr "Articolo"
 
 #: inc/Services/Post.php:103 inc/Services/Theme.php:85
 msgid "Title"
-msgstr "Naslov"
+msgstr "Titolo"
 
 #: inc/Services/Access.php:65 inc/Services/Access.php:122
 #: inc/Services/Comment.php:103 inc/Services/Post.php:107
 #: inc/Services/Theme.php:89 inc/Services/User.php:65 inc/Services/User.php:121
 #: inc/Services/User.php:178
 msgid "Date"
-msgstr "Datum"
+msgstr "Data"
 
 #: inc/Services/Admin.php:105
 msgid "John Doe"
-msgstr "John Doe"
+msgstr "Mario Rossi"
 
 #: inc/Services/Admin.php:104
 msgid "Slack Username"
-msgstr "Slack korisničko ime"
+msgstr "Nome utente Slack"
 
 #: inc/Services/Admin.php:111
 msgid "Slack Channel"
-msgstr "Kanal Slack"
+msgstr "Canale Slack"
 
 #: inc/Services/Admin.php:118
 msgid "Slack Webhook"
-msgstr "Slack Webhook"
+msgstr "Webhook Slack"
 
 #: inc/Services/Admin.php:112
 msgid "e.g. #general"
-msgstr "npr. #general"
+msgstr "ad es. #general"
 
 #: inc/Services/Admin.php:119
 msgid "e.g. https://hooks.slack.com/services/xxxxxx"
-msgstr "npr. https://hooks.slack.com/services/xxxxxx"
+msgstr "ad es. https://hooks.slack.com/services/xxxxxx"
 
 #: inc/Services/User.php:60
 msgid "A User was just created!"
-msgstr "Korisnik je upravo stvoren!"
+msgstr "Un utente è stato appena creato!"
 
 #: inc/Services/User.php:116
 msgid "A User was just modified!"
-msgstr "Korisnik je upravo izmijenjen!"
+msgstr "Un utente è stato appena modificato!"
 
 #: inc/Services/User.php:173
 msgid "A User was just deleted!"
-msgstr "Korisnik je upravo izbrisan!"
+msgstr "Un utente è stato appena cancellato!"
 
 #: inc/Services/Access.php:60
 msgid "A User just logged in!"
-msgstr "Korisnik se upravo prijavio!"
+msgstr "Un utente ha appena effettuato l'accesso!"
 
 #: inc/Services/Access.php:117
 msgid "A User just logged out!"
-msgstr "Korisnik se upravo odjavio!"
+msgstr "Un utente si è appena disconnesso!"
 
 msgid "A Comment was just published!"
-msgstr "Komentar je upravo objavljen!"
+msgstr "Un commento è stato appena pubblicato!"
 
 msgid "A Comment was just trashed!"
-msgstr "Komentar je upravo uništen!"
+msgstr "Un commento è stato appena cestinato!"
 
 msgid "A Post draft was just created!"
-msgstr "Upravo je stvoren Post Draft!"
+msgstr "È stata appena creata una bozza di post!"
 
 msgid "A Post was just published!"
-msgstr "Upravo je objavljen post!"
+msgstr "Un post è stato appena pubblicato!"
 
 msgid "A Post was just trashed!"
-msgstr "A Post je upravo uništen!"
+msgstr "Un post è stato appena cestinato!"
 
 msgid "A Theme was just switched!"
-msgstr "Tema je upravo zamijenjena!"
+msgstr "Un tema è stato appena cambiato!"
 
 msgid "A Plugin was just installed!"
-msgstr "Upravo je instaliran dodatak!"
+msgstr "Un plugin è stato appena installato!"
 
 msgid "A Plugin was just removed!"
-msgstr "Dodatak je upravo uklonjen!"
+msgstr "Un plugin è stato appena rimosso!"
 
 msgid "A Plugin was just activated!"
-msgstr "Dodatak je upravo aktiviran!"
+msgstr "Un plugin è stato appena attivato!"
 
 msgid "A Plugin was just de-activated!"
-msgstr "Dodatak je upravo deaktiviran!"
+msgstr "Un plugin è stato appena disattivato!"
 
 msgid "An Image was just uploaded!"
-msgstr "Slika je upravo postavljena!"
+msgstr "Un'immagine è stata appena caricata!"
 
 msgid "An Image was just deleted!"
-msgstr "Slika je upravo izbrisana!"
+msgstr "Un'immagine è stata appena cancellata!"

@@ -4,10 +4,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ping My Slack\n"
 "POT-Creation-Date: 2024-08-05 05:33+0100\n"
-"PO-Revision-Date: 2024-08-05 09:55+0100\n"
+"PO-Revision-Date: 2024-08-05 08:40+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: it_IT\n"
+"Language: hi_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,16 +26,16 @@ msgstr ""
 #: inc/Services/Theme.php:81 inc/Services/User.php:59 inc/Services/User.php:115
 #: inc/Services/User.php:172
 msgid "Ping"
-msgstr "Ping"
+msgstr "पिंग"
 
 #. Plugin Name of the plugin/theme
-msgid "Ping My Slack"
-msgstr "Esegui il ping del mio Slack"
+msgid "Ping Me On Slack"
+msgstr "पिंग माई स्लैक"
 
 #. Description of the plugin/theme
 #: inc/Services/Admin.php:99
 msgid "Get notifications on Slack when changes are made on your WP website."
-msgstr "Ricevi notifiche su Slack quando vengono apportate modifiche al tuo sito web WP."
+msgstr "अपनी WP वेबसाइट पर परिवर्तन किए जाने पर स्लैक पर सूचनाएं प्राप्त करें।"
 
 #. Plugin URI of the plugin/theme
 msgid "https://github.com/badasswp/ping-me-on-slack"
@@ -51,116 +51,116 @@ msgstr "https://github.com/badasswp"
 
 #: init.php:15
 msgid "Error: Composer is not installed!"
-msgstr "Errore: Composer non è installato!"
+msgstr "त्रुटि: संगीतकार स्थापित नहीं है!"
 
 #: inc/Services/Access.php:61 inc/Services/Access.php:118
 #: inc/Services/Post.php:101 inc/Services/Theme.php:83 inc/Services/User.php:61
 #: inc/Services/User.php:117 inc/Services/User.php:174
 msgid "ID"
-msgstr "ID"
+msgstr "आईडी"
 
 #: inc/Services/Access.php:63 inc/Services/Access.php:120
 #: inc/Services/Comment.php:99 inc/Services/Post.php:105
 #: inc/Services/Theme.php:87 inc/Services/User.php:63 inc/Services/User.php:119
 #: inc/Services/User.php:176
 msgid "User"
-msgstr "Utente"
+msgstr "उपयोगकर्ता"
 
 #: inc/Services/Comment.php:97
 msgid "Comment"
-msgstr "Commento"
+msgstr "टिपण्णी"
 
 #: inc/Services/Comment.php:101
 msgid "Post"
-msgstr "Articolo"
+msgstr "पोस्ट"
 
 #: inc/Services/Post.php:103 inc/Services/Theme.php:85
 msgid "Title"
-msgstr "Titolo"
+msgstr "शीर्षक"
 
 #: inc/Services/Access.php:65 inc/Services/Access.php:122
 #: inc/Services/Comment.php:103 inc/Services/Post.php:107
 #: inc/Services/Theme.php:89 inc/Services/User.php:65 inc/Services/User.php:121
 #: inc/Services/User.php:178
 msgid "Date"
-msgstr "Data"
+msgstr "दिनांक"
 
 #: inc/Services/Admin.php:105
 msgid "John Doe"
-msgstr "Mario Rossi"
+msgstr "जॉन डो"
 
 #: inc/Services/Admin.php:104
 msgid "Slack Username"
-msgstr "Nome utente Slack"
+msgstr "सुस्त उपयोगकर्ता नाम"
 
 #: inc/Services/Admin.php:111
 msgid "Slack Channel"
-msgstr "Canale Slack"
+msgstr "सुस्त चैनल"
 
 #: inc/Services/Admin.php:118
 msgid "Slack Webhook"
-msgstr "Webhook Slack"
+msgstr "सुस्त वेबहुक"
 
 #: inc/Services/Admin.php:112
 msgid "e.g. #general"
-msgstr "ad es. #general"
+msgstr "जैसे #general"
 
 #: inc/Services/Admin.php:119
 msgid "e.g. https://hooks.slack.com/services/xxxxxx"
-msgstr "ad es. https://hooks.slack.com/services/xxxxxx"
+msgstr "जैसे https://hooks.slack.com/services/xxxxxx"
 
 #: inc/Services/User.php:60
 msgid "A User was just created!"
-msgstr "Un utente è stato appena creato!"
+msgstr "एक उपयोगकर्ता अभी बनाया गया था!"
 
 #: inc/Services/User.php:116
 msgid "A User was just modified!"
-msgstr "Un utente è stato appena modificato!"
+msgstr "एक उपयोगकर्ता को अभी संशोधित किया गया था!"
 
 #: inc/Services/User.php:173
 msgid "A User was just deleted!"
-msgstr "Un utente è stato appena cancellato!"
+msgstr "एक उपयोगकर्ता को अभी हटा दिया गया था!"
 
 #: inc/Services/Access.php:60
 msgid "A User just logged in!"
-msgstr "Un utente ha appena effettuato l'accesso!"
+msgstr "एक उपयोगकर्ता ने अभी लॉग इन किया है!"
 
 #: inc/Services/Access.php:117
 msgid "A User just logged out!"
-msgstr "Un utente si è appena disconnesso!"
+msgstr "एक उपयोगकर्ता ने अभी-अभी लॉग आउट किया है!"
 
 msgid "A Comment was just published!"
-msgstr "Un commento è stato appena pubblicato!"
+msgstr "एक टिप्पणी अभी प्रकाशित हुई थी!"
 
 msgid "A Comment was just trashed!"
-msgstr "Un commento è stato appena cestinato!"
+msgstr "एक टिप्पणी सिर्फ ट्रैश की गई थी!"
 
 msgid "A Post draft was just created!"
-msgstr "È stata appena creata una bozza di post!"
+msgstr "एक पोस्ट ड्राफ्ट अभी बनाया गया था!"
 
 msgid "A Post was just published!"
-msgstr "Un post è stato appena pubblicato!"
+msgstr "एक पोस्ट अभी प्रकाशित हुई थी!"
 
 msgid "A Post was just trashed!"
-msgstr "Un post è stato appena cestinato!"
+msgstr "एक पोस्ट बस ट्रैश किया गया था!"
 
 msgid "A Theme was just switched!"
-msgstr "Un tema è stato appena cambiato!"
+msgstr "एक थीम बस स्विच किया गया था!"
 
 msgid "A Plugin was just installed!"
-msgstr "Un plugin è stato appena installato!"
+msgstr "एक प्लगइन अभी स्थापित किया गया था!"
 
 msgid "A Plugin was just removed!"
-msgstr "Un plugin è stato appena rimosso!"
+msgstr "एक प्लगइन अभी हटा दिया गया था!"
 
 msgid "A Plugin was just activated!"
-msgstr "Un plugin è stato appena attivato!"
+msgstr "एक प्लगइन अभी सक्रिय किया गया था!"
 
 msgid "A Plugin was just de-activated!"
-msgstr "Un plugin è stato appena disattivato!"
+msgstr "एक प्लगइन सिर्फ निष्क्रिय किया गया था!"
 
 msgid "An Image was just uploaded!"
-msgstr "Un'immagine è stata appena caricata!"
+msgstr "एक छवि अभी अपलोड की गई थी!"
 
 msgid "An Image was just deleted!"
-msgstr "Un'immagine è stata appena cancellata!"
+msgstr "एक छवि अभी हटा दी गई थी!"

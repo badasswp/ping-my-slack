@@ -4,21 +4,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ping My Slack\n"
 "POT-Creation-Date: 2024-08-05 05:33+0100\n"
-"PO-Revision-Date: 2024-08-05 05:29+0100\n"
+"PO-Revision-Date: 2024-08-05 08:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "X-Generator: Poedit 3.4.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: ping-me-on-slack.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
@@ -28,141 +26,141 @@ msgstr ""
 #: inc/Services/Theme.php:81 inc/Services/User.php:59 inc/Services/User.php:115
 #: inc/Services/User.php:172
 msgid "Ping"
-msgstr ""
+msgstr "Atención"
 
 #. Plugin Name of the plugin/theme
-msgid "Ping My Slack"
-msgstr ""
+msgid "Ping Me On Slack"
+msgstr "Enviar mensaje a Slack"
 
 #. Description of the plugin/theme
 #: inc/Services/Admin.php:99
 msgid "Get notifications on Slack when changes are made on your WP website."
-msgstr ""
+msgstr "Reciba notificaciones en Slack cuando se realicen cambios en su sitio web de WP."
 
 #. Plugin URI of the plugin/theme
 msgid "https://github.com/badasswp/ping-me-on-slack"
-msgstr ""
+msgstr "https://github.com/badasswp/ping-me-on-slack"
 
 #. Author of the plugin/theme
 msgid "badasswp"
-msgstr ""
+msgstr "badasswp"
 
 #. Author URI of the plugin/theme
 msgid "https://github.com/badasswp"
-msgstr ""
+msgstr "https://github.com/badasswp"
 
 #: init.php:15
 msgid "Error: Composer is not installed!"
-msgstr ""
+msgstr "Error: ¡Composer no está instalado!"
 
 #: inc/Services/Access.php:61 inc/Services/Access.php:118
 #: inc/Services/Post.php:101 inc/Services/Theme.php:83 inc/Services/User.php:61
 #: inc/Services/User.php:117 inc/Services/User.php:174
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: inc/Services/Access.php:63 inc/Services/Access.php:120
 #: inc/Services/Comment.php:99 inc/Services/Post.php:105
 #: inc/Services/Theme.php:87 inc/Services/User.php:63 inc/Services/User.php:119
 #: inc/Services/User.php:176
 msgid "User"
-msgstr ""
+msgstr "Usuario"
 
 #: inc/Services/Comment.php:97
 msgid "Comment"
-msgstr ""
+msgstr "Comentario"
 
 #: inc/Services/Comment.php:101
 msgid "Post"
-msgstr ""
+msgstr "Entrada"
 
 #: inc/Services/Post.php:103 inc/Services/Theme.php:85
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 #: inc/Services/Access.php:65 inc/Services/Access.php:122
 #: inc/Services/Comment.php:103 inc/Services/Post.php:107
 #: inc/Services/Theme.php:89 inc/Services/User.php:65 inc/Services/User.php:121
 #: inc/Services/User.php:178
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #: inc/Services/Admin.php:105
 msgid "John Doe"
-msgstr ""
+msgstr "John Doe"
 
 #: inc/Services/Admin.php:104
 msgid "Slack Username"
-msgstr ""
+msgstr "Nombre de usuario de Slack"
 
 #: inc/Services/Admin.php:111
 msgid "Slack Channel"
-msgstr ""
+msgstr "Canal Slack"
 
 #: inc/Services/Admin.php:118
 msgid "Slack Webhook"
-msgstr ""
+msgstr "Slack Webhook"
 
 #: inc/Services/Admin.php:112
 msgid "e.g. #general"
-msgstr ""
+msgstr "p. ej. #general"
 
 #: inc/Services/Admin.php:119
 msgid "e.g. https://hooks.slack.com/services/xxxxxx"
-msgstr ""
+msgstr "Por ejemplo, https://hooks.slack.com/services/xxxxxx"
 
 #: inc/Services/User.php:60
 msgid "A User was just created!"
-msgstr ""
+msgstr "¡Se acaba de crear un usuario!"
 
 #: inc/Services/User.php:116
 msgid "A User was just modified!"
-msgstr ""
+msgstr "¡Un usuario acaba de ser modificado!"
 
 #: inc/Services/User.php:173
 msgid "A User was just deleted!"
-msgstr ""
+msgstr "¡Un usuario acaba de ser eliminado!"
 
 #: inc/Services/Access.php:60
 msgid "A User just logged in!"
-msgstr ""
+msgstr "¡Un usuario acaba de iniciar sesión!"
 
 #: inc/Services/Access.php:117
 msgid "A User just logged out!"
-msgstr ""
+msgstr "¡Un usuario acaba de cerrar sesión!"
 
 msgid "A Comment was just published!"
-msgstr ""
+msgstr "¡Se acaba de publicar un comentario!"
 
 msgid "A Comment was just trashed!"
-msgstr ""
+msgstr "¡Un comentario acaba de ser tirado a la basura!"
 
 msgid "A Post draft was just created!"
-msgstr ""
+msgstr "¡Se acaba de crear un borrador de publicación!"
 
 msgid "A Post was just published!"
-msgstr ""
+msgstr "¡Se acaba de publicar un post!"
 
 msgid "A Post was just trashed!"
-msgstr ""
+msgstr "¡Una publicación acaba de ser tirada a la basura!"
 
 msgid "A Theme was just switched!"
-msgstr ""
+msgstr "¡Se acaba de cambiar un tema!"
 
 msgid "A Plugin was just installed!"
-msgstr ""
+msgstr "¡Se acaba de instalar un complemento!"
 
 msgid "A Plugin was just removed!"
-msgstr ""
+msgstr "¡Se acaba de eliminar un complemento!"
 
 msgid "A Plugin was just activated!"
-msgstr ""
+msgstr "¡Se acaba de activar un complemento!"
 
 msgid "A Plugin was just de-activated!"
-msgstr ""
+msgstr "¡Un plugin acaba de ser desactivado!"
 
 msgid "An Image was just uploaded!"
-msgstr ""
+msgstr "¡Se acaba de subir una imagen!"
 
 msgid "An Image was just deleted!"
-msgstr ""
+msgstr "¡Se acaba de eliminar una imagen!"

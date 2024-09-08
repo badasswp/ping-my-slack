@@ -4,10 +4,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ping My Slack\n"
 "POT-Creation-Date: 2024-08-05 05:33+0100\n"
-"PO-Revision-Date: 2024-08-05 08:50+0100\n"
+"PO-Revision-Date: 2024-08-05 10:03+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: fr_FR\n"
+"Language: he_IL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,16 +26,16 @@ msgstr ""
 #: inc/Services/Theme.php:81 inc/Services/User.php:59 inc/Services/User.php:115
 #: inc/Services/User.php:172
 msgid "Ping"
-msgstr "Attention"
+msgstr "פינג"
 
 #. Plugin Name of the plugin/theme
-msgid "Ping My Slack"
-msgstr "Ping sur mon Slack"
+msgid "Ping Me On Slack"
+msgstr "פינג הרפיון שלי"
 
 #. Description of the plugin/theme
 #: inc/Services/Admin.php:99
 msgid "Get notifications on Slack when changes are made on your WP website."
-msgstr "Recevez des notifications sur Slack lorsque des modifications sont apportées sur votre site Web WP."
+msgstr "קבל התראות על Slack כאשר שינויים מתבצעים באתר WP שלך."
 
 #. Plugin URI of the plugin/theme
 msgid "https://github.com/badasswp/ping-me-on-slack"
@@ -43,7 +43,7 @@ msgstr "https://github.com/badasswp/ping-me-on-slack"
 
 #. Author of the plugin/theme
 msgid "badasswp"
-msgstr "badasswp"
+msgstr "‫badasswp"
 
 #. Author URI of the plugin/theme
 msgid "https://github.com/badasswp"
@@ -51,51 +51,51 @@ msgstr "https://github.com/badasswp"
 
 #: init.php:15
 msgid "Error: Composer is not installed!"
-msgstr "Erreur : Composer n’est pas installé !"
+msgstr "שגיאה: Composer אינו מותקן!"
 
 #: inc/Services/Access.php:61 inc/Services/Access.php:118
 #: inc/Services/Post.php:101 inc/Services/Theme.php:83 inc/Services/User.php:61
 #: inc/Services/User.php:117 inc/Services/User.php:174
 msgid "ID"
-msgstr "ID"
+msgstr "מזהה"
 
 #: inc/Services/Access.php:63 inc/Services/Access.php:120
 #: inc/Services/Comment.php:99 inc/Services/Post.php:105
 #: inc/Services/Theme.php:87 inc/Services/User.php:63 inc/Services/User.php:119
 #: inc/Services/User.php:176
 msgid "User"
-msgstr "Utilisateur"
+msgstr "משתמש"
 
 #: inc/Services/Comment.php:97
 msgid "Comment"
-msgstr "Commentaire"
+msgstr "תגובה"
 
 #: inc/Services/Comment.php:101
 msgid "Post"
-msgstr "Article"
+msgstr "פוסט"
 
 #: inc/Services/Post.php:103 inc/Services/Theme.php:85
 msgid "Title"
-msgstr "Titre"
+msgstr "כותרת"
 
 #: inc/Services/Access.php:65 inc/Services/Access.php:122
 #: inc/Services/Comment.php:103 inc/Services/Post.php:107
 #: inc/Services/Theme.php:89 inc/Services/User.php:65 inc/Services/User.php:121
 #: inc/Services/User.php:178
 msgid "Date"
-msgstr "Date"
+msgstr "תַאֲרִיך"
 
 #: inc/Services/Admin.php:105
 msgid "John Doe"
-msgstr "John Doe"
+msgstr "ישראל ישראלי"
 
 #: inc/Services/Admin.php:104
 msgid "Slack Username"
-msgstr "Nom d’utilisateur Slack"
+msgstr "Slack שם משתמש"
 
 #: inc/Services/Admin.php:111
 msgid "Slack Channel"
-msgstr "Canal Slack"
+msgstr "ערוץ Slack"
 
 #: inc/Services/Admin.php:118
 msgid "Slack Webhook"
@@ -103,64 +103,64 @@ msgstr "Slack Webhook"
 
 #: inc/Services/Admin.php:112
 msgid "e.g. #general"
-msgstr "par exemple #general"
+msgstr "לדוגמה #general"
 
 #: inc/Services/Admin.php:119
 msgid "e.g. https://hooks.slack.com/services/xxxxxx"
-msgstr "par exemple https://hooks.slack.com/services/xxxxxx"
+msgstr "לדוגמה https://hooks.slack.com/services/xxxxxx"
 
 #: inc/Services/User.php:60
 msgid "A User was just created!"
-msgstr "Un utilisateur vient de se créer !"
+msgstr "משתמש נוצר זה עתה!"
 
 #: inc/Services/User.php:116
 msgid "A User was just modified!"
-msgstr "Un utilisateur vient d’être modifié !"
+msgstr "משתמש פשוט השתנה!"
 
 #: inc/Services/User.php:173
 msgid "A User was just deleted!"
-msgstr "Un utilisateur vient d’être supprimé !"
+msgstr "משתמש פשוט נמחק!"
 
 #: inc/Services/Access.php:60
 msgid "A User just logged in!"
-msgstr "Un utilisateur vient de se connecter !"
+msgstr "משתמש שזה עתה התחבר!"
 
 #: inc/Services/Access.php:117
 msgid "A User just logged out!"
-msgstr "Un utilisateur vient de se déconnecter !"
+msgstr "משתמש פשוט התנתק!"
 
 msgid "A Comment was just published!"
-msgstr "Un commentaire vient d’être publié !"
+msgstr "תגובה פורסמה זה עתה!"
 
 msgid "A Comment was just trashed!"
-msgstr "Un commentaire vient d’être détruit !"
+msgstr "תגובה הייתה פשוט זבל!"
 
 msgid "A Post draft was just created!"
-msgstr "Un brouillon de Post vient d’être créé !"
+msgstr "טיוטת פוסט נוצרה זה עתה!"
 
 msgid "A Post was just published!"
-msgstr "Un article vient d’être publié !"
+msgstr "פוסט בדיוק פורסם!"
 
 msgid "A Post was just trashed!"
-msgstr "Un courrier vient d’être détruit !"
+msgstr "פוסט היה פשוט זבל!"
 
 msgid "A Theme was just switched!"
-msgstr "Un thème vient d’être changé !"
+msgstr "נושא פשוט הוחלף!"
 
 msgid "A Plugin was just installed!"
-msgstr "Un plugin vient d’être installé !"
+msgstr "תוסף הותקן זה עתה!"
 
 msgid "A Plugin was just removed!"
-msgstr "Un plugin vient d’être supprimé !"
+msgstr "תוסף הוסר זה עתה!"
 
 msgid "A Plugin was just activated!"
-msgstr "Un Plugin vient d’être activé !"
+msgstr "תוסף הופעל זה עתה!"
 
 msgid "A Plugin was just de-activated!"
-msgstr "Un plugin vient d’être désactivé !"
+msgstr "תוסף פשוט הושבת!"
 
 msgid "An Image was just uploaded!"
-msgstr "Une image vient d’être téléchargée !"
+msgstr "תמונה הועלתה זה עתה!"
 
 msgid "An Image was just deleted!"
-msgstr "Une image vient d’être supprimée !"
+msgstr "תמונה נמחקה זה עתה!"

@@ -4,10 +4,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ping My Slack\n"
 "POT-Creation-Date: 2024-08-05 05:33+0100\n"
-"PO-Revision-Date: 2024-08-05 08:47+0100\n"
+"PO-Revision-Date: 2024-08-05 06:57+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: ru_RU\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,16 +26,16 @@ msgstr ""
 #: inc/Services/Theme.php:81 inc/Services/User.php:59 inc/Services/User.php:115
 #: inc/Services/User.php:172
 msgid "Ping"
-msgstr "внимание"
+msgstr "Zviždati"
 
 #. Plugin Name of the plugin/theme
-msgid "Ping My Slack"
-msgstr "Пинг в Slack"
+msgid "Ping Me On Slack"
+msgstr "Pingajte moju opuštenost"
 
 #. Description of the plugin/theme
 #: inc/Services/Admin.php:99
 msgid "Get notifications on Slack when changes are made on your WP website."
-msgstr "Получайте уведомления в Slack об изменениях на вашем веб-сайте WP."
+msgstr "Primajte obavijesti na Slacku kada se naprave promjene na vašoj WP web stranici."
 
 #. Plugin URI of the plugin/theme
 msgid "https://github.com/badasswp/ping-me-on-slack"
@@ -51,7 +51,7 @@ msgstr "https://github.com/badasswp"
 
 #: init.php:15
 msgid "Error: Composer is not installed!"
-msgstr "Ошибка: Composer не установлен!"
+msgstr "Pogreška: Composer nije instaliran!"
 
 #: inc/Services/Access.php:61 inc/Services/Access.php:118
 #: inc/Services/Post.php:101 inc/Services/Theme.php:83 inc/Services/User.php:61
@@ -64,103 +64,103 @@ msgstr "ID"
 #: inc/Services/Theme.php:87 inc/Services/User.php:63 inc/Services/User.php:119
 #: inc/Services/User.php:176
 msgid "User"
-msgstr "Пользователь"
+msgstr "Korisnik"
 
 #: inc/Services/Comment.php:97
 msgid "Comment"
-msgstr "Комментарии"
+msgstr "Komentar"
 
 #: inc/Services/Comment.php:101
 msgid "Post"
-msgstr "Запись"
+msgstr "Objava"
 
 #: inc/Services/Post.php:103 inc/Services/Theme.php:85
 msgid "Title"
-msgstr "Заголовок"
+msgstr "Naslov"
 
 #: inc/Services/Access.php:65 inc/Services/Access.php:122
 #: inc/Services/Comment.php:103 inc/Services/Post.php:107
 #: inc/Services/Theme.php:89 inc/Services/User.php:65 inc/Services/User.php:121
 #: inc/Services/User.php:178
 msgid "Date"
-msgstr "Дата"
+msgstr "Datum"
 
 #: inc/Services/Admin.php:105
 msgid "John Doe"
-msgstr "Иван Иванов"
+msgstr "John Doe"
 
 #: inc/Services/Admin.php:104
 msgid "Slack Username"
-msgstr "Имя пользователя в Slack"
+msgstr "Slack korisničko ime"
 
 #: inc/Services/Admin.php:111
 msgid "Slack Channel"
-msgstr "Slack канал"
+msgstr "Kanal Slack"
 
 #: inc/Services/Admin.php:118
 msgid "Slack Webhook"
-msgstr "Вебхук Slack"
+msgstr "Slack Webhook"
 
 #: inc/Services/Admin.php:112
 msgid "e.g. #general"
-msgstr "пример, #общий"
+msgstr "npr. #general"
 
 #: inc/Services/Admin.php:119
 msgid "e.g. https://hooks.slack.com/services/xxxxxx"
-msgstr "пример, https://hooks.slack.com/services/xxxxxx"
+msgstr "npr. https://hooks.slack.com/services/xxxxxx"
 
 #: inc/Services/User.php:60
 msgid "A User was just created!"
-msgstr "Пользователь только что создан!"
+msgstr "Korisnik je upravo stvoren!"
 
 #: inc/Services/User.php:116
 msgid "A User was just modified!"
-msgstr "Пользователь был только что изменен!"
+msgstr "Korisnik je upravo izmijenjen!"
 
 #: inc/Services/User.php:173
 msgid "A User was just deleted!"
-msgstr "Пользователь только что был удален!"
+msgstr "Korisnik je upravo izbrisan!"
 
 #: inc/Services/Access.php:60
 msgid "A User just logged in!"
-msgstr "Пользователь только что вошел в систему!"
+msgstr "Korisnik se upravo prijavio!"
 
 #: inc/Services/Access.php:117
 msgid "A User just logged out!"
-msgstr "Пользователь только что вышел из системы!"
+msgstr "Korisnik se upravo odjavio!"
 
 msgid "A Comment was just published!"
-msgstr "Комментарий только что был опубликован!"
+msgstr "Komentar je upravo objavljen!"
 
 msgid "A Comment was just trashed!"
-msgstr "Комментарий был просто выброшен в мусор!"
+msgstr "Komentar je upravo uništen!"
 
 msgid "A Post draft was just created!"
-msgstr "Черновик поста только что был создан!"
+msgstr "Upravo je stvoren Post Draft!"
 
 msgid "A Post was just published!"
-msgstr "Пост только что был опубликован!"
+msgstr "Upravo je objavljen post!"
 
 msgid "A Post was just trashed!"
-msgstr "Пост был просто разгромлен!"
+msgstr "A Post je upravo uništen!"
 
 msgid "A Theme was just switched!"
-msgstr "Тема только что была изменена!"
+msgstr "Tema je upravo zamijenjena!"
 
 msgid "A Plugin was just installed!"
-msgstr "Плагин только что установили!"
+msgstr "Upravo je instaliran dodatak!"
 
 msgid "A Plugin was just removed!"
-msgstr "Плагин только что был удален!"
+msgstr "Dodatak je upravo uklonjen!"
 
 msgid "A Plugin was just activated!"
-msgstr "Плагин только что был активирован!"
+msgstr "Dodatak je upravo aktiviran!"
 
 msgid "A Plugin was just de-activated!"
-msgstr "Плагин только что был деактивирован!"
+msgstr "Dodatak je upravo deaktiviran!"
 
 msgid "An Image was just uploaded!"
-msgstr "Изображение только что было загружено!"
+msgstr "Slika je upravo postavljena!"
 
 msgid "An Image was just deleted!"
-msgstr "Изображение только что было удалено!"
+msgstr "Slika je upravo izbrisana!"

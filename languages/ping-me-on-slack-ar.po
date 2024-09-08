@@ -29,7 +29,7 @@ msgid "Ping"
 msgstr "بينج"
 
 #. Plugin Name of the plugin/theme
-msgid "Ping My Slack"
+msgid "Ping Me On Slack"
 msgstr "بينغ بلدي سلاك"
 
 #. Description of the plugin/theme
