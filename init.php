@@ -1,8 +1,8 @@
 <?php
 
-namespace badasswp\PingMySlack;
+namespace badasswp\PingMeOnSlack;
 
-define( 'PINGMYSLACK', __DIR__ . '/vendor/autoload.php' );
+define( 'PINGMEONSLACK', __DIR__ . '/vendor/autoload.php' );
 
 /**
  * Run Notice, if Composer is not installed.
@@ -11,8 +11,8 @@ define( 'PINGMYSLACK', __DIR__ . '/vendor/autoload.php' );
  *
  * @return void
  */
-function ping_my_slack_notice(): void {
-	echo esc_html__( 'Error: Composer is not installed!', 'ping-my-slack' );
+function ping_me_on_slack_notice(): void {
+	echo esc_html__( 'Error: Composer is not installed!', 'ping-me-on-slack' );
 }
 
 /**
@@ -23,7 +23,7 @@ function ping_my_slack_notice(): void {
  * @param string $autoload Composer Autoload file.
  * @return void
  */
-function ping_my_slack_run( $autoload ): void {
+function ping_me_on_slack_run( $autoload ): void {
 	require_once $autoload;
-	( \PingMySlack\Plugin::get_instance() )->run();
+	( \PingMeOnSlack\Plugin::get_instance() )->run();
 }
