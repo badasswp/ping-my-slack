@@ -5,7 +5,7 @@
  * This class acts as a Factory container to load
  * all the services that the plugin uses.
  *
- * @package PingMySlack
+ * @package PingMeOnSlack
  */
 
 namespace PingMySlack\Core;

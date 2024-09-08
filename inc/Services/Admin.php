@@ -5,7 +5,7 @@
  * This class is responsible for setting up the
  * Options fields for the plugin.
  *
- * @package PingMySlack
+ * @package PingMeOnSlack
  */
 
 namespace PingMySlack\Services;

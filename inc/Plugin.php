@@ -5,7 +5,7 @@
  * Set up the singleton instance, initialise
  * and run the plugin logic.
  *
- * @package PingMySlack
+ * @package PingMeOnSlack
  */
 
 namespace PingMySlack;

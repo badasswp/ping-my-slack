@@ -5,7 +5,7 @@
  * This class handles the pinging of user account creation,
  * modification & deletion.
  *
- * @package PingMySlack;
+ * @package PingMeOnSlack;
  */
 
 namespace PingMySlack\Services;

@@ -5,7 +5,7 @@
  * This class handles sending Slack notifications
  * via API calls.
  *
- * @package PingMySlack
+ * @package PingMeOnSlack
  */
 
 namespace PingMySlack\Core;

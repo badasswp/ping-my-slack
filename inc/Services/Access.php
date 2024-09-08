@@ -5,7 +5,7 @@
  * This class handles the pinging of user login/logout
  * events to the Slack workspace.
  *
- * @package PingMySlack;
+ * @package PingMeOnSlack;
  */
 
 namespace PingMySlack\Services;

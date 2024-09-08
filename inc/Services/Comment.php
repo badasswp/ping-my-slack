@@ -5,7 +5,7 @@
  * This class is responsible for pinging comment events
  * to the Slack workspace.
  *
- * @package PingMySlack
+ * @package PingMeOnSlack
  */
 
 namespace PingMySlack\Services;

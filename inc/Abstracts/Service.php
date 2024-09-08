@@ -5,7 +5,7 @@
  * This defines the Service abstraction for
  * use by Plugin services.
  *
- * @package PingMySlack
+ * @package PingMeOnSlack
  */
 
 namespace PingMySlack\Abstracts;

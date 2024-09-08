@@ -5,7 +5,7 @@
  * Define the base methods that must be shared
  * across concerte classes.
  *
- * @package PingMySlack
+ * @package PingMeOnSlack
  */
 
 namespace PingMySlack\Interfaces;

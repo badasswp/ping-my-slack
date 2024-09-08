@@ -5,7 +5,7 @@
  * This class binds all Post, Page, CPT logic
  * to the WP API.
  *
- * @package PingMySlack
+ * @package PingMeOnSlack
  */
 
 namespace PingMySlack\Services;

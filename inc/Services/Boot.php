@@ -5,7 +5,7 @@
  * Define registration hooks, translations and
  * post meta definitions here.
  *
- * @package PingMySlack
+ * @package PingMeOnSlack
  */
 
 namespace PingMySlack\Services;
