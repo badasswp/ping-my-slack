@@ -117,7 +117,7 @@ class PostTest extends TestCase {
 			'esc_html__',
 			[
 				'times'  => 5,
-				'return' => function ( $text, $domain = 'ping-my-slack' ) {
+				'return' => function ( $text, $domain = 'ping-me-on-slack' ) {
 					return $text;
 				},
 			]

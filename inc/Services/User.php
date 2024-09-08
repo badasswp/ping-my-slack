@@ -56,13 +56,13 @@ class User extends Service implements Kernel {
 
 		$message = sprintf(
 			"%s: %s \n%s: %s \n%s: %s \n%s: %s",
-			esc_html__( 'Ping', 'ping-my-slack' ),
-			esc_html__( 'A User was just created!', 'ping-my-slack' ),
-			esc_html__( 'ID', 'ping-my-slack' ),
+			esc_html__( 'Ping', 'ping-me-on-slack' ),
+			esc_html__( 'A User was just created!', 'ping-me-on-slack' ),
+			esc_html__( 'ID', 'ping-me-on-slack' ),
 			esc_html( $user_id ),
-			esc_html__( 'User', 'ping-my-slack' ),
+			esc_html__( 'User', 'ping-me-on-slack' ),
 			esc_html( get_user_by( 'id', $user_id )->user_login ),
-			esc_html__( 'Date', 'ping-my-slack' ),
+			esc_html__( 'Date', 'ping-me-on-slack' ),
 			esc_html( $this->get_date() )
 		);
 
@@ -112,13 +112,13 @@ class User extends Service implements Kernel {
 
 		$message = sprintf(
 			"%s: %s \n%s: %s \n%s: %s \n%s: %s",
-			esc_html__( 'Ping', 'ping-my-slack' ),
-			esc_html__( 'A User was just modified!', 'ping-my-slack' ),
-			esc_html__( 'ID', 'ping-my-slack' ),
+			esc_html__( 'Ping', 'ping-me-on-slack' ),
+			esc_html__( 'A User was just modified!', 'ping-me-on-slack' ),
+			esc_html__( 'ID', 'ping-me-on-slack' ),
 			esc_html( $user_id ),
-			esc_html__( 'User', 'ping-my-slack' ),
+			esc_html__( 'User', 'ping-me-on-slack' ),
 			esc_html( get_user_by( 'id', $user_id )->user_login ),
-			esc_html__( 'Date', 'ping-my-slack' ),
+			esc_html__( 'Date', 'ping-me-on-slack' ),
 			esc_html( $this->get_date() )
 		);
 
@@ -169,13 +169,13 @@ class User extends Service implements Kernel {
 
 		$message = sprintf(
 			"%s: %s \n%s: %s \n%s: %s \n%s: %s",
-			esc_html__( 'Ping', 'ping-my-slack' ),
-			esc_html__( 'A User was just deleted!', 'ping-my-slack' ),
-			esc_html__( 'ID', 'ping-my-slack' ),
+			esc_html__( 'Ping', 'ping-me-on-slack' ),
+			esc_html__( 'A User was just deleted!', 'ping-me-on-slack' ),
+			esc_html__( 'ID', 'ping-me-on-slack' ),
 			esc_html( $user_id ),
-			esc_html__( 'User', 'ping-my-slack' ),
+			esc_html__( 'User', 'ping-me-on-slack' ),
 			esc_html( $user->user_login ),
-			esc_html__( 'Date', 'ping-my-slack' ),
+			esc_html__( 'Date', 'ping-me-on-slack' ),
 			esc_html( $this->get_date() )
 		);
 

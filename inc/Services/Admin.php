@@ -53,7 +53,7 @@ class Admin extends Service implements Kernel {
 	 */
 	public function get_admin_page(): void {
 		Container::make( 'theme_options', 'Ping My Slack' )
-			->set_page_file( 'ping-my-slack' )
+			->set_page_file( 'ping-me-on-slack' )
 			->set_icon( 'dashicons-format-chat' )
 			->set_page_menu_position( 3 )
 			->add_fields( $this->get_admin_fields() );
@@ -96,27 +96,27 @@ class Admin extends Service implements Kernel {
 			'summary'  => [
 				'type' => 'html',
 				'name' => 'ping_me_on_slack_summary',
-				'html' => esc_html__( 'Get notifications on Slack when changes are made on your WP website.', 'ping-my-slack' ),
+				'html' => esc_html__( 'Get notifications on Slack when changes are made on your WP website.', 'ping-me-on-slack' ),
 			],
 			'username' => [
 				'type'  => 'text',
 				'name'  => 'ping_me_on_slack_username',
-				'html'  => esc_html__( 'Slack Username', 'ping-my-slack' ),
-				'label' => esc_html__( 'John Doe', 'ping-my-slack' ),
+				'html'  => esc_html__( 'Slack Username', 'ping-me-on-slack' ),
+				'label' => esc_html__( 'John Doe', 'ping-me-on-slack' ),
 				'width' => 50,
 			],
 			'channel'  => [
 				'type'  => 'text',
 				'name'  => 'ping_me_on_slack_channel',
-				'html'  => esc_html__( 'Slack Channel', 'ping-my-slack' ),
-				'label' => esc_html__( 'e.g. #general', 'ping-my-slack' ),
+				'html'  => esc_html__( 'Slack Channel', 'ping-me-on-slack' ),
+				'label' => esc_html__( 'e.g. #general', 'ping-me-on-slack' ),
 				'width' => 50,
 			],
 			'webhook'  => [
 				'type'  => 'text',
 				'name'  => 'ping_me_on_slack_webhook',
-				'html'  => esc_html__( 'Slack Webhook', 'ping-my-slack' ),
-				'label' => esc_html__( 'e.g. https://hooks.slack.com/services/xxxxxx', 'ping-my-slack' ),
+				'html'  => esc_html__( 'Slack Webhook', 'ping-me-on-slack' ),
+				'label' => esc_html__( 'e.g. https://hooks.slack.com/services/xxxxxx', 'ping-me-on-slack' ),
 			],
 		];
 

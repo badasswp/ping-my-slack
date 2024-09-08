@@ -56,13 +56,13 @@ class Access extends Service implements Kernel {
 
 		$message = sprintf(
 			"%s: %s \n%s: %s \n%s: %s \n%s: %s",
-			esc_html__( 'Ping', 'ping-my-slack' ),
-			esc_html__( 'A User just logged in!', 'ping-my-slack' ),
-			esc_html__( 'ID', 'ping-my-slack' ),
+			esc_html__( 'Ping', 'ping-me-on-slack' ),
+			esc_html__( 'A User just logged in!', 'ping-me-on-slack' ),
+			esc_html__( 'ID', 'ping-me-on-slack' ),
 			esc_html( $user->ID ),
-			esc_html__( 'User', 'ping-my-slack' ),
+			esc_html__( 'User', 'ping-me-on-slack' ),
 			esc_html( $user_login ),
-			esc_html__( 'Date', 'ping-my-slack' ),
+			esc_html__( 'Date', 'ping-me-on-slack' ),
 			esc_html( $this->get_date() )
 		);
 
@@ -113,13 +113,13 @@ class Access extends Service implements Kernel {
 
 		$message = sprintf(
 			"%s: %s \n%s: %s \n%s: %s \n%s: %s",
-			esc_html__( 'Ping', 'ping-my-slack' ),
-			esc_html__( 'A User just logged out!', 'ping-my-slack' ),
-			esc_html__( 'ID', 'ping-my-slack' ),
+			esc_html__( 'Ping', 'ping-me-on-slack' ),
+			esc_html__( 'A User just logged out!', 'ping-me-on-slack' ),
+			esc_html__( 'ID', 'ping-me-on-slack' ),
 			esc_html( $user_id ),
-			esc_html__( 'User', 'ping-my-slack' ),
+			esc_html__( 'User', 'ping-me-on-slack' ),
 			esc_html( $user->user_login ),
-			esc_html__( 'Date', 'ping-my-slack' ),
+			esc_html__( 'Date', 'ping-me-on-slack' ),
 			esc_html( $this->get_date() )
 		);
 

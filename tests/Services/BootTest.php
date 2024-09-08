@@ -46,7 +46,7 @@ class BootTest extends TestCase {
 		\WP_Mock::userFunction( 'load_plugin_textdomain' )
 			->once()
 			->with(
-				'ping-my-slack',
+				'ping-me-on-slack',
 				false,
 				'/inc/Services/../../languages'
 			);

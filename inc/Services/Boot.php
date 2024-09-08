@@ -34,7 +34,7 @@ class Boot extends Service implements Kernel {
 	 */
 	public function ping_me_on_slack_translation(): void {
 		load_plugin_textdomain(
-			'ping-my-slack',
+			'ping-me-on-slack',
 			false,
 			dirname( plugin_basename( __FILE__ ) ) . '/../../languages'
 		);

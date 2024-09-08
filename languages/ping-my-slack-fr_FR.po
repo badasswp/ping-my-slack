@@ -14,7 +14,7 @@ msgstr ""
 "X-Generator: Poedit 3.4.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: ping-my-slack.php\n"
+"X-Poedit-WPHeader: ping-me-on-slack.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -38,8 +38,8 @@ msgid "Get notifications on Slack when changes are made on your WP website."
 msgstr "Recevez des notifications sur Slack lorsque des modifications sont apportées sur votre site Web WP."
 
 #. Plugin URI of the plugin/theme
-msgid "https://github.com/badasswp/ping-my-slack"
-msgstr "https://github.com/badasswp/ping-my-slack"
+msgid "https://github.com/badasswp/ping-me-on-slack"
+msgstr "https://github.com/badasswp/ping-me-on-slack"
 
 #. Author of the plugin/theme
 msgid "badasswp"

@@ -55,19 +55,19 @@ class Post extends Service implements Kernel {
 		switch ( $new_status ) {
 			case 'draft':
 				$message = $this->get_message(
-					esc_html__( 'A Post draft was just created!', 'ping-my-slack' )
+					esc_html__( 'A Post draft was just created!', 'ping-me-on-slack' )
 				);
 				break;
 
 			case 'publish':
 				$message = $this->get_message(
-					esc_html__( 'A Post was just published!', 'ping-my-slack' )
+					esc_html__( 'A Post was just published!', 'ping-me-on-slack' )
 				);
 				break;
 
 			case 'trash':
 				$message = $this->get_message(
-					esc_html__( 'A Post was just trashed!', 'ping-my-slack' )
+					esc_html__( 'A Post was just trashed!', 'ping-me-on-slack' )
 				);
 				break;
 		}
@@ -102,15 +102,15 @@ class Post extends Service implements Kernel {
 	public function get_message( $message ): string {
 		$message = sprintf(
 			"%s: %s \n%s: %s \n%s: %s \n%s: %s \n%s: %s",
-			esc_html__( 'Ping', 'ping-my-slack' ),
+			esc_html__( 'Ping', 'ping-me-on-slack' ),
 			esc_html( $message ),
-			esc_html__( 'ID', 'ping-my-slack' ),
+			esc_html__( 'ID', 'ping-me-on-slack' ),
 			esc_html( $this->post->ID ),
-			esc_html__( 'Title', 'ping-my-slack' ),
+			esc_html__( 'Title', 'ping-me-on-slack' ),
 			esc_html( $this->post->post_title ),
-			esc_html__( 'User', 'ping-my-slack' ),
+			esc_html__( 'User', 'ping-me-on-slack' ),
 			esc_html( get_user_by( 'id', $this->post->post_author )->user_login ),
-			esc_html__( 'Date', 'ping-my-slack' ),
+			esc_html__( 'Date', 'ping-me-on-slack' ),
 			esc_html( $this->get_date() )
 		);
 

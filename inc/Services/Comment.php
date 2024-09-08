@@ -55,13 +55,13 @@ class Comment extends Service implements Kernel {
 		switch ( $new_status ) {
 			case 'approved':
 				$message = $this->get_message(
-					esc_html__( 'A Comment was just published!', 'ping-my-slack' )
+					esc_html__( 'A Comment was just published!', 'ping-me-on-slack' )
 				);
 				break;
 
 			case 'trash':
 				$message = $this->get_message(
-					esc_html__( 'A Comment was just trashed!', 'ping-my-slack' )
+					esc_html__( 'A Comment was just trashed!', 'ping-me-on-slack' )
 				);
 				break;
 		}
@@ -96,15 +96,15 @@ class Comment extends Service implements Kernel {
 	public function get_message( $message ): string {
 		$message = sprintf(
 			"%s: %s \n%s: %s \n%s: %s \n%s: %s \n%s: %s",
-			esc_html__( 'Ping', 'ping-my-slack' ),
+			esc_html__( 'Ping', 'ping-me-on-slack' ),
 			esc_html( $message ),
-			esc_html__( 'Comment', 'ping-my-slack' ),
+			esc_html__( 'Comment', 'ping-me-on-slack' ),
 			esc_html( $this->comment->comment_content ),
-			esc_html__( 'User', 'ping-my-slack' ),
+			esc_html__( 'User', 'ping-me-on-slack' ),
 			esc_html( $this->comment->comment_author_email ),
-			esc_html__( 'Post', 'ping-my-slack' ),
+			esc_html__( 'Post', 'ping-me-on-slack' ),
 			esc_html( get_the_title( $this->comment->comment_post_ID ) ),
-			esc_html__( 'Date', 'ping-my-slack' ),
+			esc_html__( 'Date', 'ping-me-on-slack' ),
 			esc_html( $this->get_date() )
 		);
 

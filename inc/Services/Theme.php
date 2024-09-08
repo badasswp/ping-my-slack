@@ -47,7 +47,7 @@ class Theme extends Service implements Kernel {
 		}
 
 		$message = $this->get_message(
-			esc_html__( 'A Theme was just switched!', 'ping-my-slack' )
+			esc_html__( 'A Theme was just switched!', 'ping-me-on-slack' )
 		);
 
 		/**
@@ -80,15 +80,15 @@ class Theme extends Service implements Kernel {
 	public function get_message( $message ): string {
 		$message = sprintf(
 			"%s: %s \n%s: %s \n%s: %s \n%s: %s \n%s: %s",
-			esc_html__( 'Ping', 'ping-my-slack' ),
+			esc_html__( 'Ping', 'ping-me-on-slack' ),
 			esc_html( $message ),
-			esc_html__( 'ID', 'ping-my-slack' ),
+			esc_html__( 'ID', 'ping-me-on-slack' ),
 			esc_html( $this->theme->ID ),
-			esc_html__( 'Title', 'ping-my-slack' ),
+			esc_html__( 'Title', 'ping-me-on-slack' ),
 			esc_html( $this->theme->title ),
-			esc_html__( 'User', 'ping-my-slack' ),
+			esc_html__( 'User', 'ping-me-on-slack' ),
 			esc_html( wp_get_current_user()->user_login ),
-			esc_html__( 'Date', 'ping-my-slack' ),
+			esc_html__( 'Date', 'ping-me-on-slack' ),
 			esc_html( $this->get_date() )
 		);
 

@@ -4,7 +4,7 @@ Get notifications on Slack when changes are made on your WP website.
 
 ![screenshot-1](https://github.com/user-attachments/assets/667ab2fb-24c1-4d4d-ae83-5a89fc848710)
 
-![ping-me-on-slack](https://github.com/badasswp/ping-my-slack/assets/149586343/1da2be61-ab22-42ac-bf9b-63df814c093d)
+![ping-me-on-slack](https://github.com/badasswp/ping-me-on-slack/assets/149586343/1da2be61-ab22-42ac-bf9b-63df814c093d)
 
 To get started, you would need to have an incoming webhook of your own. Head over to the URL below and follow the instructions to generate your webhook:
 
@@ -96,8 +96,8 @@ public function custom_field( $fields ): array {
             'telephone' => [
                 'type'  => 'text',
                 'name'  => 'ping_me_on_slack_telephone',
-                'html'  => esc_html__( 'My Telephone', 'ping-my-slack' ),
-                'label' => esc_html__( '(555) 555-1234', 'ping-my-slack' ),
+                'html'  => esc_html__( 'My Telephone', 'ping-me-on-slack' ),
+                'label' => esc_html__( '(555) 555-1234', 'ping-me-on-slack' ),
             ]
         ],
         $fields
