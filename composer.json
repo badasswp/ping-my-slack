@@ -5,8 +5,8 @@
   "license": "GPL-2.0-or-later",
   "autoload": {
     "psr-4": {
-      "PingMySlack\\": "inc/",
-      "PingMySlack\\Tests\\": "tests/"
+      "PingMeOnSlack\\": "inc/",
+      "PingMeOnSlack\\Tests\\": "tests/"
     }
   },
   "authors": [

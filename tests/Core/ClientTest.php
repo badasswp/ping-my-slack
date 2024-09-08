@@ -1,14 +1,14 @@
 <?php
 
-namespace PingMySlack\Tests\Core;
+namespace PingMeOnSlack\Tests\Core;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use PingMySlack\Core\Client;
+use PingMeOnSlack\Core\Client;
 use Maknz\Slack\Client as SlackClient;
 
 /**
- * @covers \PingMySlack\Core\Client::__construct
+ * @covers \PingMeOnSlack\Core\Client::__construct
  */
 class ClientTest extends TestCase {
 	public function setUp(): void {

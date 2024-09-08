@@ -1,13 +1,13 @@
 <?php
 
-namespace PingMySlack\Tests\Interfaces;
+namespace PingMeOnSlack\Tests\Interfaces;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use PingMySlack\Interfaces\Kernel;
+use PingMeOnSlack\Interfaces\Kernel;
 
 /**
- * @covers \PingMySlack\Interfaces\Kernel::__construct
+ * @covers \PingMeOnSlack\Interfaces\Kernel::__construct
  */
 class KernelTest extends TestCase {
 	public function setUp(): void {

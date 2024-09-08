@@ -53,7 +53,7 @@ public function post_client( $client ) {
 
 **Parameters**
 
-- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+- client _`{\PingMeOnSlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
 #### `ping_me_on_slack_{$post_type}_message`
@@ -131,7 +131,7 @@ public function comment_client( $client ) {
 
 **Parameters**
 
-- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+- client _`{\PingMeOnSlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
 #### `ping_me_on_slack_comment_message`
@@ -209,7 +209,7 @@ public function login_client( $client ) {
 
 **Parameters**
 
-- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+- client _`{\PingMeOnSlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
 #### `ping_me_on_slack_login_message`
@@ -258,7 +258,7 @@ public function logout_client( $client ) {
 
 **Parameters**
 
-- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+- client _`{\PingMeOnSlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
 #### `ping_me_on_slack_logout_message`
@@ -307,7 +307,7 @@ public function theme_client( $client ) {
 
 **Parameters**
 
-- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+- client _`{\PingMeOnSlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
 #### `ping_me_on_slack_theme_message`
@@ -356,7 +356,7 @@ public function user_creation_client( $client ) {
 
 **Parameters**
 
-- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+- client _`{\PingMeOnSlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
 #### `ping_me_on_slack_user_creation_message`
@@ -403,7 +403,7 @@ public function user_deletion_client( $client ) {
 
 **Parameters**
 
-- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+- client _`{\PingMeOnSlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
 #### `ping_me_on_slack_user_deletion_message`
@@ -450,7 +450,7 @@ public function user_modification_client( $client ) {
 
 **Parameters**
 
-- client _`{\PingMySlack\Core\Client}`_ By default this will be the Client instance.
+- client _`{\PingMeOnSlack\Core\Client}`_ By default this will be the Client instance.
 <br/>
 
 #### `ping_me_on_slack_user_modification_message`

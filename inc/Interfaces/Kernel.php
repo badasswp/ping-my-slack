@@ -8,7 +8,7 @@
  * @package PingMeOnSlack
  */
 
-namespace PingMySlack\Interfaces;
+namespace PingMeOnSlack\Interfaces;
 
 interface Kernel {
 	/**

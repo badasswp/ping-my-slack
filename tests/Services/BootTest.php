@@ -1,15 +1,15 @@
 <?php
 
-namespace PingMySlack\Tests\Services;
+namespace PingMeOnSlack\Tests\Services;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use PingMySlack\Core\Client;
-use PingMySlack\Services\Boot;
+use PingMeOnSlack\Core\Client;
+use PingMeOnSlack\Services\Boot;
 
 /**
- * @covers \PingMySlack\Services\Boot::__construct
- * @covers \PingMySlack\Services\Boot::register
+ * @covers \PingMeOnSlack\Services\Boot::__construct
+ * @covers \PingMeOnSlack\Services\Boot::register
  */
 class BootTest extends TestCase {
 	public function setUp(): void {

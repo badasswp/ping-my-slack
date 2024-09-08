@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="PingMySlack">
+<ruleset name="PingMeOnSlack">
 	<rule ref="WordPress-Core">
 		<exclude name="WordPress.Files.FileName" />
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax" />

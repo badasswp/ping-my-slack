@@ -1,23 +1,23 @@
 <?php
 
-namespace PingMySlack\Tests\Core;
+namespace PingMeOnSlack\Tests\Core;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
 
-use PingMySlack\Services\Boot;
-use PingMySlack\Services\Post;
-use PingMySlack\Services\User;
-use PingMySlack\Core\Container;
-use PingMySlack\Services\Admin;
-use PingMySlack\Services\Theme;
-use PingMySlack\Services\Access;
-use PingMySlack\Services\Comment;
-use PingMySlack\Abstracts\Service;
+use PingMeOnSlack\Services\Boot;
+use PingMeOnSlack\Services\Post;
+use PingMeOnSlack\Services\User;
+use PingMeOnSlack\Core\Container;
+use PingMeOnSlack\Services\Admin;
+use PingMeOnSlack\Services\Theme;
+use PingMeOnSlack\Services\Access;
+use PingMeOnSlack\Services\Comment;
+use PingMeOnSlack\Abstracts\Service;
 
 /**
- * @covers \PingMySlack\Core\Container::__construct
- * @covers \PingMySlack\Core\Container::register
+ * @covers \PingMeOnSlack\Core\Container::__construct
+ * @covers \PingMeOnSlack\Core\Container::register
  */
 class ContainerTest extends TestCase {
 	public function setUp(): void {

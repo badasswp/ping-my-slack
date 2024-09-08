@@ -1,17 +1,17 @@
 <?php
 
-namespace PingMySlack\Tests\Services;
+namespace PingMeOnSlack\Tests\Services;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use PingMySlack\Core\Client;
-use PingMySlack\Services\Comment;
+use PingMeOnSlack\Core\Client;
+use PingMeOnSlack\Services\Comment;
 
 /**
- * @covers \PingMySlack\Services\Comment::__construct
- * @covers \PingMySlack\Services\Comment::register
- * @covers \PingMySlack\Services\Comment::ping_on_comment_status_change
- * @covers \PingMySlack\Services\Comment::get_message
+ * @covers \PingMeOnSlack\Services\Comment::__construct
+ * @covers \PingMeOnSlack\Services\Comment::register
+ * @covers \PingMeOnSlack\Services\Comment::ping_on_comment_status_change
+ * @covers \PingMeOnSlack\Services\Comment::get_message
  */
 class CommentTest extends TestCase {
 	public function setUp(): void {

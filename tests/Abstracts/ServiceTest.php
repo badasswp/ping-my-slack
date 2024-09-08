@@ -1,14 +1,14 @@
 <?php
 
-namespace PingMySlack\Tests\Abstracts;
+namespace PingMeOnSlack\Tests\Abstracts;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use PingMySlack\Core\Client;
-use PingMySlack\Abstracts\Service;
+use PingMeOnSlack\Core\Client;
+use PingMeOnSlack\Abstracts\Service;
 
 /**
- * @covers \PingMySlack\Abstracts\Service::__construct
+ * @covers \PingMeOnSlack\Abstracts\Service::__construct
  */
 class ServiceTest extends TestCase {
 	public function setUp(): void {

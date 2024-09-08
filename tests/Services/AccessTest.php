@@ -1,17 +1,17 @@
 <?php
 
-namespace PingMySlack\Tests\Services;
+namespace PingMeOnSlack\Tests\Services;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use PingMySlack\Core\Client;
-use PingMySlack\Services\Access;
+use PingMeOnSlack\Core\Client;
+use PingMeOnSlack\Services\Access;
 
 /**
- * @covers \PingMySlack\Services\Access::__construct
- * @covers \PingMySlack\Services\Access::register
- * @covers \PingMySlack\Services\Access::ping_on_user_login
- * @covers \PingMySlack\Services\Access::ping_on_user_logout
+ * @covers \PingMeOnSlack\Services\Access::__construct
+ * @covers \PingMeOnSlack\Services\Access::register
+ * @covers \PingMeOnSlack\Services\Access::ping_on_user_login
+ * @covers \PingMeOnSlack\Services\Access::ping_on_user_logout
  */
 class AccessTest extends TestCase {
 	public function setUp(): void {

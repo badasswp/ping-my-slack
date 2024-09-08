@@ -1,8 +1,8 @@
-name: PingMySlack Build
+name: PingMeOnSlack Build
 
 on:
   workflow_run:
-    workflows: ["PingMySlack CI"]
+    workflows: ["PingMeOnSlack CI"]
     types: [completed]
     branches: [master]
 

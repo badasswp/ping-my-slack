@@ -1,18 +1,18 @@
 <?php
 
-namespace PingMySlack\Tests\Services;
+namespace PingMeOnSlack\Tests\Services;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use PingMySlack\Core\Client;
-use PingMySlack\Services\User;
+use PingMeOnSlack\Core\Client;
+use PingMeOnSlack\Services\User;
 
 /**
- * @covers \PingMySlack\Services\User::__construct
- * @covers \PingMySlack\Services\User::register
- * @covers \PingMySlack\Services\User::ping_on_user_creation
- * @covers \PingMySlack\Services\User::ping_on_user_modification
- * @covers \PingMySlack\Services\User::ping_on_user_deletion
+ * @covers \PingMeOnSlack\Services\User::__construct
+ * @covers \PingMeOnSlack\Services\User::register
+ * @covers \PingMeOnSlack\Services\User::ping_on_user_creation
+ * @covers \PingMeOnSlack\Services\User::ping_on_user_modification
+ * @covers \PingMeOnSlack\Services\User::ping_on_user_deletion
  */
 class UserTest extends TestCase {
 	public function setUp(): void {

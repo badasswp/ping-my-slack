@@ -8,10 +8,10 @@
  * @package PingMeOnSlack;
  */
 
-namespace PingMySlack\Services;
+namespace PingMeOnSlack\Services;
 
-use PingMySlack\Abstracts\Service;
-use PingMySlack\Interfaces\Kernel;
+use PingMeOnSlack\Abstracts\Service;
+use PingMeOnSlack\Interfaces\Kernel;
 
 class User extends Service implements Kernel {
 	/**

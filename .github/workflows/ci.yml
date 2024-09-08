@@ -1,4 +1,4 @@
-name: PingMySlack CI
+name: PingMeOnSlack CI
 
 on:
   push:

@@ -8,7 +8,7 @@
  * @package PingMeOnSlack
  */
 
-namespace PingMySlack\Core;
+namespace PingMeOnSlack\Core;
 
 use Maknz\Slack\Client as SlackClient;
 

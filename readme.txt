@@ -18,7 +18,7 @@ Get notifications on Slack when changes are made on your WP website.
 4. To get started, you would need to have an incoming webhook of your own. Head over to the URL below and follow the instructions to generate your webhook: https://api.slack.com/messaging/webhooks
 5. If you have done this successfully, you should have something that looks like so:
 https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
-6. Save these details into your PingMySlack options page and you are ready to go!
+6. Save these details into your PingMeOnSlack options page and you are ready to go!
 
 == Description ==
 

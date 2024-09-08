@@ -8,16 +8,16 @@
  * @package PingMeOnSlack
  */
 
-namespace PingMySlack\Core;
+namespace PingMeOnSlack\Core;
 
-use PingMySlack\Services\Post;
-use PingMySlack\Services\Boot;
-use PingMySlack\Services\Theme;
-use PingMySlack\Services\User;
-use PingMySlack\Services\Access;
-use PingMySlack\Services\Admin;
-use PingMySlack\Services\Comment;
-use PingMySlack\Services\Options;
+use PingMeOnSlack\Services\Post;
+use PingMeOnSlack\Services\Boot;
+use PingMeOnSlack\Services\Theme;
+use PingMeOnSlack\Services\User;
+use PingMeOnSlack\Services\Access;
+use PingMeOnSlack\Services\Admin;
+use PingMeOnSlack\Services\Comment;
+use PingMeOnSlack\Services\Options;
 
 final class Container {
 	/**

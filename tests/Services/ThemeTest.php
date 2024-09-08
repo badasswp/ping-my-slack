@@ -1,17 +1,17 @@
 <?php
 
-namespace PingMySlack\Tests\Services;
+namespace PingMeOnSlack\Tests\Services;
 
 use Mockery;
 use WP_Mock\Tools\TestCase;
-use PingMySlack\Core\Client;
-use PingMySlack\Services\Theme;
+use PingMeOnSlack\Core\Client;
+use PingMeOnSlack\Services\Theme;
 
 /**
- * @covers \PingMySlack\Services\Theme::__construct
- * @covers \PingMySlack\Services\Theme::register
- * @covers \PingMySlack\Services\Theme::ping_on_theme_change
- * @covers \PingMySlack\Services\Theme::get_message
+ * @covers \PingMeOnSlack\Services\Theme::__construct
+ * @covers \PingMeOnSlack\Services\Theme::register
+ * @covers \PingMeOnSlack\Services\Theme::ping_on_theme_change
+ * @covers \PingMeOnSlack\Services\Theme::get_message
  */
 class ThemeTest extends TestCase {
 	public function setUp(): void {

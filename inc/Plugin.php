@@ -8,9 +8,9 @@
  * @package PingMeOnSlack
  */
 
-namespace PingMySlack;
+namespace PingMeOnSlack;
 
-use PingMySlack\Core\Container;
+use PingMeOnSlack\Core\Container;
 
 final class Plugin {
 	/**

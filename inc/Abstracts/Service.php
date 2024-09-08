@@ -8,10 +8,10 @@
  * @package PingMeOnSlack
  */
 
-namespace PingMySlack\Abstracts;
+namespace PingMeOnSlack\Abstracts;
 
-use PingMySlack\Core\Client;
-use PingMySlack\Interfaces\Kernel;
+use PingMeOnSlack\Core\Client;
+use PingMeOnSlack\Interfaces\Kernel;
 
 abstract class Service implements Kernel {
 	/**
@@ -29,7 +29,7 @@ abstract class Service implements Kernel {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @var \PingMySlack\Client
+	 * @var \PingMeOnSlack\Client
 	 */
 	public Client $client;
 

@@ -8,11 +8,11 @@
  * @package PingMeOnSlack;
  */
 
-namespace PingMySlack\Services;
+namespace PingMeOnSlack\Services;
 
-use PingMySlack\Core\Client;
-use PingMySlack\Abstracts\Service;
-use PingMySlack\Interfaces\Kernel;
+use PingMeOnSlack\Core\Client;
+use PingMeOnSlack\Abstracts\Service;
+use PingMeOnSlack\Interfaces\Kernel;
 
 class Access extends Service implements Kernel {
 	/**
