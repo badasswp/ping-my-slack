@@ -2,7 +2,7 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ping My Slack\n"
+"Project-Id-Version: Ping Me on Slack\n"
 "POT-Creation-Date: 2024-08-05 05:33+0100\n"
 "PO-Revision-Date: 2024-08-05 05:29+0100\n"
 "Last-Translator: \n"

@@ -52,7 +52,7 @@ class Admin extends Service implements Kernel {
 	 * @return void
 	 */
 	public function get_admin_page(): void {
-		Container::make( 'theme_options', 'Ping My Slack' )
+		Container::make( 'theme_options', 'Ping Me on Slack' )
 			->set_page_file( 'ping-me-on-slack' )
 			->set_icon( 'dashicons-format-chat' )
 			->set_page_menu_position( 3 )
