@@ -1,4 +1,4 @@
-=== Ping My Slack ===
+=== Ping Me On Slack ===
 Contributors: badasswp
 Tags: slack, ping, notify, chat.
 Requires at least: 4.0
@@ -13,7 +13,7 @@ Get notifications on Slack when changes are made on your WP website.
 == Installation ==
 
 1. Go to 'Plugins > Add New' on your WordPress admin dashboard.
-2. Search for 'Ping My Slack' plugin from the official WordPress plugin repository.
+2. Search for 'Ping Me On Slack' plugin from the official WordPress plugin repository.
 3. Click 'Install Now' and then 'Activate'.
 4. To get started, you would need to have an incoming webhook of your own. Head over to the URL below and follow the instructions to generate your webhook: https://api.slack.com/messaging/webhooks
 5. If you have done this successfully, you should have something that looks like so:
@@ -40,4 +40,4 @@ Ever needed to keep track of what's happening on your website? No need to look f
 
 == Contribute ==
 
-If you'd like to contribute to the development of this plugin, you can find it on [GitHub](https://github.com/badasswp/ping-my-slack).
+If you'd like to contribute to the development of this plugin, you can find it on [GitHub](https://github.com/badasswp/ping-me-on-slack).
