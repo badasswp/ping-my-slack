@@ -4,8 +4,6 @@ Get notifications on Slack when changes are made on your WP website.
 
 ![screenshot-1](https://github.com/user-attachments/assets/667ab2fb-24c1-4d4d-ae83-5a89fc848710)
 
-![ping-me-on-slack](https://github.com/badasswp/ping-me-on-slack/assets/149586343/1da2be61-ab22-42ac-bf9b-63df814c093d)
-
 ## Download
 
 Download from [WordPress plugin repository](https://wordpress.org/plugins/ping-me-on-slack/).
@@ -27,6 +25,8 @@ https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 Save these details into your PingMeOnSlack options page and you are ready to go!
+
+![ping-me-on-slack](https://github.com/badasswp/ping-me-on-slack/assets/149586343/1da2be61-ab22-42ac-bf9b-63df814c093d)
 
 ## Why Ping Me On Slack?
 
