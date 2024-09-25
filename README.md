@@ -6,6 +6,14 @@ Get notifications on Slack when changes are made on your WP website.
 
 ![ping-me-on-slack](https://github.com/badasswp/ping-me-on-slack/assets/149586343/1da2be61-ab22-42ac-bf9b-63df814c093d)
 
+## Download
+
+Download from [WordPress plugin repository](https://wordpress.org/plugins/ping-me-on-slack/).
+
+You can also get the latest version from any of our [release tags](https://github.com/badasswp/ping-me-on-slack/releases).
+
+## Getting Started
+
 To get started, you would need to have an incoming webhook of your own. Head over to the URL below and follow the instructions to generate your webhook:
 
 ```
